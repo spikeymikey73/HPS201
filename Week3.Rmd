@@ -1,8 +1,9 @@
 ---
-title: 'Week 1: xyz'
+title: 'Week 3: Hypothesis Testing'
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(jmv)
 ```
 
