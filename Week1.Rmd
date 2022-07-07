@@ -2,6 +2,11 @@
 title: 'Week 1: Measurement'
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(jmv)
+```
+
 ### LO1: Understand the difference between population and sample
 
 #### Population vs. Sample
@@ -102,18 +107,17 @@ The type of data that you use will impact the types of statistical approach that
 
 ### LO5: Explain the difference between categorical data and measurement data
 
-The type of data that you use will impact the types of
-statistical approach that we use to analyze data
- Continuous/Measurement data are usually summarised
-using means (averages)
- Mean age of HPS201 students is 19.8 (made up)
- Mean height of AFL footballers is 188cm
- Discrete/Categorical data are usually summarized using
-percentage
- 15% of participants were left-handed, 75% right-handed, 10%
-ambidextrous
- 32% if students have black hair, 8% have red hair , 50% have
-brown hair, 5 % have blonde hair, 5% other
+The type of data that you use will impact the types of statistical approach that we use to analyse data.
+
+Continuous/Measurement data are usually summarised using means (averages)
+
+-   Mean age of HPS201 students is 19.8 (made up)
+-   Mean height of AFL footballers is 188cm
+
+Discrete/Categorical data are usually summarized using percentage
+
+-   15% of participants were left-handed, 75% right-handed, 10% ambidextrous
+-   32% if students have black hair, 8% have red hair , 50% have brown hair, 5 % have blonde hair, 5% other
 
 ### LO6: Distinguish between independent and dependent variables
 
@@ -182,6 +186,25 @@ We measure our IV and DV’s using a variety of measurement scales:
 ### L08: Understand how to construct frequency distributions and histograms
 
 
+Frequency distributions report how often each score was recorded in a given data set. When presented in table form, a frequency distribution lists all values for a variable along with the frequency of each.
+
+For example, imagine a researcher obtains the following self-esteem scores from 16 people (measured as a continuous variable ranging from 0–10):
+
+```{r}
+esteem <- c(5,1,3,4,5,6,2,5,5,4,7,4,4,8,6,3)
+jmv::descriptives(
+    vars = esteem,
+    freq = TRUE,
+    desc = "rows",
+    hist = TRUE,
+    n = FALSE,
+    missing = FALSE,
+    mean = FALSE,
+    median = FALSE,
+    sd = FALSE,
+    min = FALSE,
+    max = FALSE)
+```
 
 ### LO9: Understand positive skew, negative skew and kurtosis
 
