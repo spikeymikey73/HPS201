@@ -185,10 +185,11 @@ We measure our IV and DV’s using a variety of measurement scales:
 
 ### L08: Understand how to construct frequency distributions and histograms
 
-
-Frequency distributions report how often each score was recorded in a given data set. When presented in table form, a frequency distribution lists all values for a variable along with the frequency of each.
+**Frequency distributions** report how often each score was recorded in a given data set. When presented in table form, a frequency distribution lists all values for a variable along with the frequency of each.
 
 For example, imagine a researcher obtains the following self-esteem scores from 16 people (measured as a continuous variable ranging from 0–10):
+
+5 1 3 4 5 6 2 5 5 4 7 4 4 8 6 3
 
 ```{r}
 esteem <- c(5,1,3,4,5,6,2,5,5,4,7,4,4,8,6,3)
@@ -206,5 +207,16 @@ jmv::descriptives(
     max = FALSE)
 ```
 
+The frequency table above helps to summarise the collected data, allowing us to easily see the number of participants recording each score. We can also gather from this table the highest concentration of results towards the centre of the table (those who answered 4 or 5).
+
+The **histogram** is a graphical representation of the data in the frequency table. A larger data set may be most relevant when the results are grouped together (known as a **bin**), while smaller data sets can simply be plotted as collected. Grouping data in bins assists in reducing the number of 'random' results and to assist in identifying trends.
+
 ### LO9: Understand positive skew, negative skew and kurtosis
 
+**Bimodal:** A frequency distribution is said to be bimodal when the majority of results are visible at 2 clear peaks in the data being presented.
+
+**Negatively Skewed:** A greater number of people have scored at the high end of a scale.
+
+**Positively Skewed:** A greater number of people have scored at the low end of a scale.
+
+**Kurtosis:** refers to the peaks of the recorded variable (<abbr title="low peaked distribution">platykurtosis</abbr> or <abbr title="high peaked distribution">leptokurtosis</abbr>).
