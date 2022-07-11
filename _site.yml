@@ -3,7 +3,7 @@ title: HPS201 - Psychology Research Methods (Introductory)
 output_dir: docs
 navbar:
   title: "HPS201"
-  right:
+  left:
     - icon: fa fa-list fa-lg
       href: index.html
     - icon: fa fa-book fa-lg
@@ -35,4 +35,4 @@ navbar:
 output:
   html_document:
     theme: cosmo
-    highlight: tango
+    highlight: textmate
