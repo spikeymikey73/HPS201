@@ -10,27 +10,27 @@ navbar:
       href: Readings.html
     - icon: fa fa-sticky-note fa-lg
       menu:
-        - text: Week 1
+        - text: "Week 1"
           href: Week1.html
-        - text: Week 2
+        - text: "Week 2"
           href: Week2.html
-        - text: Week 3
+        - text: "Week 3"
           href: Week3.html
-        - text: Week 4
+        - text: "Week 4"
           href: Week4.html
-        - text: Week 5
+        - text: "Week 5"
           href: Week5.html
-        - text: Week 6
+        - text: "Week 6"
           href: Week6.html
-        - text: Week 7
+        - text: "Week 7"
           href: Week7.html
-        - text: Week 8
+        - text: "Week 8"
           href: Week8.html
-        - text: Week 9
+        - text: "Week 9"
           href: Week9.html
-        - text: Week 10
+        - text: "Week 10"
           href: Week10.html
-        - text: Week 11
+        - text: "Week 11"
           href: Week11.html
 output:
   html_document:
