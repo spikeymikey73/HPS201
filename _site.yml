@@ -2,7 +2,8 @@ name: HPS201
 title: HPS201 - Psychology Research Methods (Introductory)
 output_dir: docs
 navbar:
-  title: 
+  left:
+    title: "HPS201"
   right:
     - icon: fa fa-list fa-lg
       href: index.html

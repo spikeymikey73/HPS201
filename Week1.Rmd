@@ -11,8 +11,7 @@ library(jmv)
 
 #### Population vs. Sample
 
-**Population:** the entire set of individuals, or events, of interest in a particular study (Often not feasible!)
-**Sample:** set of individuals selected from a population
+**Population:** the entire set of individuals, or events, of interest in a particular study (Often not feasible!) **Sample:** set of individuals selected from a population
 
 #### Example:
 
@@ -42,12 +41,17 @@ $\bigstar$ Statistics are used to estimate values that exist in the population.
 As a researcher, you have:
 
 -   Decided on a research question: Is a new anti-depressant effective at reducing depressive symptoms?
--   You’ve taken a sample of individuals to answer your research question: 100 individuals with depression
+
+-   You've taken a sample of individuals to answer your research question: 100 individuals with depression
+
 -   Conduct your experiment
-      +   50 given the new anti-depressant
-      +   50 given the pre-existing best seller
+
+    -   50 given the new anti-depressant
+    -   50 given the pre-existing best seller
+
 -   Measure depression levels after (0-100)
--   You’ve collected your data. Now what??
+
+-   You've collected your data. Now what??
 
 Statistics is the method of using mathematics to organize, summarise, and interpret numerical data
 
@@ -74,21 +78,19 @@ Two main types:
 #### Discrete data
 
 -   Contain only a small number of values, such as:
-      +   handedness (right/left/ambidextrous)
-      +   favourite season (summer/autumn/ winter/ spring)
+
+    -   handedness (right/left/ambidextrous)
+    -   favourite season (summer/autumn/ winter/ spring)
+
 -   Often referred to as Categorical data
 
 #### Continuous:
 
-Contain many different values
--   Weight (40kg- 140kg), age (0-100 years)
--   Often referred to as Measurement data
--   Often depends on the way you set up the measurement
--   Anxiety levels of HPS201/771 students
+Contain many different values - Weight (40kg- 140kg), age (0-100 years) - Often referred to as Measurement data - Often depends on the way you set up the measurement - Anxiety levels of HPS201/771 students
 
 #### Discrete or continuous?
 
--   Generally continuous – score on an anxiety questionnaire
+-   Generally continuous -- score on an anxiety questionnaire
 -   Questionnaire scores range from 0-60
 -   But, often people will be categorised into groups:
 -   High anxiety (41-60), Average anxiety (21-40), Low anxiety (0-20)
@@ -131,7 +133,7 @@ Discrete/Categorical data are usually summarized using percentage
 -   The variable that we measure
 -   The variable that is observed for differences/changes
 
----
+------------------------------------------------------------------------
 
 #### Quiz time!
 
@@ -141,7 +143,7 @@ A researcher wanted to test her theory that people tend to walk faster on cold d
 
 <abbr title="Walking speed">Dependant variable?</abbr>
 
----
+------------------------------------------------------------------------
 
 #### Quiz time!
 
@@ -151,43 +153,58 @@ A psychologist wants to investigate whether caffeine improves attention. She giv
 
 <abbr title="Attentional Capacity">Dependant variable?</abbr>
 
----
+------------------------------------------------------------------------
 
 ### LO7: Understand the different types of measurement scales (nominal, ordinal, interval and ratio)
 
-We measure our IV and DV’s using a variety of measurement scales:
+We measure our IV and DV's using a variety of measurement scales:
 
 -   **Nominal:** consist of a set of categories with different names in no ordered sequence
-      +   Handedness:
-          *   Right, Left, Ambidextrous
-          *   No category is higher/lower, better/worse than any other as they are just labels for different categories
+
+    -   Handedness:
+
+        -   Right, Left, Ambidextrous
+        -   No category is higher/lower, better/worse than any other as they are just labels for different categories
+
 -   **Ordinal:** Ordinal scales consist of a set of categories with different names AND are organized into an ordered sequence
-      +   Highest level of academic qualification:
-            *   High School Incomplete
-            *   High School Complete
-            *   Diploma
-            *   Bachelor Degree
-            *   Masters Degree
-            *   PhD
+
+    -   Highest level of academic qualification:
+
+        -   High School Incomplete
+        -   High School Complete
+        -   Diploma
+        -   Bachelor Degree
+        -   Masters Degree
+        -   PhD
+
 -   **Interval:** Consist of ordered categories where the intervals are exactly the same size
-      +   The distance between each value is the same along the scale
-      +   Usually have a more data points than ordinal scales (continuous data)
-      +   **No absolute zero point**
-            *   Degrees Celsius
-            *   Distance between 10-15 degrees is the same as the distance between 30-35 degrees
-            *   Zero degrees does not represent the absence of temperature. It is just a point on the temperature scale
+
+    -   The distance between each value is the same along the scale
+
+    -   Usually have a more data points than ordinal scales (continuous data)
+
+    -   **No absolute zero point**
+
+        -   Degrees Celsius
+        -   Distance between 10-15 degrees is the same as the distance between 30-35 degrees
+        -   Zero degrees does not represent the absence of temperature. It is just a point on the temperature scale
+
 -   **Ratio:** Consist of ordered categories where the intervals are exactly the same size
-      +   The distance between each value is the same along the scale
-      +   Usually have a more data points than ordinal scales (continuous data)
-      +   **With a true zero point**
-            *   Time (minutes)
-            *   length (cm)
+
+    -   The distance between each value is the same along the scale
+
+    -   Usually have a more data points than ordinal scales (continuous data)
+
+    -   **With a true zero point**
+
+        -   Time (minutes)
+        -   length (cm)
 
 ### L08: Understand how to construct frequency distributions and histograms
 
 **Frequency distributions** report how often each score was recorded in a given data set. When presented in table form, a frequency distribution lists all values for a variable along with the frequency of each.
 
-For example, imagine a researcher obtains the following self-esteem scores from 16 people (measured as a continuous variable ranging from 0–10):
+For example, imagine a researcher obtains the following self-esteem scores from 16 people (measured as a continuous variable ranging from 0--10):
 
 5 1 3 4 5 6 2 5 5 4 7 4 4 8 6 3
 
