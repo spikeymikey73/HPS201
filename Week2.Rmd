@@ -79,11 +79,36 @@ $$\frac{\Sigma X}{N}$$
 
 ## Variability
 
+### Range and interquartile range
+
+-   **Range** statistics report the minimum and maximum score in a data set.
+-   The range is influenced by extreme scores.
+-   The range may not provide a true indication of the variability in a data set if extreme scores are present.
+-   The **interquartile range** overcomes the problem of extreme values by removing the upper 25% and lower 25% of the distribution.
+-   **Trimmed Samples**: Removing 50% of the data we could be losing important information.
+
 ### Average Deviation
+
+The degree to which scores vary from the mean, when calculating the mean and then compute how much each score deviates from this average value. We then average these deviations to provide a single measure of variability. However, this would not work as some scores will be above, and some below the mean, resulting in positive and negative deviations (which will serve to balance each other out and sum to zero)
 
 ### Mean Absolute Deviation (m.a.d.)
 
-### Variance
+The mean absolute deviation (m.a.d.) overcomes this problem by using the absolute values of the deviations. This is helpful as we are not interested in whether scores are above or below the mean, simply the extent to which they vary from the mean. The m.a.d. is the sum of the absolute deviations divided by N to provide an average deviation.
 
-### Standard Deviation
+### Variance ($S^2$)
+
+This statistic uses squared deviations to deal with the problem of positive/negative differences from the mean. A negative value, once squared, becomes positive. So we calculate the sum of the squared deviations from the mean (or sums of squares, $SS$). This value is then divided by N – 1 to provide the variance:
+
+$$
+  S^2 = \frac{\Sigma(X - \bar{X})^2}{N - 1}
+$$
+
+### Standard Deviation ($S$)
+
+The standard deviation is simply the square root of the variance. It provides a measure of the average deviation from the mean and is the most commonly reported statistic of variability. Once the s^2 has been calculated, it can be converted into the SD by simply taking the square root of s^2
+
+$$
+  S = \sqrt{\frac{\Sigma(X - \bar{X})^2}{N - 1}}
+$$
+
 

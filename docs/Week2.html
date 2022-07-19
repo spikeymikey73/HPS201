@@ -389,7 +389,7 @@ $(document).ready(function () {
 <blockquote>
 <p>‘the score that corresponds to the point at or below which 50% of the scores fall when the data are arranged in numerical order’</p>
 </blockquote>
-<p>A simple rule of thumb formula for finding the <strong>median location</strong> in a set of scores is (N + 1)/2 (where N = the number of scores).</p>
+<p>A simple rule of thumb formula for finding the <strong>median location</strong> in a set of scores is <span class="math inline">\((N + 1)/2\)</span> (where <span class="math inline">\(N =\)</span> the number of scores).</p>
 </div>
 <div id="the-mean" class="section level3">
 <h3>The Mean</h3>
@@ -436,17 +436,37 @@ $(document).ready(function () {
 </div>
 <div id="variability" class="section level2">
 <h2>Variability</h2>
+<div id="range-and-interquartile-range" class="section level3">
+<h3>Range and interquartile range</h3>
+<ul>
+<li><strong>Range</strong> statistics report the minimum and maximum score in a data set.</li>
+<li>The range is influenced by extreme scores.</li>
+<li>The range may not provide a true indication of the variability in a data set if extreme scores are present.</li>
+<li>The <strong>interquartile range</strong> overcomes the problem of extreme values by removing the upper 25% and lower 25% of the distribution.</li>
+<li><strong>Trimmed Samples</strong>: Removing 50% of the data we could be losing important information.</li>
+</ul>
+</div>
 <div id="average-deviation" class="section level3">
 <h3>Average Deviation</h3>
+<p>The degree to which scores vary from the mean, when calculating the mean and then compute how much each score deviates from this average value. We then average these deviations to provide a single measure of variability. However, this would not work as some scores will be above, and some below the mean, resulting in positive and negative deviations (which will serve to balance each other out and sum to zero)</p>
 </div>
 <div id="mean-absolute-deviation-m.a.d." class="section level3">
 <h3>Mean Absolute Deviation (m.a.d.)</h3>
+<p>The mean absolute deviation (m.a.d.) overcomes this problem by using the absolute values of the deviations. This is helpful as we are not interested in whether scores are above or below the mean, simply the extent to which they vary from the mean. The m.a.d. is the sum of the absolute deviations divided by N to provide an average deviation.</p>
 </div>
-<div id="variance" class="section level3">
-<h3>Variance</h3>
+<div id="variance-s2" class="section level3">
+<h3>Variance (<span class="math inline">\(S^2\)</span>)</h3>
+<p>This statistic uses squared deviations to deal with the problem of positive/negative differences from the mean. A negative value, once squared, becomes positive. So we calculate the sum of the squared deviations from the mean (or sums of squares, <span class="math inline">\(SS\)</span>). This value is then divided by N – 1 to provide the variance:</p>
+<p><span class="math display">\[
+  S^2 = \frac{\Sigma(X - \bar{X})^2}{N - 1}
+\]</span></p>
 </div>
-<div id="standard-deviation" class="section level3">
-<h3>Standard Deviation</h3>
+<div id="standard-deviation-s" class="section level3">
+<h3>Standard Deviation (<span class="math inline">\(S\)</span>)</h3>
+<p>The standard deviation is simply the square root of the variance. It provides a measure of the average deviation from the mean and is the most commonly reported statistic of variability. Once the s^2 has been calculated, it can be converted into the SD by simply taking the square root of s^2</p>
+<p><span class="math display">\[
+  S = \sqrt{\frac{\Sigma(X - \bar{X})^2}{N - 1}}
+\]</span></p>
 </div>
 </div>
 
