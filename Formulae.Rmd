@@ -1,5 +1,5 @@
 ---
-title: 'Week 1: xyz'
+title: 'Formulae'
 ---
 
 ```{r setup, include=FALSE}
@@ -7,3 +7,4 @@ knitr::opts_chunk$set(echo = TRUE)
 library(jmv)
 ```
 
+${z = \frac{X - \bar{X}}{\sigma}}$

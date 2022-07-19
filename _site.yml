@@ -30,8 +30,8 @@ navbar:
           href: Week9.html
         - text: "Week 10"
           href: Week10.html
-        - text: "Week 11"
-          href: Week11.html
+        - text: "Formulae"
+          href: Formulae.html
 output:
   html_document:
     theme: cosmo

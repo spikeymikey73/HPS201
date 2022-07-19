@@ -3,6 +3,87 @@ title: 'Week 2: Central Tendency'
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+library(jmv)
 ```
+
+## Statistical Notation
+
+### Notation of Variables
+
+$\Sigma = sum$
+
+$X = variable$
+
+$\bar{X} =$ mean of $X$
+
+### Summation Notation
+```{r}
+X <- c(45,42,35,23,52)
+options(scipen = 999)
+knitr::kable(X)
+```
+
+$\Sigma X = (X_1 + X_2 + X_3 + X_4 + X_5) =$ `r sum(X)`
+
+$\Sigma X^2 = (X_1^2 + X_2^2 + X_3^2 + X_4^2 + X_5^2) =$ `r  sum(X^2)`
+
+$(\Sigma X)^2 = (X_1 + X_2 + X_3 + X_4 + X_5)^2 =$ `r  sum(X)^2`
+
+![Summation Notation Examples](~/Documents/BPsychSci/HPS201/Images/Notation.png)
+
+### Double Subscripts
+
+$X_{ij}$ where i = the row and j = the column
+
+![Double Notation Examples](~/Documents/BPsychSci/HPS201/Images/DoubleNotation.png)
+
+>In the above data set:
+>
+>3^rd^ trial on day 2
+>
+> $X_{2,3} = 13$
+>
+>4^th^ trial on day 1
+>
+>$X_{1,4} = 9$
+
+## Measures of Central Tendency
+
+Once data is collected, research psychologists would usually be interested in examining the <abbr title="the mid-point of a frequency distribution">central tendency</abbr> of this data. 
+
+### The Mode
+
+The mode is he most frequently occurring value and thus represented by the highest bar in a histogram.
+
+### The Median
+
+>‘the score that corresponds to the point at or below which 50% of the scores fall when the data are arranged in numerical order’
+
+A simple rule of thumb formula for finding the **median location** in a set of scores is $(N + 1)/2$ (where $N =$ the number of scores).
+
+### The Mean
+
+-   The most common and popular measure of central tendency is the mean.
+-   The mean is simply the average score in a data set and is calculated as:
+
+$$\frac{\Sigma X}{N}$$
+
+### Relative Advantages and Disadvantages of the Mean, Median and Mode
+
+| <i class="fas fa-ruler fa-lg"></i> | <i class="fas fa-plus fa-lg"></i>                                                                  | <i class="fas fa-minus fa-lg"></i>                                                                               |
+|---------|-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| Mode    | - actual value appearing in data</br>- represents the largest number of people</br>- Unaffected by outliers | - Unable to be manipulated algebraically</br>- Poor indicator of population trends                                  |
+| Median  | - Unaffected by outliers                                                                            | - Does not always appear in data</br>- Unable to be manipulated algebraically</br>- Poor indicator of population trends |
+| Mean    | - Most common measure</br>- Can be manipulated algebraically</br>- Good estimate of population mean         | - Does not always appear in data</br>- Influenced by outliers                                                       |
+
+## Variability
+
+### Average Deviation
+
+### Mean Absolute Deviation (m.a.d.)
+
+### Variance
+
+### Standard Deviation
 
