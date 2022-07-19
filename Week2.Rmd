@@ -111,4 +111,18 @@ $$
   S = \sqrt{\frac{\Sigma(X - \bar{X})^2}{N - 1}}
 $$
 
+## Standard Normal Distribution
 
+A variety of statistical techniques assume that the dependent variables under study are normally distributed in the population. If we assume a normal distribution then we can make a range of inferences about the probabilities of particular events or phenomenon.
+
+### z-scores
+
+The standard normal distribution has a mean of 0 and a standard deviation of 1. We can convert any distribution into a standard normal distribution by applying the z-score formula, which converts each score into **standard deviation units.**
+
+The formula for z using the IQ test example is:
+
+$$
+  z = \frac{X-\bar{X}}{s}
+    = \frac{100-130}{15}
+    = 2
+$$
