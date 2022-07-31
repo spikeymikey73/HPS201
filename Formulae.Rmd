@@ -4,7 +4,36 @@ title: 'Formulae'
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(jmv)
 ```
 
+::: boxy
+
+#### Variance
+
+$s^2 = \frac{\Sigma(X-\bar{X})}{N-1}$
+
+:::
+
+::: boxy
+
+#### Standard Deviation
+
+$s = \sqrt{\frac{\Sigma(X-\bar{X})}{N-1}}$
+
+:::
+
+::: boxy
+
+#### z-score
+
 ${z = \frac{X - \bar{X}}{\sigma}}$
+
+:::
+
+::: boxy
+
+#### Confidence limits on z
+
+$X = \mu \pm 1.96\sigma$
+
+:::
