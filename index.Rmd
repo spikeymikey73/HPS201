@@ -13,5 +13,5 @@ title: "Unit Schedule"
 | 7    | 29 AUG 22  | Regression                                | Assessment 1 (Part 1) Due 01 SEP 22 |
 | 8    | 05 SEP 22  | Analysis of Variance (ANOVA)              | Assessment 2 (Quiz 2) Due 08 SEP 22 |
 | 9    | 12 SEP 22  | Post-hoc Tests                            | -                                   |
-| 10   | 19 SEP 22  | Factorial ANOVA                           | Assessment 1 (Part 2) Due 22 SEP 22     |
-| 11   | 26 SEP 22  | Exam Revision                             | Assessment 2 (Quiz 3) Due 29 SEP 22     |
+| 10   | 19 SEP 22  | Factorial ANOVA                           | Assessment 1 (Part 2) Due 22 SEP 22 |
+| 11   | 26 SEP 22  | Exam Revision                             | Assessment 2 (Quiz 3) Due 29 SEP 22 |

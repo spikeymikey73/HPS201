@@ -319,24 +319,136 @@ $(document).ready(function () {
 </div>
 
 
-<div id="variance" class="section level4 boxy">
-<h4>Variance</h4>
-<p><span class="math inline">\(s^2 =
-\frac{\Sigma(X-\bar{X})}{N-1}\)</span></p>
-</div>
-<div id="standard-deviation" class="section level4 boxy">
-<h4>Standard Deviation</h4>
-<p><span class="math inline">\(s =
-\sqrt{\frac{\Sigma(X-\bar{X})}{N-1}}\)</span></p>
-</div>
-<div id="z-score" class="section level4 boxy">
-<h4>z-score</h4>
-<p><span class="math inline">\({z = \frac{X -
-\bar{X}}{\sigma}}\)</span></p>
-</div>
-<div id="confidence-limits-on-z" class="section level4 boxy">
+<table>
+<colgroup>
+<col width="17%" />
+<col width="51%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th>Formula</th>
+<th>R Input</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Variance</td>
+<td><span class="math inline">\(s^2 =
+\frac{\Sigma(X-\bar{X})}{N-1}\)</span></td>
+<td><code>var(X)</code></td>
+</tr>
+<tr class="even">
+<td>Std Deviation</td>
+<td><span class="math inline">\(s =
+\sqrt{\frac{\Sigma(X-\bar{X})}{N-1}}\)</span></td>
+<td><code>sd(x)</code></td>
+</tr>
+<tr class="odd">
+<td>z-score</td>
+<td><span class="math inline">\({z = \frac{X -
+\bar{X}}{\sigma}}\)</span></td>
+<td>See below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th>R Input</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Density</td>
+<td><code>dnorm(x, mean = 0, sd = 1, log = FALSE)</code></td>
+</tr>
+<tr class="even">
+<td>Distribution Function</td>
+<td><code>pnorm(q, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)</code></td>
+</tr>
+<tr class="odd">
+<td>Quantile Function</td>
+<td><code>qnorm(p, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)</code></td>
+</tr>
+<tr class="even">
+<td>Random Deviates</td>
+<td><code>rnorm(n, mean = 0, sd = 1)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div id="confidence-limits-on-z" class="section level4">
 <h4>Confidence limits on z</h4>
 <p><span class="math inline">\(X = \mu \pm 1.96\sigma\)</span></p>
+<hr />
+</div>
+<div id="chi-square" class="section level4">
+<h4>Chi-Square</h4>
+<p><span class="math inline">\(\chi^2 =
+\sum\frac{(O-E)^2}{E}\)</span></p>
+<p><span class="math inline">\(E_{ij} =
+\frac{R_{i}C_{j}}{N}\)</span></p>
+<p><span class="math inline">\(df = C - 1\)</span> (1 way)</p>
+<p><span class="math inline">\(df = (R-1)(C-1)\)</span>(2 way)</p>
+<p><span class="math inline">\(\Phi =
+\sqrt{\frac{\chi^2}{N}}\)</span></p>
+<hr />
+</div>
+<div id="linear-relationships" class="section level3">
+<h3>Linear Relationships</h3>
+<div id="correlation" class="section level4">
+<h4>Correlation</h4>
+<p><span class="math inline">\(r =
+\frac{cov_{xy}}{s_{x}s_{y}}\)</span></p>
+<p><span class="math inline">\(df = N-2\)</span></p>
+<hr />
+</div>
+<div id="covariance" class="section level4">
+<h4>Covariance</h4>
+<p><span
+class="math inline">\(\frac{(X-\bar{X})(Y-\bar{Y})}{N-1}\)</span></p>
+<hr />
+</div>
+<div id="significance-of-r" class="section level4">
+<h4>Significance of r</h4>
+<p><span class="math inline">\(t =
+\frac{r\sqrt{N-2}}{\sqrt{(1-r^2)}}\)</span></p>
+<hr />
+</div>
+<div id="regression" class="section level4">
+<h4>Regression</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>General Equation</td>
+<td><span class="math inline">\(\hat{Y} = bX - a\)</span></td>
+</tr>
+<tr class="even">
+<td>Slope</td>
+<td><span class="math inline">\(r =
+\frac{cov_{xy}}{s_{x}^2}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Intercept</td>
+<td><span class="math inline">\(a = \bar{Y} - b\bar{X}\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
 </div>
 
 
