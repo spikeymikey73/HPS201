@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 | Purpose       | Formula                                    | R Input                  |
-|---------------|--------------------------------------------|--------------------------|
+|---------------|:------------------------------------------:|--------------------------|
 | Variance      | $s^2 = \frac{\Sigma(X-\bar{X})}{N-1}$      | `var(X)`                 |
 | Std Deviation | $s = \sqrt{\frac{\Sigma(X-\bar{X})}{N-1}}$ | `sd(x)`                  |
 | z-score       | ${z = \frac{X - \bar{X}}{\sigma}}$         | See below |
@@ -29,13 +29,19 @@ $X = \mu \pm 1.96\sigma$
 
 #### Chi-Square
 
+Goodness of Fit / 1 Way Classification
+
 $\chi^2 = \sum\frac{(O-E)^2}{E}$
+
+$df = C - 1$
+
+Independence Test / 2 Way Classification
 
 $E_{ij} = \frac{R_{i}C_{j}}{N}$
 
-$df = C - 1$ (1 way)
+$df = (R-1)(C-1)$
 
-$df = (R-1)(C-1)$(2 way)
+Sample Size
 
 $\Phi = \sqrt{\frac{\chi^2}{N}}$
 

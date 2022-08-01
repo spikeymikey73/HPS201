@@ -328,26 +328,26 @@ $(document).ready(function () {
 <thead>
 <tr class="header">
 <th>Purpose</th>
-<th>Formula</th>
+<th align="center">Formula</th>
 <th>R Input</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Variance</td>
-<td><span class="math inline">\(s^2 =
+<td align="center"><span class="math inline">\(s^2 =
 \frac{\Sigma(X-\bar{X})}{N-1}\)</span></td>
 <td><code>var(X)</code></td>
 </tr>
 <tr class="even">
 <td>Std Deviation</td>
-<td><span class="math inline">\(s =
+<td align="center"><span class="math inline">\(s =
 \sqrt{\frac{\Sigma(X-\bar{X})}{N-1}}\)</span></td>
 <td><code>sd(x)</code></td>
 </tr>
 <tr class="odd">
 <td>z-score</td>
-<td><span class="math inline">\({z = \frac{X -
+<td align="center"><span class="math inline">\({z = \frac{X -
 \bar{X}}{\sigma}}\)</span></td>
 <td>See below</td>
 </tr>
@@ -391,12 +391,15 @@ $(document).ready(function () {
 </div>
 <div id="chi-square" class="section level4">
 <h4>Chi-Square</h4>
+<p>Goodness of Fit / 1 Way Classification</p>
 <p><span class="math inline">\(\chi^2 =
 \sum\frac{(O-E)^2}{E}\)</span></p>
+<p><span class="math inline">\(df = C - 1\)</span></p>
+<p>Independence Test / 2 Way Classification</p>
 <p><span class="math inline">\(E_{ij} =
 \frac{R_{i}C_{j}}{N}\)</span></p>
-<p><span class="math inline">\(df = C - 1\)</span> (1 way)</p>
-<p><span class="math inline">\(df = (R-1)(C-1)\)</span>(2 way)</p>
+<p><span class="math inline">\(df = (R-1)(C-1)\)</span></p>
+<p>Sample Size</p>
 <p><span class="math inline">\(\Phi =
 \sqrt{\frac{\chi^2}{N}}\)</span></p>
 <hr />
