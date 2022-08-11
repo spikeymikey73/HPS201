@@ -1,0 +1,86 @@
+---
+title: "Practice Quiz"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(jmv)
+
+PracQuiz <- read.csv(file = 'data/PracQuiz.csv')
+
+jmv::descriptives(
+    data = data,
+    vars = vars(pulse1, pulse2, ranspot, smokes, active, sex, height, weight))
+```
+
+What percentage of participants smoke?
+
+-[X]    39%
+-[ ]    61%
+-[ ]    20%
+-[ ]    82%
+
+Question 2
+How many participants smoke and report being "Somewhat active"?
+
+-[ ]    14
+-[X]    29
+-[ ]    75
+-[ ]    46
+
+Question 3
+What is the average for the variable pulse1?
+
+-[ ]    119.09
+-[ ]    75.00
+-[ ]    10.91
+-[X]    75.17
+
+Question 4
+What is the standard deviation for the variable height?
+
+-[ ]    175.89
+-[ ]    89.53
+-[ ]    176.00
+-[X]    9.46
+
+Question 5
+What is the range for the variable pusle2?
+
+-[X]    97
+-[ ]    94
+-[ ]    51
+-[ ]    148
+
+Question 6
+Nala scores 60 on pulse2. What is Nala's z-score when calculated based on the entire group of participants?
+
+-[ ]    -33.49
+-[ ]    1.64
+-[X]    -1.64
+-[ ]    33.49
+
+Question 7
+Anna scores 78 on pulse1. Tom scores 72 on pulse1. Emily scores 120 on pulse2. Who scores the highest relative to the other participants in the study?
+
+-[ ]    Tom
+-[X]    Emily
+-[ ]    The scores are equally high
+-[ ]    Anna
+
+Question 8
+What percentage of the general population can be expected to be taller than 185 cm?
+
+-[ ]    83.15%
+-[ ]    33.15%
+-[X]    16.85%
+-[ ]    25.16%
+
+Question 9
+7.21% of people in the general population are taller than Jason. How tall is Jason?
+
+-[ ]    160.45 cm
+-[ ]    200.30 cm
+-[X]    189.70 cm
+-[ ]    175.22 cm

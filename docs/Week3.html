@@ -11,7 +11,7 @@
 
 
 
-<title>Week 3: Hypothesis Testing</title>
+<title>Week 3: Sampling Distributions and Hypothesis Testing</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -314,12 +314,152 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Week 3: Hypothesis Testing</h1>
+<h1 class="title toc-ignore">Week 3: Sampling Distributions and Hypothesis Testing</h1>
 
 </div>
 
 
-
+<div id="sampling-error" class="section level2">
+<h2>Sampling Error</h2>
+<p>The degree to which the difference between the population mean and sample mean are “due to chance”, which can be answered using hypothesis testing and inferential statistics.</p>
+</div>
+<div id="sampling-distributions" class="section level2">
+<h2>Sampling Distributions</h2>
+<ul>
+<li>Identify the degree of variability from one sample to another as a result of the sampling error.</li>
+<li>From an infinite number of samples, with plotted means of these samples, a normal distribution of means would be the result.</li>
+<li>The standard deviation of a sampling mean is known as <strong>standard error of differences between means</strong>, and shows the average distance between a sample mean and a population mean.</li>
+<li>The standard deviation of a set of means is known as the standard error.</li>
+</ul>
+<p>The formula for calculating standard error is:</p>
+<p><span class="math display">\[
+  \begin{aligned}
+    \frac{s}{\sqrt{n}}
+  \end{aligned}
+\]</span></p>
+<p>In summary, here are a few points that can help with your study into sampling distributions:</p>
+<ul>
+<li>A random sample should represent the population well so sample statistics from a random sample should provide reasonable estimates of the population values.</li>
+<li>There is always some error in estimating population values from sample statistics (sampling error).</li>
+<li>If we take repeated samples from a population and calculate the mean, these mean scores will vary and form a distribution (distribution of sample means) which will itself have a mean and standard deviation.</li>
+<li>The degree to which the sample means vary from the overall population mean (i.e. the standard deviation of the sampling distribution) is the standard error.</li>
+<li>Larger samples provide more information than smaller samples so statistics from large samples have less standard error than statistics from smaller samples.</li>
+</ul>
+</div>
+<div id="hypothesis-testing" class="section level2">
+<h2>Hypothesis Testing</h2>
+<p>The information provided by the sampling distribution of the mean can be used to test hypotheses. Hypotheses are specific predictions which can be subject to an empirical and statistical test. For example, suppose we wanted to know whether the mean intelligence score of 109 we have obtained from our sample of 50 people is different from the general population mean of 100. If our sample was special in some way (e.g. all high functioning people) we might hypothesise that there would be a difference. Using the sampling distribution of the mean, we can test whether such a sample could reasonably have arisen had we drawn our sample from a population in which μ = 100. That is, what is the probability of finding a sample which scores 109 on average, given a population mean of 100? We might find that the probability of obtaining a score of 109 is 0.20, which is a fairly high probability. Thus, a sample mean that high is often obtained from a population with a mean of 100—we would conclude there is no statistical difference between our sample mean and the population mean.</p>
+<div id="hypothesis-testing-steps" class="section level3">
+<h3>Hypothesis Testing Steps</h3>
+<p>The steps that will be used throughout this unit when we are testing hypotheses using inferential statistics are as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Begin with a research hypothesis (i.e. that there is a difference in intelligence between our sample and the population mean; that is, it is unlikely that our sample comes from a population whose mean is 100).</li>
+<li>Set up the null hypothesis (i.e. that there is no difference between our sample and the population mean; that is, our sample mean comes from a population whose mean is 100). More to come on the null hypothesis in the next section!</li>
+<li>Construct the sampling distribution of the particular statistic (depending on the type of statistical technique you are going to use) on the assumption that the null hypothesis is true.</li>
+<li>Conduct the experiment and collect data.</li>
+<li>Compare the sample statistic you obtain to the sampling distribution.</li>
+<li>Evaluate the null hypothesis according to the probability of the statistic. That is, how probable is it that our sample mean comes from a distribution whose mean is 100? If it is highly unlikely, then we can reject the null hypothesis and conclude that there is a difference.</li>
+</ol>
+</div>
+<div id="the-null-hypothesis" class="section level3">
+<h3>The Null Hypothesis</h3>
+<p>The null hypothesis is the primary starting point for any statistical test. Basically, the null hypothesis states that there is no difference between the groups, or that there is no relationship between two or more variables. In more specific terms and using our intelligence testing example, it states that the data we have obtained in our sample (mean = 109) are likely to have come from the population with a mean intelligence score of 100. The subsequent statistical tests that we employ are used to test the likelihood of this.</p>
+<p>Therefore, the probability/likelihood we are referring to is always the probability of obtaining that particular result given that the null hypothesis is true (see Howell, p. 90 ‘The first stumbling block’).</p>
+<p>You should be familiar with the notation for the null hypothesis. In this case:</p>
+<p><span class="math display">\[
+  \begin{aligned}
+      H_0: μ = 100
+    \end{aligned}
+\]</span></p>
+<p>This states the null hypothesis (<span class="math inline">\(H_0\)</span>) that the sample we have drawn comes from a population with a mean of 100. If it is highly unlikely that the data we have obtained come from a distribution with a mean of 100 then we can simply reject the null hypothesis (that there is no difference) and conclude that there is a difference between our sample mean and that of the population.</p>
+<p>What happens if our data do not lead us to reject the null hypothesis? That is, often the statistics tell us that our sample mean is no different from the population (e.g. the difference could be just due to chance). Thus, the null hypothesis is ‘proved’ or ‘supported’. In these cases it is best to say that we fail to reject the null hypothesis. In summary, the null hypothesis states that there is no difference between groups, or no relationship between variables (i.e. null effect). The statistical test evaluates the likelihood of obtaining the data we have (e.g. mean of 109 on intelligence) if we took this sample from a population with a mean of 100.</p>
+</div>
+<div id="hypothesis-testing-using-the-normal-distribution" class="section level3">
+<h3>Hypothesis Testing Using the Normal Distribution</h3>
+<p>The following example is similar to the one provided by Howell. The principles are the same; however, illustrating the technique with a slightly different data set and outcome will be helpful in consolidating your understanding.</p>
+<p>Research psychologists specialising in cognitive processes often study attention and the influence of attentional biases on a range of behaviours. One such behaviour is drug and alcohol use. Evidence shows that dependent drinkers allocate a large amount of their attention toward stimuli associated with drinking (e.g. pictures of alcohol, alcohol advertisements).</p>
+<p>A computerised test of this has been developed which assesses the number of milliseconds a person takes to respond to the colour of words that are associated with alcohol represented on screen. Theoretically, the longer it takes them to name the colour of the word, the more attention is being drawn to the word itself. Researchers know that in the normal population, response times are normally distributed with a mean of 900 milliseconds and a standard deviation of 120 milliseconds.</p>
+<p>Suppose an individual is referred to a cognitive psychologist with a score of 1100 milliseconds. Is this score sufficiently longer than the mean population response time to assume that this person did not come from a population of ‘normal’ people?</p>
+<p>Here is the distribution of scores (sample means) on this task in the normal population (<span class="math inline">\(\mu = 900, \sigma = 120\)</span>). The sample score we have obtained is also indicated under the distribution.</p>
+<p>The first step here is to state the null hypothesis:</p>
+<p>H0: There is no difference between our sample mean and the population mean. That is, the individual’s score does come from the population of ‘normal’ attention scores.</p>
+<p>Next we can calculate the probability of scoring 1100 given a normal population mean of 900 (standard deviation of 120). That is, we can now calculate the probability that a score as high as this would be obtained from this population. All we need to do is calculate the z score for this observed value and determine the probability using the normal distribution table (or z tables, as we did in Topic 2).</p>
+<p><span class="math display">\[
+  \begin{aligned}
+    z &amp;= \frac{X - \mu}{\sigma}\\
+    &amp;= \frac{1100 - 900}{120}\\
+    &amp;= 1.67
+  \end{aligned}
+\]</span></p>
+<p>Thus, we have a z score of 1.67. If we consult the z tables (Appendix z in Howell) we will see that the probability of a z score of 1.67 or above is 0.0475. The smaller portion column in the z table tells us the proportion of the population that score at that point and above. Therefore, less than 5% of the population score 1100 milliseconds or longer on this task. Statistically speaking, the probability that this score comes from a population with a mean of 900 is less than 5%. Is this likelihood sufficiently small? How do we decide if we can reject the null hypothesis based on this information?</p>
+</div>
+<div id="decision-making" class="section level3">
+<h3>Decision Making</h3>
+<p>To answer this question, we need to compare our obtained probability value to some standard. The conventional approach to this is to use the 0.05 level as a ‘cut off’. This is referred to as the rejection or significance level of the statistical test. If our probability level is less than or equal to this ‘rejection level’ then we reject H0. As noted by Howell, this is an arbitrary convention that has been established over the years for specific reasons but one that is pervasive throughout psychological research. Other significance levels are used (e.g. 0.01) for a variety of reasons. At this stage it is only necessary for you to know that the standard level of significance/rejection is 0.05.</p>
+<p>The probability level we have obtained in the example is p = 0.0475. This is less than 0.05 and therefore, following the decision rule, we can reject the null hypothesis. Thus, we can say that it is highly unlikely that the person came from the ‘normal population’ and conclude that the score of 1100 is sufficiently different from the normal population mean.</p>
+<p>In this case, we have supported the alternative hypothesis, which states that there is a difference between the sample mean and the population mean. This is in essence, the opposite to the null hypothesis:</p>
+<p>As you know, the null hypothesis is that of no difference:</p>
+<p><span class="math display">\[
+  \begin{aligned}
+    H_0: \mu = 900
+  \end{aligned}
+\]</span></p>
+<p>The alternative hypothesis is that there is a difference:</p>
+<p><span class="math display">\[
+  \begin{aligned}
+    H_1: \mu \ne 900
+  \end{aligned}
+\]</span></p>
+<p>Or, that the mean is higher than or lower than the population mean:</p>
+<p><span class="math display">\[
+  \begin{aligned}
+    H_1: \mu \gt 900\\
+    H_1: \mu \lt 900
+  \end{aligned}
+\]</span></p>
+</div>
+</div>
+<div id="type-i-and-ii-errors" class="section level2">
+<h2>Type I and II errors</h2>
+<p>There is always some error associated with decision making in everyday life. However, as noted by Howell, in statistics we can precisely identify the probability of making an error in our decision making processes.</p>
+<p>For example, above we rejected the null hypothesis and concluded that the person did not come from the ‘normal’ population. That is, the probability of obtaining a score of 1100 milliseconds was sufficiently small (i.e. less than 0.05) as to be unlikely to have come from the ‘normal’ population.</p>
+<p>However the fact that we are using the 0.05 ‘rejection’ level as our cut off produces a degree of error: a 5% degree of error to be exact.</p>
+<p>A <strong>Type I</strong> error is when we erroneously reject a null hypothesis. It is the probability of rejecting a ‘true’ null hypothesis (e.g. the probability of saying there is a difference when there in fact isn’t). The risk of a Type I error is small and under the control of the researcher (it can be set at 0.01, for example).</p>
+<p>A <strong>Type II</strong> errors occurs when we fail to reject a false null hypothesis. So whenever we fail to reject a null hypothesis there is a risk of a Type II error. This relates to the power of the test the probability of rejecting a null hypothesis when it is false.</p>
+<p>The difference between Type I and Type II errors are illustrated in the table below for quick reference (see also Howell, p. 98).</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Decision</th>
+<th align="center"><span class="math inline">\(H_0\)</span>: True</th>
+<th align="center"><span class="math inline">\(H_0\)</span>: False</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Reject <span class="math inline">\(H_0\)</span></td>
+<td align="center">Type I error</td>
+<td align="center">Correct decision</td>
+</tr>
+<tr class="even">
+<td align="center">Don’t reject <span class="math inline">\(H_0\)</span></td>
+<td align="center">Correct decision</td>
+<td align="center">Type II error</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="one-and-two-tailed-tests" class="section level2">
+<h2>One and Two Tailed Tests</h2>
+<p>One-tailed test: <span class="math inline">\(\lt\)</span> or <span class="math inline">\(\gt\)</span> (directional). For a one-tailed test, we use the full 5% rejection region in the ‘one-tail’, in this example the high tail. Thus, any scores that fall in the top 5% of scores are considered sufficiently unlikely.</p>
+<blockquote>
+<p>One-tailed test: <span class="math inline">\(H_1: \mu \gt 900\)</span></p>
+</blockquote>
+<p>Two-tailed test: <span class="math inline">\(\ne\)</span> (measuring/comparing difference). For a two-tailed test we must separate the proportion into the two tails: 0.025 at one end, 0.025 at the other (so that the overall probability level is set at 0.05).</p>
+<blockquote>
+<p>Two-tailed test: <span class="math inline">\(H_1: \mu \ne 900\)</span></p>
+</blockquote>
+</div>
 
 
 
