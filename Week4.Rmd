@@ -8,7 +8,7 @@ library(jmv)
 library(kableExtra)
 ```
 
-## Chi-Square {.tabset}
+## Chi-Square
 
 ### Goodness of Fit {.well}
 
