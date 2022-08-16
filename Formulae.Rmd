@@ -4,7 +4,6 @@ title: 'Formulae'
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-<<<<<<< HEAD
 library(fontawesome)
 ```
 
@@ -121,4 +120,3 @@ $t = \frac{r\sqrt{N-2}}{\sqrt{(1-r^2)}}$
 | Intercept        | $a = \bar{Y} - b\bar{X}$       |
 
 ---
->>>>>>> f70a4454cc90d2fe1db69db2c4a622b5cf67cdaa
