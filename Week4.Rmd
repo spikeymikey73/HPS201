@@ -3,7 +3,7 @@ title: "Week 4: Chi-square"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo=FALSE)
 library(jmv)
 library(kableExtra)
 ```
@@ -13,7 +13,7 @@ library(kableExtra)
 ### Goodness of Fit {.well}
 
 -   Used for a **single** categorical (discrete) variable
--   Used to determine percentages (proportions)
+-   Used  to determine percentages (proportions)
 -   Used for data about frequencies of responses
 
 $O$ = Observed Frequencies
