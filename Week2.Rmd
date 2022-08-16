@@ -126,3 +126,32 @@ $$
     = \frac{100-130}{15}
     = 2
 $$
+
+### Using z tables
+
+Consider an intelligence test which has a mean of 100 and a standard deviation of 15 in the general population. From this information we can work out how much of the area under the normal curve is above 1 standard deviations from the mean. That is, we can work out the probability of obtaining a score of 115 or more (+1 standard deviation) on this intelligence test.
+
+Given that z scores represent standard deviation units we want to find the area above z = 1. To answer this we need to consult the z table. From Appendix z you need to find the row corresponding to z = 1 and locate the ‘smaller portion’ column, as we are interested in the area above that score. You should find that the smaller portion equals 0.1587. So, the probability that a person drawn randomly from the population will score 115 or above on this intelligence test is 0.1587 or approximately 16%.
+
+### Setting Probable Limits on z
+
+Setting limits on an observation provides researchers with a way of stating the confidence of their results. That is, having set limits on a score we can specify with a certain degree of confidence that the score will lie between two values. Usually researchers employ 95% confidence intervals so that they can say with 95% confidence that a score will lie between two values. The ztables help us here also.
+We need to remove 5% of the area under the curve, which means we need to find the value that cuts off 2.5% at each end. Inspection of the ztables (Appendix z) indicates that z = ±1.96 corresponds to this value. This means that we can be 95% confident that a score on the intelligence test will fall between 1.96 standard deviations below and 1.96 standard deviations above the mean. So what does this mean for our intelligence test? This is simply a matter of calculating scores that correspond to 1.96 standard deviations from the mean. A way to calculate this is provided by Howell on page 74:
+
+
+$$
+  \begin{aligned}
+      X = μ ±1.96\sigma\\
+  \end{aligned}
+$$
+
+where $μ = mean$, and $σ = standard\ deviation$.
+
+$$  \begin{aligned}
+      Limits &= 100 \pm 1.96(15)\\
+             &= 100 \pm 29.4\\
+             &= 70.6\ to\ 129.4\\
+  \end{aligned}
+$$
+
+This indicates that we can be 95% confident that a person selected at random from the population will score between 70.6 and 129.4 on this intelligence test. Thus, any score higher than 130 (i.e. 2sd above the mean) is a rare occurrence as only 2% of the population are expected to score this highly.
