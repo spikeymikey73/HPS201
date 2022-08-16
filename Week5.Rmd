@@ -1,5 +1,5 @@
 ---
-title: 'Week 1: xyz'
+title: 'Week 5: t-tests'
 ---
 
 ```{r setup, include=FALSE}

@@ -1,5 +1,5 @@
 ---
-title: 'Week 1: xyz'
+title: 'Week 8: Analysis of Variance (ANOVA)'
 ---
 
 ```{r setup, include=FALSE}

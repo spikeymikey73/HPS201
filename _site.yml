@@ -18,17 +18,17 @@ navbar:
           href: Week3.html
         - text: "Week 4: Chi-Square"
           href: Week4.html
-        - text: "Week 5: "
+        - text: "Week 5: t-tests"
           href: Week5.html
-        - text: "Week 6: "
+        - text: "Week 6: Correlation"
           href: Week6.html
-        - text: "Week 7"
+        - text: "Week 7: Regression"
           href: Week7.html
-        - text: "Week 8"
+        - text: "Week 8: ANOVA"
           href: Week8.html
-        - text: "Week 9"
+        - text: "Week 9: Post-hoc Tests"
           href: Week9.html
-        - text: "Week 10"
+        - text: "Week 10: Factorial ANOVA"
           href: Week10.html
         - text: "Formulae"
           href: Formulae.html

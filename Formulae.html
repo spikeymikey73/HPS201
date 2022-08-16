@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Formulae</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">HPS201</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-list fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="Readings.html">
+    <span class="fa fa-book fa-lg"></span>
+     
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-sticky-note fa-lg"></span>
+     
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Week1.html">Week 1: Measurement</a>
+    </li>
+    <li>
+      <a href="Week2.html">Week 2: Central Tendency</a>
+    </li>
+    <li>
+      <a href="Week3.html">Week 3: Sampling Distributions and Hypothesis Testing</a>
+    </li>
+    <li>
+      <a href="Week4.html">Week 4: Chi-Square</a>
+    </li>
+    <li>
+      <a href="Week5.html">Week 5: t-tests</a>
+    </li>
+    <li>
+      <a href="Week6.html">Week 6: Correlation</a>
+    </li>
+    <li>
+      <a href="Week7.html">Week 7: Regression</a>
+    </li>
+    <li>
+      <a href="Week8.html">Week 8: ANOVA</a>
+    </li>
+    <li>
+      <a href="Week9.html">Week 9: Post-hoc Tests</a>
+    </li>
+    <li>
+      <a href="Week10.html">Week 10: Factorial ANOVA</a>
+    </li>
+    <li>
+      <a href="Formulae.html">Formulae</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Formulae</h1>
+
+</div>
+
+
+<div id="variance" class="section level4 boxy boxy-primary">
+<h4><abbr title="Variance tells you the degree of spread in your data set. The more spread the data, the larger the variance is in relation to the mean.">Variance</abbr></h4>
+<p><span class="math inline">\(s^2 =
+\frac{\Sigma(X-\bar{X})^2}{N-1}\)</span></p>
+<p><code>var(mean)</code></p>
+</div>
+<div id="standard-deviation" class="section level4 boxy boxy-primary">
+<h4>Standard Deviation</h4>
+<p><span class="math inline">\(s =
+\sqrt{\frac{\Sigma(X-\bar{X})^2}{N-1}}\)</span></p>
+<p><code>sd(X)</code></p>
+</div>
+<div id="confidence-limits-on-z-upper-and-lower"
+class="section level4 boxy boxy-primary">
+<h4>95% Confidence limits on z (upper and lower)</h4>
+<p><span class="math inline">\(X = \mu \pm 1.96\sigma\)</span></p>
+</div>
+<div class="boxy boxy-primary">
+<p>####
+<abbr title="Gives the Standard Deviation of a set of data as a standardised number">Z
+Score</abbr></p>
+<p><span class="math inline">\({z = \frac{X -
+\bar{X}}{\sigma}}\)</span></p>
+<p>given an area, find the boundary value that determines this area.</p>
+<pre class="r"><code>  qnorm(0.5,mean=100,sd=15)</code></pre>
+<pre><code>## [1] 100</code></pre>
+</div>
+<p>======= ```</p>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="51%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th align="center">Formula</th>
+<th>R Input</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Variance</td>
+<td align="center"><span class="math inline">\(s^2 =
+\frac{\Sigma(X-\bar{X})}{N-1}\)</span></td>
+<td><code>var(X)</code></td>
+</tr>
+<tr class="even">
+<td>Std Deviation</td>
+<td align="center"><span class="math inline">\(s =
+\sqrt{\frac{\Sigma(X-\bar{X})}{N-1}}\)</span></td>
+<td><code>sd(x)</code></td>
+</tr>
+<tr class="odd">
+<td>z-score</td>
+<td align="center"><span class="math inline">\({z = \frac{X -
+\bar{X}}{\sigma}}\)</span></td>
+<td>See below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th>R Input</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Density</td>
+<td><code>dnorm(x, mean = 0, sd = 1, log = FALSE)</code></td>
+</tr>
+<tr class="even">
+<td>Distribution Function</td>
+<td><code>pnorm(q, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)</code></td>
+</tr>
+<tr class="odd">
+<td>Quantile Function</td>
+<td><code>qnorm(p, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)</code></td>
+</tr>
+<tr class="even">
+<td>Random Deviates</td>
+<td><code>rnorm(n, mean = 0, sd = 1)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div id="confidence-limits-on-z" class="section level4">
+<h4>Confidence limits on z</h4>
+<p><span class="math inline">\(X = \mu \pm 1.96\sigma\)</span></p>
+<hr />
+</div>
+<div id="chi-square" class="section level4">
+<h4>Chi-Square</h4>
+<p>Goodness of Fit / 1 Way Classification</p>
+<p><span class="math inline">\(\chi^2 =
+\sum\frac{(O-E)^2}{E}\)</span></p>
+<p><span class="math inline">\(df = C - 1\)</span></p>
+<p>Independence Test / 2 Way Classification</p>
+<p><span class="math inline">\(E_{ij} =
+\frac{R_{i}C_{j}}{N}\)</span></p>
+<p><span class="math inline">\(df = (R-1)(C-1)\)</span></p>
+<p>Sample Size</p>
+<p><span class="math inline">\(\Phi =
+\sqrt{\frac{\chi^2}{N}}\)</span></p>
+<hr />
+</div>
+<div id="linear-relationships" class="section level3">
+<h3>Linear Relationships</h3>
+<div id="correlation" class="section level4">
+<h4>Correlation</h4>
+<p><span class="math inline">\(r =
+\frac{cov_{xy}}{s_{x}s_{y}}\)</span></p>
+<p><span class="math inline">\(df = N-2\)</span></p>
+<hr />
+</div>
+<div id="covariance" class="section level4">
+<h4>Covariance</h4>
+<p><span
+class="math inline">\(\frac{(X-\bar{X})(Y-\bar{Y})}{N-1}\)</span></p>
+<hr />
+</div>
+<div id="significance-of-r" class="section level4">
+<h4>Significance of r</h4>
+<p><span class="math inline">\(t =
+\frac{r\sqrt{N-2}}{\sqrt{(1-r^2)}}\)</span></p>
+<hr />
+</div>
+<div id="regression" class="section level4">
+<h4>Regression</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>General Equation</td>
+<td><span class="math inline">\(\hat{Y} = bX - a\)</span></td>
+</tr>
+<tr class="even">
+<td>Slope</td>
+<td><span class="math inline">\(r =
+\frac{cov_{xy}}{s_{x}^2}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Intercept</td>
+<td><span class="math inline">\(a = \bar{Y} - b\bar{X}\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
