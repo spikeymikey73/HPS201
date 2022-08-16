@@ -16,7 +16,7 @@
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -30,7 +30,7 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
@@ -268,16 +268,16 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Week1.html">Week 1</a>
+      <a href="Week1.html">Week 1: Measurement</a>
     </li>
     <li>
-      <a href="Week2.html">Week 2</a>
+      <a href="Week2.html">Week 2: Central Tendency</a>
     </li>
     <li>
-      <a href="Week3.html">Week 3</a>
+      <a href="Week3.html">Week 3: Sampling Distributions and Hypothesis Testing</a>
     </li>
     <li>
-      <a href="Week4.html">Week 4</a>
+      <a href="Week4.html">Week 4: Chi-Square</a>
     </li>
     <li>
       <a href="Week5.html">Week 5</a>
@@ -319,43 +319,58 @@ $(document).ready(function () {
 </div>
 
 
-<div id="lo1-understand-the-difference-between-population-and-sample" class="section level3">
+<div id="lo1-understand-the-difference-between-population-and-sample"
+class="section level3">
 <h3>LO1: Understand the difference between population and sample</h3>
 <div id="population-vs.-sample" class="section level4">
 <h4>Population vs. Sample</h4>
-<p><strong>Population:</strong> the entire set of individuals, or events, of interest in a particular study (Often not feasible!) <strong>Sample:</strong> set of individuals selected from a population</p>
+<p><strong>Population:</strong> the entire set of individuals, or
+events, of interest in a particular study (Often not feasible!)
+<strong>Sample:</strong> set of individuals selected from a
+population</p>
 </div>
 <div id="example" class="section level4">
 <h4>Example:</h4>
-<p>A psychologist wants to determine whether a motivational program is effective in improving work performance in Australian office workers.</p>
+<p>A psychologist wants to determine whether a motivational program is
+effective in improving work performance in Australian office
+workers.</p>
 <ul>
 <li>Population: Every Australian office worker</li>
 <li>Problem?: Not feasible, and not sure if it works yet.</li>
-<li>Solution: Select a sample from the population Sample (e.g., 100 workers from each state)</li>
-<li>Generalise: Results from the sample (100 workers from each state) back to the population of interest (Every Australian Office Worker)</li>
+<li>Solution: Select a sample from the population Sample (e.g., 100
+workers from each state)</li>
+<li>Generalise: Results from the sample (100 workers from each state)
+back to the population of interest (Every Australian Office Worker)</li>
 </ul>
 </div>
 </div>
-<div id="lo2-distinguish-between-parameters-and-statistics" class="section level3">
+<div id="lo2-distinguish-between-parameters-and-statistics"
+class="section level3">
 <h3>LO2: Distinguish between parameters and statistics</h3>
-<p><strong>Parameter:</strong> a value that describes a key characteristic of the population, such as:</p>
+<p><strong>Parameter:</strong> a value that describes a key
+characteristic of the population, such as:</p>
 <ul>
 <li>Average income of all Australians</li>
 <li>Average age of all Australians</li>
 </ul>
-<p><strong>Statistic:</strong> a value that describes a key characteristic of the sample, such as:</p>
+<p><strong>Statistic:</strong> a value that describes a key
+characteristic of the sample, such as:</p>
 <ul>
 <li>Average IQ of a sample of 1000 Australian Uni Students</li>
 <li>Average Age of a sample of 1000 Australian Uni Students</li>
 </ul>
-<p><span class="math inline">\(\bigstar\)</span> Statistics are used to estimate values that exist in the population.</p>
+<p><span class="math inline">\(\bigstar\)</span> Statistics are used to
+estimate values that exist in the population.</p>
 </div>
-<div id="lo3-distinguish-between-descriptive-and-inferential-statistics" class="section level3">
+<div id="lo3-distinguish-between-descriptive-and-inferential-statistics"
+class="section level3">
 <h3>LO3: Distinguish between descriptive and inferential statistics</h3>
 <p>As a researcher, you have:</p>
 <ul>
-<li><p>Decided on a research question: Is a new anti-depressant effective at reducing depressive symptoms?</p></li>
-<li><p>You’ve taken a sample of individuals to answer your research question: 100 individuals with depression</p></li>
+<li><p>Decided on a research question: Is a new anti-depressant
+effective at reducing depressive symptoms?</p></li>
+<li><p>You’ve taken a sample of individuals to answer your research
+question: 100 individuals with depression</p></li>
 <li><p>Conduct your experiment</p>
 <ul>
 <li>50 given the new anti-depressant</li>
@@ -364,7 +379,8 @@ $(document).ready(function () {
 <li><p>Measure depression levels after (0-100)</p></li>
 <li><p>You’ve collected your data. Now what??</p></li>
 </ul>
-<p>Statistics is the method of using mathematics to organize, summarise, and interpret numerical data</p>
+<p>Statistics is the method of using mathematics to organize, summarise,
+and interpret numerical data</p>
 <p>Two main types:</p>
 <div id="descriptive-statistics" class="section level4">
 <h4>Descriptive statistics:</h4>
@@ -379,16 +395,21 @@ $(document).ready(function () {
 <h4>Inferential statistics:</h4>
 <ul>
 <li>Used when we want to answer research questions (Week 3 onwards)</li>
-<li>Allows us to make generalizations from our sample to our population of interest</li>
+<li>Allows us to make generalizations from our sample to our population
+of interest</li>
 </ul>
 </div>
 </div>
-<div id="lo4-distinguish-between-discrete-and-continuous-variables" class="section level3">
+<div id="lo4-distinguish-between-discrete-and-continuous-variables"
+class="section level3">
 <h3>LO4: Distinguish between discrete and continuous variables</h3>
 <ul>
 <li>Before we can answer our research questions we need data</li>
-<li>Data is obtained by measuring specific variables of interest to your research question</li>
-<li><strong>Variable:</strong> a characteristic or condition that changes or has different values for different individuals (Previous example: Depression, Age, etc.)</li>
+<li>Data is obtained by measuring specific variables of interest to your
+research question</li>
+<li><strong>Variable:</strong> a characteristic or condition that
+changes or has different values for different individuals (Previous
+example: Depression, Age, etc.)</li>
 </ul>
 <div id="discrete-data" class="section level4">
 <h4>Discrete data</h4>
@@ -403,7 +424,10 @@ $(document).ready(function () {
 </div>
 <div id="continuous" class="section level4">
 <h4>Continuous:</h4>
-<p>Contain many different values - Weight (40kg- 140kg), age (0-100 years) - Often referred to as Measurement data - Often depends on the way you set up the measurement - Anxiety levels of HPS201/771 students</p>
+<p>Contain many different values - Weight (40kg- 140kg), age (0-100
+years) - Often referred to as Measurement data - Often depends on the
+way you set up the measurement - Anxiety levels of HPS201/771
+students</p>
 </div>
 <div id="discrete-or-continuous" class="section level4">
 <h4>Discrete or continuous?</h4>
@@ -411,44 +435,59 @@ $(document).ready(function () {
 <li>Generally continuous – score on an anxiety questionnaire</li>
 <li>Questionnaire scores range from 0-60</li>
 <li>But, often people will be categorised into groups:</li>
-<li>High anxiety (41-60), Average anxiety (21-40), Low anxiety (0-20)</li>
+<li>High anxiety (41-60), Average anxiety (21-40), Low anxiety
+(0-20)</li>
 <li>This is a discrete variable</li>
 </ul>
 </div>
 <div id="why-does-it-matter" class="section level4">
 <h4>Why does it matter?</h4>
-<p>The type of data that you use will impact the types of statistical approach that we use to analyse data</p>
+<p>The type of data that you use will impact the types of statistical
+approach that we use to analyse data</p>
 <ul>
-<li>Continuous/Measurement data are usually summarised using means (averages)</li>
+<li>Continuous/Measurement data are usually summarised using means
+(averages)</li>
 <li>Mean age of HPS201 students is 19.8 (made up)</li>
 <li>Mean height of AFL footballers is 188cm</li>
-<li>Discrete/Categorical data are usually summarized using percentage</li>
-<li>15% of participants were left-handed, 75% right-handed, 10% ambidextrous</li>
-<li>32% of students have black hair, 8% have red hair, 50% have brown hair, 5 % have blonde hair, 5% other</li>
+<li>Discrete/Categorical data are usually summarized using
+percentage</li>
+<li>15% of participants were left-handed, 75% right-handed, 10%
+ambidextrous</li>
+<li>32% of students have black hair, 8% have red hair, 50% have brown
+hair, 5 % have blonde hair, 5% other</li>
 </ul>
 </div>
 </div>
-<div id="lo5-explain-the-difference-between-categorical-data-and-measurement-data" class="section level3">
-<h3>LO5: Explain the difference between categorical data and measurement data</h3>
-<p>The type of data that you use will impact the types of statistical approach that we use to analyse data.</p>
-<p>Continuous/Measurement data are usually summarised using means (averages)</p>
+<div
+id="lo5-explain-the-difference-between-categorical-data-and-measurement-data"
+class="section level3">
+<h3>LO5: Explain the difference between categorical data and measurement
+data</h3>
+<p>The type of data that you use will impact the types of statistical
+approach that we use to analyse data.</p>
+<p>Continuous/Measurement data are usually summarised using means
+(averages)</p>
 <ul>
 <li>Mean age of HPS201 students is 19.8 (made up)</li>
 <li>Mean height of AFL footballers is 188cm</li>
 </ul>
 <p>Discrete/Categorical data are usually summarized using percentage</p>
 <ul>
-<li>15% of participants were left-handed, 75% right-handed, 10% ambidextrous</li>
-<li>32% if students have black hair, 8% have red hair , 50% have brown hair, 5 % have blonde hair, 5% other</li>
+<li>15% of participants were left-handed, 75% right-handed, 10%
+ambidextrous</li>
+<li>32% if students have black hair, 8% have red hair , 50% have brown
+hair, 5 % have blonde hair, 5% other</li>
 </ul>
 </div>
-<div id="lo6-distinguish-between-independent-and-dependent-variables" class="section level3">
+<div id="lo6-distinguish-between-independent-and-dependent-variables"
+class="section level3">
 <h3>LO6: Distinguish between independent and dependent variables</h3>
 <div id="independent-variable-iv" class="section level4">
 <h4>Independent variable (IV):</h4>
 <ul>
 <li>The variable that we manipulate</li>
-<li>As a researcher, we believe that the IV will effect our dependent variable</li>
+<li>As a researcher, we believe that the IV will effect our dependent
+variable</li>
 </ul>
 </div>
 <div id="dependent-variable-dv" class="section level4">
@@ -461,32 +500,43 @@ $(document).ready(function () {
 </div>
 <div id="quiz-time" class="section level4">
 <h4>Quiz time!</h4>
-<p>A researcher wanted to test her theory that people tend to walk faster on cold days compared to hot days…</p>
-<p><abbr title="Type of day (hot vs cold)">Independent variable?</abbr></p>
+<p>A researcher wanted to test her theory that people tend to walk
+faster on cold days compared to hot days…</p>
+<p><abbr title="Type of day (hot vs cold)">Independent
+variable?</abbr></p>
 <p><abbr title="Walking speed">Dependant variable?</abbr></p>
 <hr />
 </div>
 <div id="quiz-time-1" class="section level4">
 <h4>Quiz time!</h4>
-<p>A psychologist wants to investigate whether caffeine improves attention. She gives different amounts of caffeine (low or high) to the research participants and then measures their attentional capacity…</p>
+<p>A psychologist wants to investigate whether caffeine improves
+attention. She gives different amounts of caffeine (low or high) to the
+research participants and then measures their attentional capacity…</p>
 <p><abbr title="Amount of caffeine">Independent variable?</abbr></p>
 <p><abbr title="Attentional Capacity">Dependant variable?</abbr></p>
 <hr />
 </div>
 </div>
-<div id="lo7-understand-the-different-types-of-measurement-scales-nominal-ordinal-interval-and-ratio" class="section level3">
-<h3>LO7: Understand the different types of measurement scales (nominal, ordinal, interval and ratio)</h3>
+<div
+id="lo7-understand-the-different-types-of-measurement-scales-nominal-ordinal-interval-and-ratio"
+class="section level3">
+<h3>LO7: Understand the different types of measurement scales (nominal,
+ordinal, interval and ratio)</h3>
 <p>We measure our IV and DV’s using a variety of measurement scales:</p>
 <ul>
-<li><p><strong>Nominal:</strong> consist of a set of categories with different names in no ordered sequence</p>
+<li><p><strong>Nominal:</strong> consist of a set of categories with
+different names in no ordered sequence</p>
 <ul>
 <li><p>Handedness:</p>
 <ul>
 <li>Right, Left, Ambidextrous</li>
-<li>No category is higher/lower, better/worse than any other as they are just labels for different categories</li>
+<li>No category is higher/lower, better/worse than any other as they are
+just labels for different categories</li>
 </ul></li>
 </ul></li>
-<li><p><strong>Ordinal:</strong> Ordinal scales consist of a set of categories with different names AND are organized into an ordered sequence</p>
+<li><p><strong>Ordinal:</strong> Ordinal scales consist of a set of
+categories with different names AND are organized into an ordered
+sequence</p>
 <ul>
 <li><p>Highest level of academic qualification:</p>
 <ul>
@@ -498,21 +548,29 @@ $(document).ready(function () {
 <li>PhD</li>
 </ul></li>
 </ul></li>
-<li><p><strong>Interval:</strong> Consist of ordered categories where the intervals are exactly the same size</p>
+<li><p><strong>Interval:</strong> Consist of ordered categories where
+the intervals are exactly the same size</p>
 <ul>
-<li><p>The distance between each value is the same along the scale</p></li>
-<li><p>Usually have a more data points than ordinal scales (continuous data)</p></li>
+<li><p>The distance between each value is the same along the
+scale</p></li>
+<li><p>Usually have a more data points than ordinal scales (continuous
+data)</p></li>
 <li><p><strong>No absolute zero point</strong></p>
 <ul>
 <li>Degrees Celsius</li>
-<li>Distance between 10-15 degrees is the same as the distance between 30-35 degrees</li>
-<li>Zero degrees does not represent the absence of temperature. It is just a point on the temperature scale</li>
+<li>Distance between 10-15 degrees is the same as the distance between
+30-35 degrees</li>
+<li>Zero degrees does not represent the absence of temperature. It is
+just a point on the temperature scale</li>
 </ul></li>
 </ul></li>
-<li><p><strong>Ratio:</strong> Consist of ordered categories where the intervals are exactly the same size</p>
+<li><p><strong>Ratio:</strong> Consist of ordered categories where the
+intervals are exactly the same size</p>
 <ul>
-<li><p>The distance between each value is the same along the scale</p></li>
-<li><p>Usually have a more data points than ordinal scales (continuous data)</p></li>
+<li><p>The distance between each value is the same along the
+scale</p></li>
+<li><p>Usually have a more data points than ordinal scales (continuous
+data)</p></li>
 <li><p><strong>With a true zero point</strong></p>
 <ul>
 <li>Time (minutes)</li>
@@ -521,10 +579,18 @@ $(document).ready(function () {
 </ul></li>
 </ul>
 </div>
-<div id="l08-understand-how-to-construct-frequency-distributions-and-histograms" class="section level3">
-<h3>L08: Understand how to construct frequency distributions and histograms</h3>
-<p><strong>Frequency distributions</strong> report how often each score was recorded in a given data set. When presented in table form, a frequency distribution lists all values for a variable along with the frequency of each.</p>
-<p>For example, imagine a researcher obtains the following self-esteem scores from 16 people (measured as a continuous variable ranging from 0–10):</p>
+<div
+id="l08-understand-how-to-construct-frequency-distributions-and-histograms"
+class="section level3">
+<h3>L08: Understand how to construct frequency distributions and
+histograms</h3>
+<p><strong>Frequency distributions</strong> report how often each score
+was recorded in a given data set. When presented in table form, a
+frequency distribution lists all values for a variable along with the
+frequency of each.</p>
+<p>For example, imagine a researcher obtains the following self-esteem
+scores from 16 people (measured as a continuous variable ranging from
+0–10):</p>
 <p>5 1 3 4 5 6 2 5 5 4 7 4 4 8 6 3</p>
 <pre class="r"><code>esteem &lt;- c(5,1,3,4,5,6,2,5,5,4,7,4,4,8,6,3)
 jmv::descriptives(
@@ -558,15 +624,30 @@ jmv::descriptives(
 ##    8              1       6.25000       100.00000   
 ##  ──────────────────────────────────────────────────</code></pre>
 <p><img src="Week1_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p>The frequency table above helps to summarise the collected data, allowing us to easily see the number of participants recording each score. We can also gather from this table the highest concentration of results towards the centre of the table (those who answered 4 or 5).</p>
-<p>The <strong>histogram</strong> is a graphical representation of the data in the frequency table. A larger data set may be most relevant when the results are grouped together (known as a <strong>bin</strong>), while smaller data sets can simply be plotted as collected. Grouping data in bins assists in reducing the number of ‘random’ results and to assist in identifying trends.</p>
+<p>The frequency table above helps to summarise the collected data,
+allowing us to easily see the number of participants recording each
+score. We can also gather from this table the highest concentration of
+results towards the centre of the table (those who answered 4 or 5).</p>
+<p>The <strong>histogram</strong> is a graphical representation of the
+data in the frequency table. A larger data set may be most relevant when
+the results are grouped together (known as a <strong>bin</strong>),
+while smaller data sets can simply be plotted as collected. Grouping
+data in bins assists in reducing the number of ‘random’ results and to
+assist in identifying trends.</p>
 </div>
-<div id="lo9-understand-positive-skew-negative-skew-and-kurtosis" class="section level3">
+<div id="lo9-understand-positive-skew-negative-skew-and-kurtosis"
+class="section level3">
 <h3>LO9: Understand positive skew, negative skew and kurtosis</h3>
-<p><strong>Bimodal:</strong> A frequency distribution is said to be bimodal when the majority of results are visible at 2 clear peaks in the data being presented.</p>
-<p><strong>Negatively Skewed:</strong> A greater number of people have scored at the high end of a scale.</p>
-<p><strong>Positively Skewed:</strong> A greater number of people have scored at the low end of a scale.</p>
-<p><strong>Kurtosis:</strong> refers to the peaks of the recorded variable (<abbr title="low peaked distribution">platykurtosis</abbr> or <abbr title="high peaked distribution">leptokurtosis</abbr>).</p>
+<p><strong>Bimodal:</strong> A frequency distribution is said to be
+bimodal when the majority of results are visible at 2 clear peaks in the
+data being presented.</p>
+<p><strong>Negatively Skewed:</strong> A greater number of people have
+scored at the high end of a scale.</p>
+<p><strong>Positively Skewed:</strong> A greater number of people have
+scored at the low end of a scale.</p>
+<p><strong>Kurtosis:</strong> refers to the peaks of the recorded
+variable (<abbr title="low peaked distribution">platykurtosis</abbr> or
+<abbr title="high peaked distribution">leptokurtosis</abbr>).</p>
 </div>
 
 

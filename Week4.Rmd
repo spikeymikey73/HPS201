@@ -1,9 +1,89 @@
 ---
-title: 'Week 1: xyz'
+title: "Week 4: Chi-square"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(jmv)
+library(kableExtra)
 ```
 
+## Chi-Square {.tabset}
+
+### Goodness of Fit {.well}
+
+-   Used for a **single** categorical (discrete) variable
+-   Used to determine percentages (proportions)
+-   Used for data about frequencies of responses
+
+$O$ = Observed Frequencies
+
+$E$ = Expected Frequencies
+
+##### Formula
+
+$\chi^2 = \Sigma{\frac{(O-E)^2}{E}}$
+
+##### Steps:
+
+1.  Calculate the difference between Observed and Expected frequencies
+2.  Square the deviation score
+3.  Divide by the expected frequency
+4.  Sum the resulting values
+5.  Compare the results to the critical value (from the chi-square table)
+
+#### Lemonade Preferences between males and females
+
+```{r echo=FALSE}
+exp_lemonade <- c(10,10,10)
+obs_lemonade <- c(5,8,7)
+table_lemonade <- rbind(exp_lemonade, obs_lemonade)
+rnames <- c("Expected","Observed")
+cnames <- c("A", "B", "C")
+
+table_lemonade <- matrix(table_lemonade,nrow=2,byrow=TRUE,dimnames=list(rnames,cnames))
+
+table_lemonade %>%
+  kbl() %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
+
+```
+
+##### Chi-square Value
+
+$\chi^2 = \overbrace{\frac{(5-10)^2}{10}}^{A} + \overbrace{\frac{(18-10)^2}{10}}^{B} + \overbrace{\frac{(7-10)^2}{10}}^{C}$
+
+$= \frac{25}{10} + \frac{64}{10} + \frac{9}{10}$
+
+$= 9.8$
+
+##### Degrees of Freedom
+
+$df = C-1$
+
+##### Critical Chi-square Value (from Chi Table)
+
+$5.99(df=2, \alpha = .05)$
+
+$\chi^2 = 9.8$ which is greater than critical value.
+
+##### Decision Making
+
+-   If our caclulated $\chi^2$ value is grater than our critical $\chi^2$ value, we reject the null hypothesis
+-   Rejection of the null hypothesis confirms that our Observed values significantly differ from our Expected values (as a result of chance)
+
+------------------------------------------------------------------------
+
+### Independence Test {.well}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+
+#### Further investigation
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+
+## Next Topic
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+
+------------------------------------------------------------------------

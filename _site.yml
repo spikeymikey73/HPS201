@@ -10,13 +10,13 @@ navbar:
       href: Readings.html
     - icon: fa fa-sticky-note fa-lg
       menu:
-        - text: "Week 1"
+        - text: "Week 1: Measurement"
           href: Week1.html
-        - text: "Week 2"
+        - text: "Week 2: Central Tendency"
           href: Week2.html
-        - text: "Week 3"
+        - text: "Week 3: Sampling Distributions and Hypothesis Testing"
           href: Week3.html
-        - text: "Week 4"
+        - text: "Week 4: Chi-Square"
           href: Week4.html
         - text: "Week 5"
           href: Week5.html
@@ -32,7 +32,4 @@ navbar:
           href: Week10.html
         - text: "Formulae"
           href: Formulae.html
-output:
-  html_document:
-    theme: cosmo
-    highlight: textmate
+output:   html_document

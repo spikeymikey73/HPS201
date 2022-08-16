@@ -4,7 +4,43 @@ title: 'Formulae'
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(jmv)
+library(fontawesome)
 ```
 
-${z = \frac{X - \bar{X}}{\sigma}}$
+<div class="boxy boxy-primary">
+#### <abbr title="Variance tells you the degree of spread in your data set. The more spread the data, the larger the variance is in relation to the mean.">Variance</abbr>
+
+$s^2 = \frac{\Sigma(X-\bar{X})^2}{N-1}$
+
+`var(mean)`
+
+</div>
+
+
+
+
+<div class="boxy boxy-primary">
+#### Standard Deviation
+
+$s = \sqrt{\frac{\Sigma(X-\bar{X})^2}{N-1}}$
+
+`sd(X)`
+</div>
+
+<div class="boxy boxy-primary">
+#### 95% Confidence limits on z (upper and lower)
+
+$X = \mu \pm 1.96\sigma$
+</div>
+
+<div class="boxy boxy-primary">
+  #### <abbr title="Gives the Standard Deviation of a set of data as a standardised number">Z Score</abbr>
+
+  ${z = \frac{X - \bar{X}}{\sigma}}$
+
+  given an area, find the boundary value that determines this area.
+
+```{r}
+  qnorm(0.5,mean=100,sd=15)
+```
+</div>
