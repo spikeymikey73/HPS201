@@ -280,22 +280,22 @@ $(document).ready(function () {
       <a href="Week4.html">Week 4: Chi-Square</a>
     </li>
     <li>
-      <a href="Week5.html">Week 5: </a>
+      <a href="Week5.html">Week 5: t-tests</a>
     </li>
     <li>
-      <a href="Week6.html">Week 6: </a>
+      <a href="Week6.html">Week 6: Correlation</a>
     </li>
     <li>
-      <a href="Week7.html">Week 7</a>
+      <a href="Week7.html">Week 7: Regression</a>
     </li>
     <li>
-      <a href="Week8.html">Week 8</a>
+      <a href="Week8.html">Week 8: ANOVA</a>
     </li>
     <li>
-      <a href="Week9.html">Week 9</a>
+      <a href="Week9.html">Week 9: Post-hoc Tests</a>
     </li>
     <li>
-      <a href="Week10.html">Week 10</a>
+      <a href="Week10.html">Week 10: Factorial ANOVA</a>
     </li>
     <li>
       <a href="Formulae.html">Formulae</a>
@@ -321,27 +321,38 @@ $(document).ready(function () {
 
 <div id="variance" class="section level4 boxy boxy-primary">
 <h4><abbr title="Variance tells you the degree of spread in your data set. The more spread the data, the larger the variance is in relation to the mean.">Variance</abbr></h4>
-<p><span class="math inline">\(s^2 = \frac{\Sigma(X-\bar{X})^2}{N-1}\)</span></p>
+<p><span class="math inline">\(s^2 =
+\frac{\Sigma(X-\bar{X})^2}{N-1}\)</span></p>
 <p><code>var(mean)</code></p>
 </div>
 <div id="standard-deviation" class="section level4 boxy boxy-primary">
 <h4>Standard Deviation</h4>
-<p><span class="math inline">\(s = \sqrt{\frac{\Sigma(X-\bar{X})^2}{N-1}}\)</span></p>
+<p><span class="math inline">\(s =
+\sqrt{\frac{\Sigma(X-\bar{X})^2}{N-1}}\)</span></p>
 <p><code>sd(X)</code></p>
 </div>
-<div id="confidence-limits-on-z-upper-and-lower" class="section level4 boxy boxy-primary">
+<div id="confidence-limits-on-z-upper-and-lower"
+class="section level4 boxy boxy-primary">
 <h4>95% Confidence limits on z (upper and lower)</h4>
 <p><span class="math inline">\(X = \mu \pm 1.96\sigma\)</span></p>
 </div>
 <div class="boxy boxy-primary">
-<p>#### <abbr title="Gives the Standard Deviation of a set of data as a standardised number">Z Score</abbr></p>
-<p><span class="math inline">\({z = \frac{X - \bar{X}}{\sigma}}\)</span></p>
+<p>####
+<abbr title="Gives the Standard Deviation of a set of data as a standardised number">Z
+Score</abbr></p>
+<p><span class="math inline">\({z = \frac{X -
+\bar{X}}{\sigma}}\)</span></p>
 <p>given an area, find the boundary value that determines this area.</p>
 <pre class="r"><code>  qnorm(0.5,mean=100,sd=15)</code></pre>
 <pre><code>## [1] 100</code></pre>
 </div>
 <p>======= ```</p>
 <table>
+<colgroup>
+<col width="17%" />
+<col width="51%" />
+<col width="30%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Purpose</th>
@@ -352,17 +363,20 @@ $(document).ready(function () {
 <tbody>
 <tr class="odd">
 <td>Variance</td>
-<td align="center"><span class="math inline">\(s^2 = \frac{\Sigma(X-\bar{X})}{N-1}\)</span></td>
+<td align="center"><span class="math inline">\(s^2 =
+\frac{\Sigma(X-\bar{X})}{N-1}\)</span></td>
 <td><code>var(X)</code></td>
 </tr>
 <tr class="even">
 <td>Std Deviation</td>
-<td align="center"><span class="math inline">\(s = \sqrt{\frac{\Sigma(X-\bar{X})}{N-1}}\)</span></td>
+<td align="center"><span class="math inline">\(s =
+\sqrt{\frac{\Sigma(X-\bar{X})}{N-1}}\)</span></td>
 <td><code>sd(x)</code></td>
 </tr>
 <tr class="odd">
 <td>z-score</td>
-<td align="center"><span class="math inline">\({z = \frac{X - \bar{X}}{\sigma}}\)</span></td>
+<td align="center"><span class="math inline">\({z = \frac{X -
+\bar{X}}{\sigma}}\)</span></td>
 <td>See below</td>
 </tr>
 </tbody>
@@ -406,31 +420,37 @@ $(document).ready(function () {
 <div id="chi-square" class="section level4">
 <h4>Chi-Square</h4>
 <p>Goodness of Fit / 1 Way Classification</p>
-<p><span class="math inline">\(\chi^2 = \sum\frac{(O-E)^2}{E}\)</span></p>
+<p><span class="math inline">\(\chi^2 =
+\sum\frac{(O-E)^2}{E}\)</span></p>
 <p><span class="math inline">\(df = C - 1\)</span></p>
 <p>Independence Test / 2 Way Classification</p>
-<p><span class="math inline">\(E_{ij} = \frac{R_{i}C_{j}}{N}\)</span></p>
+<p><span class="math inline">\(E_{ij} =
+\frac{R_{i}C_{j}}{N}\)</span></p>
 <p><span class="math inline">\(df = (R-1)(C-1)\)</span></p>
 <p>Sample Size</p>
-<p><span class="math inline">\(\Phi = \sqrt{\frac{\chi^2}{N}}\)</span></p>
+<p><span class="math inline">\(\Phi =
+\sqrt{\frac{\chi^2}{N}}\)</span></p>
 <hr />
 </div>
 <div id="linear-relationships" class="section level3">
 <h3>Linear Relationships</h3>
 <div id="correlation" class="section level4">
 <h4>Correlation</h4>
-<p><span class="math inline">\(r = \frac{cov_{xy}}{s_{x}s_{y}}\)</span></p>
+<p><span class="math inline">\(r =
+\frac{cov_{xy}}{s_{x}s_{y}}\)</span></p>
 <p><span class="math inline">\(df = N-2\)</span></p>
 <hr />
 </div>
 <div id="covariance" class="section level4">
 <h4>Covariance</h4>
-<p><span class="math inline">\(\frac{(X-\bar{X})(Y-\bar{Y})}{N-1}\)</span></p>
+<p><span
+class="math inline">\(\frac{(X-\bar{X})(Y-\bar{Y})}{N-1}\)</span></p>
 <hr />
 </div>
 <div id="significance-of-r" class="section level4">
 <h4>Significance of r</h4>
-<p><span class="math inline">\(t = \frac{r\sqrt{N-2}}{\sqrt{(1-r^2)}}\)</span></p>
+<p><span class="math inline">\(t =
+\frac{r\sqrt{N-2}}{\sqrt{(1-r^2)}}\)</span></p>
 <hr />
 </div>
 <div id="regression" class="section level4">
@@ -449,7 +469,8 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td>Slope</td>
-<td><span class="math inline">\(r = \frac{cov_{xy}}{s_{x}^2}\)</span></td>
+<td><span class="math inline">\(r =
+\frac{cov_{xy}}{s_{x}^2}\)</span></td>
 </tr>
 <tr class="odd">
 <td>Intercept</td>

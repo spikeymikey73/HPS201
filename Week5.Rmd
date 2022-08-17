@@ -7,3 +7,24 @@ knitr::opts_chunk$set(echo = TRUE)
 library(jmv)
 ```
 
+3 main types:
+
+One Sample - compares a single sample mean to a known population mean
+
+Matched Samples - Compares changes in a sample mean across time
+
+Independent Samples - Compares to different sample means
+
+Standard error is estimated using the *Central Limit Theorem*:
+
+$$
+  \frac{\sigma}{\sqrt{n}}
+$$
+
+*This theorem confirms that the lower the sample size, the higher the error*
+
+### z-test
+
+$$
+  z = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}}
+$$

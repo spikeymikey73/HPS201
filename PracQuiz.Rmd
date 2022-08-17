@@ -4,15 +4,18 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(jmv)
+knitr::opts_chunk$set(echo = FALSE)
+library(kableExtra)
 
 PracQuiz <- read.csv(file = 'data/PracQuiz.csv')
-
-jmv::descriptives(
-    data = data,
-    vars = vars(pulse1, pulse2, ranspot, smokes, active, sex, height, weight))
 ```
+
+```{r}
+PracQuiz %>%
+  kbl() %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
+```
+
 
 What percentage of participants smoke?
 
