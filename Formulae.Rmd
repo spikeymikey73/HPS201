@@ -7,34 +7,25 @@ knitr::opts_chunk$set(echo = TRUE)
 library(fontawesome)
 ```
 
-<div class="boxy boxy-primary">
-#### <abbr title="Variance tells you the degree of spread in your data set. The more spread the data, the larger the variance is in relation to the mean.">Variance</abbr>
+#### <abbr title="Variance tells you the degree of spread in your data set. The more spread the data, the larger the variance is in relation to the mean.">Variance</abbr> {.well}
 
 $s^2 = \frac{\Sigma(X-\bar{X})^2}{N-1}$
 
 `var(mean)`
 
-</div>
-
-
-
-
-<div class="boxy boxy-primary">
-#### Standard Deviation
+#### Standard Deviation {.well}
 
 $s = \sqrt{\frac{\Sigma(X-\bar{X})^2}{N-1}}$
 
 `sd(X)`
-</div>
 
-<div class="boxy boxy-primary">
-#### 95% Confidence limits on z (upper and lower)
+
+#### 95% Confidence limits on z (upper and lower) {.well}
 
 $X = \mu \pm 1.96\sigma$
-</div>
 
-<div class="boxy boxy-primary">
-  #### <abbr title="Gives the Standard Deviation of a set of data as a standardised number">Z Score</abbr>
+
+#### <abbr title="Gives the Standard Deviation of a set of data as a standardised number">Z Score</abbr> {.well}
 
   ${z = \frac{X - \bar{X}}{\sigma}}$
 
@@ -43,15 +34,16 @@ $X = \mu \pm 1.96\sigma$
 ```{r}
   qnorm(0.5,mean=100,sd=15)
 ```
-</div>
-=======
-```
+
+#### Formulae Summary {.well}
 
 | Purpose       | Formula                                    | R Input                  |
 |---------------|:------------------------------------------:|--------------------------|
 | Variance      | $s^2 = \frac{\Sigma(X-\bar{X})}{N-1}$      | `var(X)`                 |
 | Std Deviation | $s = \sqrt{\frac{\Sigma(X-\bar{X})}{N-1}}$ | `sd(x)`                  |
-| z-score       | ${z = \frac{X - \bar{X}}{\sigma}}$         | See below |
+| z-score       | ${z = \frac{X - \bar{X}}{\sigma}}$         | See R Function Summary |
+
+#### R function summary {.well}
 
 | Purpose               | R Input                                                        |
 |-----------------------|----------------------------------------------------------------|
@@ -59,36 +51,30 @@ $X = \mu \pm 1.96\sigma$
 | Distribution Function | `pnorm(q, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)` |
 | Quantile Function     | `qnorm(p, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)` |
 | Random Deviates       | `rnorm(n, mean = 0, sd = 1)`                                   |
-      
----
 
-#### Confidence limits on z
+#### Confidence limits on z {.well}
 
 $X = \mu \pm 1.96\sigma$
 
----
+#### Chi-Square {.well}
 
-#### Chi-Square
-
-Goodness of Fit / 1 Way Classification
+##### Goodness of Fit / 1 Way Classification
 
 $\chi^2 = \sum\frac{(O-E)^2}{E}$
 
 $df = C - 1$
 
-Independence Test / 2 Way Classification
+##### Independence Test / 2 Way Classification
 
 $E_{ij} = \frac{R_{i}C_{j}}{N}$
 
 $df = (R-1)(C-1)$
 
-Sample Size
+##### Sample Size 
 
 $\Phi = \sqrt{\frac{\chi^2}{N}}$
 
----
-
-### Linear Relationships
+### Linear Relationships {.well}
 
 #### Correlation
 
@@ -96,27 +82,18 @@ $r = \frac{cov_{xy}}{s_{x}s_{y}}$
 
 $df = N-2$
 
----
-
 #### Covariance
 
 $\frac{(X-\bar{X})(Y-\bar{Y})}{N-1}$
-
----
 
 #### Significance of r
 
 $t = \frac{r\sqrt{N-2}}{\sqrt{(1-r^2)}}$
 
----
-
 #### Regression
-
 
 | Purpose          | Formula                        |
 |------------------|--------------------------------|
 | General Equation | $\hat{Y} = bX - a$             |
 | Slope            | $r = \frac{cov_{xy}}{s_{x}^2}$ |
 | Intercept        | $a = \bar{Y} - b\bar{X}$       |
-
----
