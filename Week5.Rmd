@@ -153,3 +153,16 @@ Represented by Cohen's *d*, and reports the difference in standard deviation uni
 >##### **Effect Size**
 >
 >'Impulsivity has reduced by almost 1.5 SD of pre-treatment levels'
+
+### Independent Samples t-test {.well}
+
+**Compares the sample means of two independent groups where DVs are continuous and population means are unknown.
+
+![](Images/indSamples.png){width=40%}
+![](Images/indSamples2.png){width=40%}
+
+#### Hypotheses
+
+$H_0: \mu_1 = \mu_2$ OR $H_0: \mu_1 - \mu_2 = 0$
+
+$H_1: \mu_1 \ne \mu_2$ OR $H_0: \mu_1 - \mu_2 \ne 0$
