@@ -8,7 +8,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-3 main types:
+**3 main types:**
 
 -   One Sample: compares a single sample mean to a known population mean
 -   Matched Samples: Compares changes in a sample mean across time
@@ -25,7 +25,7 @@ $$
   t = \frac{obtained\ mean\ difference}{std\ diff\ expected\ by\ chance}
 $$
 
-*Standard Error*
+**Standard Error**
 
 -   The extent to which sample means deviate from the population mean
 -   The difference between the population mean and the sample mean we should expect by chance.
@@ -35,32 +35,13 @@ Standard error is estimated using the *Central Limit Theorem*:
 $$
   = \frac{\sigma}{\sqrt{n}} = \frac{pop'n\ sd}{\sqrt{sample\ size}}
 $$
-*Comparing the sample mean to population mean*
+**Comparing the sample mean to population mean**
 
 $$
   z = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}}
 $$
 
 *This theorem confirms that the larger the sample size, the lower the error*
-
-#### Example {.well}
-Achenbach Child Behaviour Checklist (CBCL), $\mu = 50, sd = 10$
-
-In a sample of 5 children ($n = 5$) under stress ($M = 56$), is the sample mean different from the population mean?
-
-\begin{align}
-H_0: &\mu = 50 \\
-H_a: &\mu \ne 50 \\
-
-SE &= \frac{\sigma}{\sqrt{n}} = \frac{10}{\sqrt{5}} = 4.47 \\
-z &= \frac{56 - 50}{\frac{10}{\sqrt{5}}} = \frac{6}{4.47} = 1.34
-\end{align}
-
-The probability that we will obtain $z = 1.34$ is $0.0901$. In a two tailed test (estimating the higher and lower parts of the normal distribution) is:
-
-\begin{align}
-  0.0901 + 0.0901 = 0.1802
-\end{align}
 
 ### One Sample t-test {.well}
 
@@ -107,8 +88,68 @@ kable(impulsiveness) %>%
 -   Calculated t-value = 2.78
 -   Critical (from table) t-value = 2.262
 
-![One Sample Result](Images/OneSampleT.png){width=50%}
+![](Images/OneSampleT.png){width=75%}
 
-#### Reporting
+>#### **Reporting**
+>
+>'The drug users in this sample reported significantly higher levels of impulsivity compared to the general population, *t*(9) = 2.78, *p* < .05.'
 
-'A one sample t-test was conducted to ...'
+### Matched Samples t-test {.well}
+
+-   Also known as related samples, repeated measures, dependent samples
+-   Same participants with measures recorded on two occasions (e.g. Pre and Post treatment)
+-   Scores are matched from one point in time to the next
+-   Examine the change in means from time<sub>1</sub> to time<sub>2</sub>
+
+**A matched samples t-test tells us whether the change in mean scores is statistically significant**
+
+
+#### Steps:
+
+1.    Obtain scores before and after treatment
+2.    Calculate difference scores before and after treatment
+3.    Calculate mean and standard deviation of the difference of scores
+4.    Calculate matched samples t-test
+
+```{r echo=FALSE}
+  Before <- c(9.6,10.5,12.4,8.7,8.5,11.2,15.1,9.4,14.3,12.1,13.7,10.2,13.8,8.9,14.5)
+  After <- c(7.1,7.6,8.2,7.7,6.5,8.2,9.7,8.3,13.2,8.4,9.3,7,8.8,6.9,8.1)
+  Difference <- Before - After
+  
+  impDiff <- cbind(Before, After, Difference)
+
+  colnames(impDiff) <- c("Before","After","Difference")
+
+  kable(impDiff) %>%
+    kable_styling(latex_options = "striped", full_width = F)
+```
+
+\begin{align}
+  s &= \sqrt{\frac{\Sigma (D-\bar{D})^2}{n-1}} = \sqrt{\frac{38.17}{14}} =  1.65 \\
+  t &= \frac{\bar{D} - 0}{\frac{s}{\sqrt{n}}} = \frac{3.19 - 0}{\frac{1.65}{\sqrt{15}}} = \frac{3.19}{0.42} \\
+  &= 7.59(df = 14)
+\end{align}
+
+#### Decision Making
+
+-   Calculated t-value = 7.59
+-   Critical (from table) t-value = 2.145 (two-sided)
+-   Since the calculated t-value is greater than the critical t-value, we can reject the null hypothesis. The changes in impulsiveness over time were significant.
+
+#### Effect Size
+
+Represented by Cohen's *d*, and reports the difference in standard deviation units. (0.20 = small, 0.50 = moderate, 0.8+ = large)
+
+\begin{align}
+  d = \frac{\bar{X}_1 - \bar{X}_2}{s_{X1}} = \frac{11.53 - 8.33}{2.32} = 1.38 \\
+\end{align}
+
+>#### Reporting
+>
+>##### **Matched Sample t-test**
+>
+>'Overall the sample were significantly less impulsive following the treatment program (*M* = 8.33, *SD* = 1.61) than they were before it (*M* = 11.53, *SD* = 2.32), *t*(14) = 7.59, *p* < .05.'
+>
+>##### **Effect Size**
+>
+>'Impulsivity has reduced by almost 1.5 SD of pre-treatment levels'
