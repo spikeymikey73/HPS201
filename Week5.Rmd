@@ -4,27 +4,111 @@ title: 'Week 5: t-tests'
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(jmv)
+library(knitr)
+library(kableExtra)
 ```
 
 3 main types:
 
-One Sample - compares a single sample mean to a known population mean
+-   One Sample: compares a single sample mean to a known population mean
+-   Matched Samples: Compares changes in a sample mean across time
+-   Independent Samples: Compares two different sample means
 
-Matched Samples - Compares changes in a sample mean across time
+#### Overview of the t-test
 
-Independent Samples - Compares to different sample means
+-   Used for comparing the means of continuous (measurement) data (IQ, height, exam results)
+-   Differences between sample means
+-   Estimates the Standard Error (difference we expect to see by chance) using sample statistics
+-   t-statistic is a ratio of the mean differences obtained and the mean differences expected by chance
+
+$$
+  t = \frac{obtained\ mean\ difference}{std\ diff\ expected\ by\ chance}
+$$
+
+*Standard Error*
+
+-   The extent to which sample means deviate from the population mean
+-   The difference between the population mean and the sample mean we should expect by chance.
 
 Standard error is estimated using the *Central Limit Theorem*:
 
 $$
-  \frac{\sigma}{\sqrt{n}}
+  = \frac{\sigma}{\sqrt{n}} = \frac{pop'n\ sd}{\sqrt{sample\ size}}
 $$
-
-*This theorem confirms that the lower the sample size, the higher the error*
-
-### z-test
+*Comparing the sample mean to population mean*
 
 $$
   z = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}}
 $$
+
+*This theorem confirms that the larger the sample size, the lower the error*
+
+#### Example {.well}
+Achenbach Child Behaviour Checklist (CBCL), $\mu = 50, sd = 10$
+
+In a sample of 5 children ($n = 5$) under stress ($M = 56$), is the sample mean different from the population mean?
+
+\begin{align}
+H_0: &\mu = 50 \\
+H_a: &\mu \ne 50 \\
+
+SE &= \frac{\sigma}{\sqrt{n}} = \frac{10}{\sqrt{5}} = 4.47 \\
+z &= \frac{56 - 50}{\frac{10}{\sqrt{5}}} = \frac{6}{4.47} = 1.34
+\end{align}
+
+The probability that we will obtain $z = 1.34$ is $0.0901$. In a two tailed test (estimating the higher and lower parts of the normal distribution) is:
+
+\begin{align}
+  0.0901 + 0.0901 = 0.1802
+\end{align}
+
+### One Sample t-test {.well}
+
+Compares a single sample mean to a population mean (when we do not know $\sigma$)
+
+#### Example
+
+-   'Impulsiveness' questionnaire (continuous scale from 0 - 18)
+-   $\mu = 7.01$
+-   Sample of 10 drug users ($n = 10$)
+-   Higher levels of impulsiveness is expected in drug users compared to the rest of the population.
+
+#### Hypotheses
+
+\begin{align}
+  H_0: \mu = 7.01 \\
+  H_a: \mu \ne 7.01 \\
+\end{align}
+
+#### Sample Data
+
+```{r echo=FALSE}
+
+X <- c(8.5,12.1,10.0,5.2,15.3,6.2,9.1,10.2,7.9,14.2)
+D <- D <- X - mean(X)
+variance <- round(D^2, 2)
+
+impulsiveness <- cbind(X,D,variance)
+
+colnames(impulsiveness) <- c("X","X - M","(X - M)^2")
+
+kable(impulsiveness) %>%
+  kable_styling(latex_options = "striped", full_width = F)
+```
+
+\begin{align}
+  s &= \sqrt{\frac{\Sigma(X-\bar{X})^2}{n-1}} = \sqrt{\frac{95}{9}} = 3.25 \\
+  t &= \frac{\bar{X} - \mu}{\frac{s}{\sqrt{n}}} = \frac{9.87 - 7.01}{\frac{3.25}{\sqrt{10}}} = \frac{2.86}{1.03} \\
+  &= 2.78(df = 9)
+\end{align}
+
+#### Decision Making
+
+-   Calculated t-value = 2.78
+-   Critical (from table) t-value = 2.262
+
+![One Sample Result](Images/OneSampleT.png){width=50%}
+
+#### Reporting
+
+'A one sample t-test was conducted to ...'
