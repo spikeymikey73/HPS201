@@ -546,6 +546,7 @@ and Post treatment)</li>
 <li>Examine the change in means from time<sub>1</sub> to
 time<sub>2</sub></li>
 </ul>
+<p><img src="Images/matchSample.png" style="width:50.0%" /></p>
 <p><strong>A matched samples t-test tells us whether the change in mean
 scores is statistically significant</strong></p>
 <div id="steps" class="section level4">
@@ -782,8 +783,49 @@ levels’</p>
 </div>
 <div id="independent-samples-t-test" class="section level3 well">
 <h3 class="well">Independent Samples t-test</h3>
-<p><img src="Images/indSamples.png" style="width:40.0%" /> <img
-src="Images/indSamples2.png" style="width:40.0%" /></p>
+<p>Compares the sample means of two independent groups where DVs are
+continuous and population means are unknown.</p>
+<p><img src="Images/indSamples2.png" style="width:50.0%" /></p>
+<div id="hypotheses-1" class="section level4">
+<h4>Hypotheses</h4>
+<p><span class="math inline">\(H_0: \mu_1 = \mu_2\)</span> OR <span
+class="math inline">\(H_0: \mu_1 - \mu_2 = 0\)</span></p>
+<p><span class="math inline">\(H_1: \mu_1 \ne \mu_2\)</span> OR <span
+class="math inline">\(H_0: \mu_1 - \mu_2 \ne 0\)</span></p>
+</div>
+<div id="differences-between-sample-means" class="section level4">
+<h4>Differences between Sample Means</h4>
+<ul>
+<li>Investigates the differences between (and Standard Error of) sample
+means.</li>
+<li>Used when sample sizes are equal.</li>
+<li>Two groups: smokers (<span class="math inline">\(n=10\)</span>), and
+non-smokers (<span class="math inline">\(n=10\)</span>)</li>
+<li>The DV is mean anxiety scores (on a scale of 0 - 20)</li>
+<li>smokers (<span class="math inline">\(\bar{X}=15.31\)</span>, <span
+class="math inline">\(s=4.42\)</span>)</li>
+<li>non-smokers (<span class="math inline">\(\bar{X}=12.19\)</span>,
+<span class="math inline">\(s=3.28\)</span>)</li>
+</ul>
+<p><span class="math display">\[\begin{align}
+  t &amp;= \frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1} +
+\frac{s^2_2}{n_2}}} =         \frac{15.31-12.19}{\sqrt{\frac{19.54}{10}
++ \frac{10.76}{10}}} = \frac{3.12}{\sqrt{1.95+1.08}} = \frac{3.12}{1.74}
+= 1.79 \\
+  df &amp;= (n_1-1)+(n_2-1)=(10-1)+(10-1)=18 \\
+\end{align}\]</span></p>
+<blockquote>
+<p><span class="math inline">\(t(18) = 1.79,\ p&gt;.05,\ two\
+tailed\)</span></p>
+</blockquote>
+</div>
+<div id="decision" class="section level4">
+<h4>Decision</h4>
+<p>The above <span class="math inline">\(t\)</span>-value falls within
+our 95% confidence interval, meaning that the result is not
+statistically significant enough for us to reject the null
+hypothesis.</p>
+</div>
 </div>
 
 
