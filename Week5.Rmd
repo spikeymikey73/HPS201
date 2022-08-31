@@ -14,7 +14,7 @@ library(kableExtra)
 -   Matched Samples: Compares changes in a sample mean across time
 -   Independent Samples: Compares two different sample means
 
-#### Overview of the t-test
+### Overview of the t-test
 
 -   Used for comparing the means of continuous (measurement) data (IQ, height, exam results)
 -   Differences between sample means
@@ -25,7 +25,7 @@ $$
   t = \frac{obtained\ mean\ difference}{std\ diff\ expected\ by\ chance}
 $$
 
-**Standard Error**
+### Standard Error
 
 -   The extent to which sample means deviate from the population mean
 -   The difference between the population mean and the sample mean we should expect by chance.
@@ -35,7 +35,7 @@ Standard error is estimated using the *Central Limit Theorem*:
 $$
   = \frac{\sigma}{\sqrt{n}} = \frac{pop'n\ sd}{\sqrt{sample\ size}}
 $$
-**Comparing the sample mean to population mean**
+### Comparing the sample mean to population mean
 
 $$
   z = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}}
@@ -88,7 +88,7 @@ kable(impulsiveness) %>%
 -   Calculated t-value = 2.78
 -   Critical (from table) t-value = 2.262
 
-![](Images/OneSampleT.png){width=75%}
+![](Images/OneSampleT.png){width=50%}
 
 >#### **Reporting**
 >
@@ -156,7 +156,7 @@ Represented by Cohen's *d*, and reports the difference in standard deviation uni
 >
 >'Impulsivity has reduced by almost 1.5 SD of pre-treatment levels'
 
-### Independent Samples t-test {.well}
+### Independent Samples t-test (equal sample sizes) {.well}
 
 Compares the sample means of two independent groups where DVs are continuous and population means are unknown.
 
@@ -186,4 +186,49 @@ $H_1: \mu_1 \ne \mu_2$ OR $H_0: \mu_1 - \mu_2 \ne 0$
 
 #### Decision
 
-The above $t$-value falls within our 95% confidence interval, meaning that the result is not statistically significant enough for us to reject the null hypothesis.
+The calculated $t$-value of 1.79 is less than our critical t-value (from a table) of ???, which falls within our 95% confidence interval, meaning that the result is not statistically significant enough for us to reject the null hypothesis.
+
+### Independent Samples t-test (unequal sample sizes) {.well}
+
+#### Pooled Variance
+
+The variance of our sample sizes is averaged using the following formula:
+
+\begin{align}
+  s^2_p = \frac{(n_1 - 1)s^2_1 + (n_2 - 1)s^2_2}{n_1 + n_2 - 2}
+\end{align}
+
+Our t-statistic formula then becomes:
+
+\begin{align}
+  t = \frac{(\bar{X}_1 - \bar{X}_2)}{\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}}
+\end{align}
+
+#### Example
+
+-   Two groups: smokers ($n=12$) and non-smokers ($n=27$)
+-   Our DV is mean anxiety scores (on a scale of 0 - 20)
+-   Smokers ($\bar{X} = 15.31$, $s=4.42$)
+-   Non-Smokers ($\bar{X} = 12.19$, $s=3.28$)
+
+##### Pooled Variance
+
+\begin{align}
+  s^2_p &= \frac{(n_1 - 1)s^2_1 + (n_2 - 1)s^2_2}{n_1 + n_2 - 2} \\
+  &= \frac{(12 - 1)4.42^2 + (27 - 1)3.28^2}{12 + 27 - 2} \\
+  &= \frac{(11 \times 19.54) + (26 \times 10.76)}{37} \\
+  &= \frac{214.94 + 279.76}{37} = \frac{494.70}{37} = 13.37
+\end{align}
+
+##### t-test
+\begin{align}
+  t &= \frac{(\bar{X}_1 - \bar{X}_2)}{\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}} \\
+  &= \frac{(15.31 - 12.19)}{\sqrt{\frac{13.37}{12} + \frac{13.37}{27}}} \\
+  &= \frac{3.12}{\sqrt{\frac{1.11}{0.50} + \frac{13.37}{27}}} = \frac{3.12}{\sqrt{1.11 + 0.50}} = \frac{3.12}{1.27} = 2.45
+\end{align}
+
+>$t(37) = 2.45$, $p<.05$
+
+#### Decision
+
+The calculated $t$-value of 2.45 is greater than our critical t-value (from a table) of ???, which falls outside our 95% confidence interval, meaning that the result is statistically significant enough for us to reject the null hypothesis.
