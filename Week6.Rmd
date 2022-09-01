@@ -7,3 +7,115 @@ knitr::opts_chunk$set(echo = TRUE)
 library(jmv)
 ```
 
+>-    Identifies the association (relationship) between 2 continuous variables within one sample
+>-    NOT the same as causation
+>-    Determine 3 characteristics:
+>       -   Type (linear, non-linear)
+>       -   Strength (strong, weak)
+>       -   Direction (positive, negative)
+
+
+<table class="table table-hover">
+  <thead>
+    <tr scope="row">
+      <th colspan="2">Scores</th>
+      <th colspan="2">Deviations<BR>from mean</th>
+      <th>Products</th>
+    </tr>
+    <tr scope="row">
+      <th>Anxiety(X)</th>
+      <th>Negative<BR>mood (Y)</th>
+      <th>$X - \bar{X}$</th>
+      <th>$Y - \bar{Y}$</th>
+      <th>$(X-\bar{X})(Y-\bar{Y})$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr scope="row">
+      <td>5</td>
+      <td>4</td>
+      <td>–0.9</td>
+      <td>–0.9</td>
+      <td>0.81</td>
+    </tr>
+    <tr scope="row">
+        <td>8</td>
+        <td>6</td>
+        <td>2.1</td>
+        <td>1.1</td>
+        <td>2.31</td>
+    </tr>
+    <tr scope="row">
+      <td>9</td>
+      <td>5</td>
+      <td>3.1</td>
+      <td>0.1</td>
+      <td>0.31</td>
+    </tr>
+    <tr scope="row">
+      <td>2</td>
+      <td>1</td>
+      <td>–3.9</td>
+      <td>–3.9</td>
+      <td>15.21</td>
+    </tr>
+    <tr scope="row">
+      <td>7</td>
+      <td>5</td>
+      <td>1.1</td>
+      <td>0.1</td>
+      <td>0.11</td>
+    </tr>
+    <tr scope="row">
+      <td>4</td>
+      <td>3</td>
+      <td>–1.9</td>
+      <td>–1.9</td>
+      <td>3.61</td>
+    </tr>
+    <tr scope="row">
+      <td>9</td>
+      <td>7</td>
+      <td>3.1</td>
+      <td>2.1</td>
+      <td>6.51</td>
+    </tr>
+    <tr scope="row">
+      <td>6</td>
+      <td>7</td>
+      <td>0.1</td>
+      <td>2.1</td>
+      <td>0.21</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-hover">
+    <thead>
+        <tr scope="row">
+            <td>Measure</td>
+            <td>Value</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr scope="row">
+            <td>$\bar{X}$</td>
+            <td>5.9</td>
+        </tr>
+        <tr scope="row">
+            <td>$\bar{Y}$</td>
+            <td>4.9</td>
+        </tr>
+        <tr scope="row">
+            <td>$\Sigma(X-\bar{X})(Y-\bar{Y})$</td>
+            <td>37.9</td>
+        </tr>
+        <tr scope="row">
+            <td>$cov_{xy}$</td>
+            <td>4.21</td>
+        </tr>
+    </tbody>
+</table>
+
+>### Reporting
+>'A Pearson's correlation analysis was conducted to examine the relationship between X and Y. The analysis revealed a significant association between the variables, *r* = .59, *N* = 10'
