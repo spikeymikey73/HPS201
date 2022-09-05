@@ -7,13 +7,83 @@ knitr::opts_chunk$set(echo = TRUE)
 library(jmv)
 ```
 
->-    Identifies the association (relationship) between 2 continuous variables within one sample
->-    NOT the same as causation
->-    Determine 3 characteristics:
->       -   Type (linear, non-linear)
->       -   Strength (strong, weak)
->       -   Direction (positive, negative)
 
+>The purpose of correlation and regression is to describe the relationship between two variables:
+>-  Correlation is the simple form of this where two variables are assessed for the degree and direction of their relationship.
+>-  Regression is an extension of correlation allowing for the prediction of one variable based on the scores from another.
+>-  A scatterplot of the <abbr title="observation">individual</abbr> scores for each person will 
+>-  A scatterplot also highlights 3 characteristics:
+>     -   Type (linear, non-linear)
+>     -   Strength (strong, weak)
+>     -   Direction (positive, negative)
+
+### Example 1 {.well}
+
+<table class="table table-hover">
+    <thead>
+        <tr scope="row">
+            <th scope="col">Person</th>
+            <th scope="col">Anxiety (X)</th>
+            <th scope="col">Negative mood (Y)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr scope="row">
+            <td>A</td>
+            <td>5</td>
+            <td>4</td>
+        </tr>
+        <tr scope="row">
+            <td>B</td>
+            <td>8</td>
+            <td>6</td>
+        </tr>
+        <tr scope="row">
+            <td>C</td>
+            <td>9</td>
+            <td>5</td>
+        </tr>
+        <tr scope="row">
+            <td>D</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr scope="row">
+            <td>E</td>
+            <td>7</td>
+            <td>5</td>
+        </tr>
+        <tr scope="row">
+            <td>F</td>
+            <td>4</td>
+            <td>3</td>
+        </tr>
+        <tr scope="row">
+            <td>G</td>
+            <td>9</td>
+            <td>7</td>
+        </tr>
+        <tr scope="row">
+            <td>H</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr scope="row">
+            <td>I</td>
+            <td>1</td>
+            <td>4</td>
+        </tr>
+        <tr scope="row">
+            <td>J</td>
+            <td>8</td>
+            <td>7</td>
+        </tr>
+    </tbody>
+</table>
+
+![](Images/Wk6Ex1.png){width=50%}
+
+### Example 2 {.well}
 
 <table class="table table-hover">
   <thead>
@@ -116,6 +186,8 @@ library(jmv)
         </tr>
     </tbody>
 </table>
+
+![](Images/Wk6Ex1.png){width=50%}
 
 >### Reporting
 >'A Pearson's correlation analysis was conducted to examine the relationship between X and Y. The analysis revealed a significant association between the variables, *r* = .59, *N* = 10'
