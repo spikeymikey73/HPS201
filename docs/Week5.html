@@ -323,21 +323,17 @@ $(document).ready(function () {
 
 <p><strong>3 main types:</strong></p>
 <ul>
-<li>One Sample: compares a single sample mean to a known population
-mean</li>
+<li>One Sample: compares a single sample mean to a known population mean</li>
 <li>Matched Samples: Compares changes in a sample mean across time</li>
 <li>Independent Samples: Compares two different sample means</li>
 </ul>
 <div id="overview-of-the-t-test" class="section level3">
 <h3>Overview of the t-test</h3>
 <ul>
-<li>Used for comparing the means of continuous (measurement) data (IQ,
-height, exam results)</li>
+<li>Used for comparing the means of continuous (measurement) data (IQ, height, exam results)</li>
 <li>Differences between sample means</li>
-<li>Estimates the Standard Error (difference we expect to see by chance)
-using sample statistics</li>
-<li>t-statistic is a ratio of the mean differences obtained and the mean
-differences expected by chance</li>
+<li>Estimates the Standard Error (difference we expect to see by chance) using sample statistics</li>
+<li>t-statistic is a ratio of the mean differences obtained and the mean differences expected by chance</li>
 </ul>
 <p><span class="math display">\[
   t = \frac{obtained\ mean\ difference}{std\ diff\ expected\ by\ chance}
@@ -346,35 +342,31 @@ differences expected by chance</li>
 <div id="standard-error" class="section level3">
 <h3>Standard Error</h3>
 <ul>
-<li>The extent to which sample means deviate from the population
-mean</li>
-<li>The difference between the population mean and the sample mean we
-should expect by chance.</li>
+<li>The extent to which sample means deviate from the population mean</li>
+<li>The difference between the population mean and the sample mean we should expect by chance.</li>
 </ul>
-<p>Standard error is estimated using the <em>Central Limit
-Theorem</em>:</p>
+<p>Standard error is estimated using the <em>Central Limit Theorem</em>:</p>
 <p><span class="math display">\[
   = \frac{\sigma}{\sqrt{n}} = \frac{pop&#39;n\ sd}{\sqrt{sample\ size}}
-\]</span> ### Comparing the sample mean to population mean</p>
+\]</span></p>
+</div>
+<div id="comparing-the-sample-mean-to-population-mean" class="section level3">
+<h3>Comparing the sample mean to population mean</h3>
 <p><span class="math display">\[
   z = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}}
 \]</span></p>
-<p><em>This theorem confirms that the larger the sample size, the lower
-the error</em></p>
+<p><em>This theorem confirms that the larger the sample size, the lower the error</em></p>
 </div>
 <div id="one-sample-t-test" class="section level3 well">
 <h3 class="well">One Sample t-test</h3>
-<p>Compares a single sample mean to a population mean (when we do not
-know <span class="math inline">\(\sigma\)</span>)</p>
+<p>Compares a single sample mean to a population mean (when we do not know <span class="math inline">\(\sigma\)</span>)</p>
 <div id="example" class="section level4">
 <h4>Example</h4>
 <ul>
 <li>‘Impulsiveness’ questionnaire (continuous scale from 0 - 18)</li>
 <li><span class="math inline">\(\mu = 7.01\)</span></li>
-<li>Sample of 10 drug users (<span class="math inline">\(n =
-10\)</span>)</li>
-<li>Higher levels of impulsiveness is expected in drug users compared to
-the rest of the population.</li>
+<li>Sample of 10 drug users (<span class="math inline">\(n = 10\)</span>)</li>
+<li>Higher levels of impulsiveness is expected in drug users compared to the rest of the population.</li>
 </ul>
 </div>
 <div id="hypotheses" class="section level4">
@@ -386,138 +378,137 @@ the rest of the population.</li>
 </div>
 <div id="sample-data" class="section level4">
 <h4>Sample Data</h4>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-hover">
 <thead>
-<tr>
-<th style="text-align:right;">
-X
+<tr scope="row">
+<th scope="col">
+<span class="math inline">\(X\)</span>
 </th>
-<th style="text-align:right;">
-X - M
+<th scope="col">
+<span class="math inline">\(X-\bar{X}\)</span>
 </th>
-<th style="text-align:right;">
-(X - M)^2
+<th scope="col">
+<span class="math inline">\((X-\bar{X})^2\)</span>
 </th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
+<tr scope="row">
+<td>
 8.5
 </td>
-<td style="text-align:right;">
+<td>
 -1.37
 </td>
-<td style="text-align:right;">
+<td>
 1.88
 </td>
 </tr>
-<tr>
-<td style="text-align:right;">
+<tr scope="row">
+<td>
 12.1
 </td>
-<td style="text-align:right;">
+<td>
 2.23
 </td>
-<td style="text-align:right;">
+<td>
 4.97
 </td>
 </tr>
-<tr>
-<td style="text-align:right;">
-10.0
+<tr scope="row">
+<td>
+10
 </td>
-<td style="text-align:right;">
+<td>
 0.13
 </td>
-<td style="text-align:right;">
+<td>
 0.02
 </td>
 </tr>
-<tr>
-<td style="text-align:right;">
+<tr scope="row">
+<td>
 5.2
 </td>
-<td style="text-align:right;">
+<td>
 -4.67
 </td>
-<td style="text-align:right;">
+<td>
 21.81
 </td>
 </tr>
-<tr>
-<td style="text-align:right;">
+<tr scope="row">
+<td>
 15.3
 </td>
-<td style="text-align:right;">
+<td>
 5.43
 </td>
-<td style="text-align:right;">
+<td>
 29.48
 </td>
 </tr>
-<tr>
-<td style="text-align:right;">
+<tr scope="row">
+<td>
 6.2
 </td>
-<td style="text-align:right;">
+<td>
 -3.67
 </td>
-<td style="text-align:right;">
+<td>
 13.47
 </td>
 </tr>
-<tr>
-<td style="text-align:right;">
+<tr scope="row">
+<td>
 9.1
 </td>
-<td style="text-align:right;">
+<td>
 -0.77
 </td>
-<td style="text-align:right;">
+<td>
 0.59
 </td>
 </tr>
-<tr>
-<td style="text-align:right;">
+<tr scope="row">
+<td>
 10.2
 </td>
-<td style="text-align:right;">
+<td>
 0.33
 </td>
-<td style="text-align:right;">
+<td>
 0.11
 </td>
 </tr>
-<tr>
-<td style="text-align:right;">
+<tr scope="row">
+<td>
 7.9
 </td>
-<td style="text-align:right;">
+<td>
 -1.97
 </td>
-<td style="text-align:right;">
+<td>
 3.88
 </td>
 </tr>
-<tr>
-<td style="text-align:right;">
+<tr scope="row">
+<td>
 14.2
 </td>
-<td style="text-align:right;">
+<td>
 4.33
 </td>
-<td style="text-align:right;">
+<td>
 18.75
 </td>
 </tr>
 </tbody>
 </table>
 <p><span class="math display">\[\begin{align}
-  s &amp;= \sqrt{\frac{\Sigma(X-\bar{X})^2}{n-1}} = \sqrt{\frac{95}{9}}
-= 3.25 \\
-  t &amp;= \frac{\bar{X} - \mu}{\frac{s}{\sqrt{n}}} = \frac{9.87 -
-7.01}{\frac{3.25}{\sqrt{10}}} = \frac{2.86}{1.03} \\
+  \bar{X} = ???
+  s &amp;= \sqrt{\frac{\Sigma(X-\bar{X})^2}{n-1}} = \sqrt{\frac{95}{9}} = 3.25 \\
+  t &amp;= \frac{\bar{X} - \mu}{\frac{s}{\sqrt{n}}} = \frac{9.87 - 7.01}{\frac{3.25}{\sqrt{10}}} = \frac{2.86}{1.03} \\
   &amp;= 2.78(df = 9)
 \end{align}\]</span></p>
 </div>
@@ -526,37 +517,31 @@ X - M
 <ul>
 <li>Calculated t-value = 2.78</li>
 <li>Critical (from table) t-value = 2.262</li>
+<li>Since the calculated t-value is greater than the <abbr title="from a table">critical</abbr> t-value, we can reject the null hypothesis. The drug users in this sample showed significantly higher levels of impulsivity than the general population.</li>
 </ul>
 <p><img src="Images/OneSampleT.png" style="width:50.0%" /></p>
 <blockquote>
 <h4 id="reporting"><strong>Reporting</strong></h4>
-<p>‘The drug users in this sample reported significantly higher levels
-of impulsivity compared to the general population, <em>t</em>(9) = 2.78,
-<em>p</em> &lt; .05.’</p>
+<p>‘The drug users in this sample reported significantly higher levels of impulsivity compared to the general population, <em>t</em>(9) = 2.78, <em>p</em> &lt; .05.’</p>
 </blockquote>
 </div>
 </div>
 <div id="matched-samples-t-test" class="section level3 well">
 <h3 class="well">Matched Samples t-test</h3>
 <ul>
-<li>Also known as related samples, repeated measures, dependent
-samples</li>
-<li>Same participants with measures recorded on two occasions (e.g. Pre
-and Post treatment)</li>
+<li>Also known as related samples, repeated measures, dependent samples</li>
+<li>Same participants with measures recorded on two occasions (e.g. Pre and Post treatment)</li>
 <li>Scores are matched from one point in time to the next</li>
-<li>Examine the change in means from time<sub>1</sub> to
-time<sub>2</sub></li>
+<li>Examine the change in means from time<sub>1</sub> to time<sub>2</sub></li>
 </ul>
 <p><img src="Images/matchSample.png" style="width:50.0%" /></p>
-<p><strong>A matched samples t-test tells us whether the change in mean
-scores is statistically significant</strong></p>
+<p><strong>A matched samples t-test tells us whether the change in mean scores is statistically significant</strong></p>
 <div id="steps" class="section level4">
 <h4>Steps:</h4>
 <ol style="list-style-type: decimal">
 <li>Obtain scores before and after treatment</li>
 <li>Calculate difference scores before and after treatment</li>
-<li>Calculate mean and standard deviation of the difference of
-scores</li>
+<li>Calculate mean and standard deviation of the difference of scores</li>
 <li>Calculate matched samples t-test</li>
 </ol>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
@@ -742,10 +727,9 @@ Difference
 </tbody>
 </table>
 <p><span class="math display">\[\begin{align}
-  s &amp;= \sqrt{\frac{\Sigma (D-\bar{D})^2}{n-1}} =
-\sqrt{\frac{38.17}{14}} =  1.65 \\
-  t &amp;= \frac{\bar{D} - 0}{\frac{s}{\sqrt{n}}} = \frac{3.19 -
-0}{\frac{1.65}{\sqrt{15}}} = \frac{3.19}{0.42} \\
+  \bar{D} &amp;= 3.19 \\
+  s &amp;= \sqrt{\frac{\Sigma (D-\bar{D})^2}{n-1}} = \sqrt{\frac{38.17}{14}} =  1.65 \\
+  t &amp;= \frac{\bar{D} - 0}{\frac{s}{\sqrt{n}}} = \frac{3.19 - 0}{\frac{1.65}{\sqrt{15}}} = \frac{3.19}{0.42} \\
   &amp;= 7.59(df = 14)
 \end{align}\]</span></p>
 </div>
@@ -754,108 +738,82 @@ Difference
 <ul>
 <li>Calculated t-value = 7.59</li>
 <li>Critical (from table) t-value = 2.145 (two-sided)</li>
-<li>Since the calculated t-value is greater than the critical t-value,
-we can reject the null hypothesis. The changes in impulsiveness over
-time were significant.</li>
+<li>Since the calculated t-value is greater than the <abbr title="from a table">critical</abbr> t-value, we can reject the null hypothesis. The changes in impulsiveness over time were significant.</li>
 </ul>
 </div>
 <div id="effect-size" class="section level4">
 <h4>Effect Size</h4>
-<p>Represented by Cohen’s <em>d</em>, and reports the difference in
-standard deviation units. (0.20 = small, 0.50 = moderate, 0.8+ =
-large)</p>
+<p>Represented by Cohen’s <em>d</em>, and reports the difference in standard deviation units. (0.20 = small, 0.50 = moderate, 0.8+ = large)</p>
 <p><span class="math display">\[\begin{align}
-  d = \frac{\bar{X}_1 - \bar{X}_2}{s_{X1}} = \frac{11.53 - 8.33}{2.32} =
-1.38 \\
+  \bar{X_1} &amp;= 11.53 \\
+  \bar{X_2} &amp;= 8.33 \\
+  d &amp;= \frac{\bar{X}_1 - \bar{X}_2}{s_{X1}} = \frac{11.53 - 8.33}{2.32} = 1.38 \\
 \end{align}\]</span></p>
 <blockquote>
 <h4 id="reporting-1">Reporting</h4>
-<h5 id="matched-sample-t-test"><strong>Matched Sample
-t-test</strong></h5>
-<p>‘Overall the sample were significantly less impulsive following the
-treatment program (<em>M</em> = 8.33, <em>SD</em> = 1.61) than they were
-before it (<em>M</em> = 11.53, <em>SD</em> = 2.32), <em>t</em>(14) =
-7.59, <em>p</em> &lt; .05.’</p>
+<h5 id="matched-sample-t-test"><strong>Matched Sample t-test</strong></h5>
+<p>‘Overall the sample were significantly less impulsive following the treatment program (<em>M</em> = 8.33, <em>SD</em> = 1.61) than they were before it (<em>M</em> = 11.53, <em>SD</em> = 2.32), <em>t</em>(14) = 7.59, <em>p</em> &lt; .05.’</p>
 <h5 id="effect-size-1"><strong>Effect Size</strong></h5>
-<p>‘Impulsivity has reduced by almost 1.5 SD of pre-treatment
-levels’</p>
+<p>‘Impulsivity has reduced by almost 1.5 SD of pre-treatment levels’</p>
 </blockquote>
 </div>
 </div>
-<div id="independent-samples-t-test-equal-sample-sizes"
-class="section level3 well">
+<div id="independent-samples-t-test-equal-sample-sizes" class="section level3 well">
 <h3 class="well">Independent Samples t-test (equal sample sizes)</h3>
-<p>Compares the sample means of two independent groups where DVs are
-continuous and population means are unknown.</p>
+<p>Compares the sample means of two independent groups where DVs are continuous and population means are unknown.</p>
 <p><img src="Images/indSamples2.png" style="width:50.0%" /></p>
 <div id="hypotheses-1" class="section level4">
 <h4>Hypotheses</h4>
-<p><span class="math inline">\(H_0: \mu_1 = \mu_2\)</span> OR <span
-class="math inline">\(H_0: \mu_1 - \mu_2 = 0\)</span></p>
-<p><span class="math inline">\(H_1: \mu_1 \ne \mu_2\)</span> OR <span
-class="math inline">\(H_0: \mu_1 - \mu_2 \ne 0\)</span></p>
+<p><span class="math inline">\(H_0: \mu_1 = \mu_2\)</span> OR <span class="math inline">\(H_0: \mu_1 - \mu_2 = 0\)</span></p>
+<p><span class="math inline">\(H_1: \mu_1 \ne \mu_2\)</span> OR <span class="math inline">\(H_0: \mu_1 - \mu_2 \ne 0\)</span></p>
 </div>
 <div id="differences-between-sample-means" class="section level4">
 <h4>Differences between Sample Means</h4>
 <ul>
-<li>Investigates the differences between (and Standard Error of) sample
-means.</li>
+<li>Investigates the differences between (and Standard Error of) sample means.</li>
 <li>Used when sample sizes are equal.</li>
-<li>Two groups: smokers (<span class="math inline">\(n=10\)</span>), and
-non-smokers (<span class="math inline">\(n=10\)</span>)</li>
+<li>Two groups: smokers (<span class="math inline">\(n=10\)</span>), and non-smokers (<span class="math inline">\(n=10\)</span>)</li>
 <li>The DV is mean anxiety scores (on a scale of 0 - 20)</li>
-<li>smokers (<span class="math inline">\(\bar{X}=15.31\)</span>, <span
-class="math inline">\(s=4.42\)</span>)</li>
-<li>non-smokers (<span class="math inline">\(\bar{X}=12.19\)</span>,
-<span class="math inline">\(s=3.28\)</span>)</li>
+<li>smokers (<span class="math inline">\(\bar{X}=15.31\)</span>, <span class="math inline">\(s=4.42\)</span>)</li>
+<li>non-smokers (<span class="math inline">\(\bar{X}=12.19\)</span>, <span class="math inline">\(s=3.28\)</span>)</li>
 </ul>
 <p><span class="math display">\[\begin{align}
-  t &amp;= \frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1} +
-\frac{s^2_2}{n_2}}} =         \frac{15.31-12.19}{\sqrt{\frac{19.54}{10}
-+ \frac{10.76}{10}}} = \frac{3.12}{\sqrt{1.95+1.08}} = \frac{3.12}{1.74}
-= 1.79 \\
+  t &amp;= \frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1} + \frac{s^2_2}{n_2}}} =         \frac{15.31-12.19}{\sqrt{\frac{19.54}{10} + \frac{10.76}{10}}} = \frac{3.12}{\sqrt{1.95+1.08}} = \frac{3.12}{1.74} = 1.79 \\
   df &amp;= (n_1-1)+(n_2-1)=(10-1)+(10-1)=18 \\
 \end{align}\]</span></p>
 <blockquote>
-<p><span class="math inline">\(t(18) = 1.79,\ p&gt;.05,\ two\
-tailed\)</span></p>
+<p><span class="math inline">\(t(18) = 1.79,\ p&gt;.05,\ two\ tailed\)</span></p>
 </blockquote>
 </div>
-<div id="decision" class="section level4">
-<h4>Decision</h4>
-<p>The calculated <span class="math inline">\(t\)</span>-value of 1.79
-is less than our critical t-value (from a table) of ???, which falls
-within our 95% confidence interval, meaning that the result is not
-statistically significant enough for us to reject the null
-hypothesis.</p>
+<div id="decision-making-2" class="section level4">
+<h4>Decision Making</h4>
+<ul>
+<li>Calculated t-value = 1.79</li>
+<li>Critical (from table) t-value = 2.1 (two-sided)</li>
+<li>The calculated <span class="math inline">\(t\)</span>-value of 1.79 is less than our <abbr title="from a table">critical</abbr> t-value of 2.1, which falls within our 95% confidence interval, meaning that the result is not statistically significant enough for us to reject the null hypothesis.</li>
+</ul>
 </div>
 </div>
-<div id="independent-samples-t-test-unequal-sample-sizes"
-class="section level3 well">
+<div id="independent-samples-t-test-unequal-sample-sizes" class="section level3 well">
 <h3 class="well">Independent Samples t-test (unequal sample sizes)</h3>
 <div id="pooled-variance" class="section level4">
 <h4>Pooled Variance</h4>
-<p>The variance of our sample sizes is averaged using the following
-formula:</p>
+<p>The variance of our sample sizes is averaged using the following formula:</p>
 <p><span class="math display">\[\begin{align}
   s^2_p = \frac{(n_1 - 1)s^2_1 + (n_2 - 1)s^2_2}{n_1 + n_2 - 2}
 \end{align}\]</span></p>
 <p>Our t-statistic formula then becomes:</p>
 <p><span class="math display">\[\begin{align}
-  t = \frac{(\bar{X}_1 - \bar{X}_2)}{\sqrt{\frac{s^2_p}{n_1} +
-\frac{s^2_p}{n_2}}}
+  t = \frac{(\bar{X}_1 - \bar{X}_2)}{\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}}
 \end{align}\]</span></p>
 </div>
 <div id="example-1" class="section level4">
 <h4>Example</h4>
 <ul>
-<li>Two groups: smokers (<span class="math inline">\(n=12\)</span>) and
-non-smokers (<span class="math inline">\(n=27\)</span>)</li>
+<li>Two groups: smokers (<span class="math inline">\(n=12\)</span>) and non-smokers (<span class="math inline">\(n=27\)</span>)</li>
 <li>Our DV is mean anxiety scores (on a scale of 0 - 20)</li>
-<li>Smokers (<span class="math inline">\(\bar{X} = 15.31\)</span>, <span
-class="math inline">\(s=4.42\)</span>)</li>
-<li>Non-Smokers (<span class="math inline">\(\bar{X} = 12.19\)</span>,
-<span class="math inline">\(s=3.28\)</span>)</li>
+<li>Smokers (<span class="math inline">\(\bar{X} = 15.31\)</span>, <span class="math inline">\(s=4.42\)</span>)</li>
+<li>Non-Smokers (<span class="math inline">\(\bar{X} = 12.19\)</span>, <span class="math inline">\(s=3.28\)</span>)</li>
 </ul>
 <div id="pooled-variance-1" class="section level5">
 <h5>Pooled Variance</h5>
@@ -869,27 +827,47 @@ class="math inline">\(s=4.42\)</span>)</li>
 <div id="t-test" class="section level5">
 <h5>t-test</h5>
 <p><span class="math display">\[\begin{align}
-  t &amp;= \frac{(\bar{X}_1 - \bar{X}_2)}{\sqrt{\frac{s^2_p}{n_1} +
-\frac{s^2_p}{n_2}}} \\
-  &amp;= \frac{(15.31 - 12.19)}{\sqrt{\frac{13.37}{12} +
-\frac{13.37}{27}}} \\
-  &amp;= \frac{3.12}{\sqrt{\frac{1.11}{0.50} + \frac{13.37}{27}}} =
-\frac{3.12}{\sqrt{1.11 + 0.50}} = \frac{3.12}{1.27} = 2.45
+  t &amp;= \frac{(\bar{X}_1 - \bar{X}_2)}{\sqrt{\frac{s^2_p}{n_1} + \frac{s^2_p}{n_2}}} \\
+  &amp;= \frac{(15.31 - 12.19)}{\sqrt{\frac{13.37}{12} + \frac{13.37}{27}}} \\
+  &amp;= \frac{3.12}{\sqrt{\frac{1.11}{0.50} + \frac{13.37}{27}}} = \frac{3.12}{\sqrt{1.11 + 0.50}} = \frac{3.12}{1.27} = 2.45
 \end{align}\]</span></p>
 <blockquote>
-<p><span class="math inline">\(t(37) = 2.45\)</span>, <span
-class="math inline">\(p&lt;.05\)</span></p>
+<p><span class="math inline">\(t(37) = 2.45\)</span>, <span class="math inline">\(p&lt;.05\)</span></p>
 </blockquote>
 </div>
 </div>
-<div id="decision-1" class="section level4">
-<h4>Decision</h4>
-<p>The calculated <span class="math inline">\(t\)</span>-value of 2.45
-is greater than our critical t-value (from a table) of ???, which falls
-outside our 95% confidence interval, meaning that the result is
-statistically significant enough for us to reject the null
-hypothesis.</p>
+<div id="decision-making-3" class="section level4">
+<h4>Decision Making</h4>
+<ul>
+<li>Calculated t-value = 2.45</li>
+<li><abbr title="from a table">Critical</abbr> = 2.026 (two-sided)</li>
+<li>The calculated <span class="math inline">\(t\)</span>-value of 2.45 is greater than our <abbr title="from a table">critical</abbr> t-value of 2.026, meaning that the result is statistically significant enough for us to reject the null hypothesis.</li>
+</ul>
+<blockquote>
+<p>‘Overall there is a significant difference in anxiety levels between smokers (<em>M</em> = 15.31, <em>SD</em> = 4.42) and non-smokers (<em>M</em> = 12.19, <em>SD</em> = 3.28), <em>t</em>(37) = 2.45, <em>p</em> &lt; .05.’</p>
+</blockquote>
 </div>
+</div>
+<div id="confidence-limits" class="section level3 well">
+<h3 class="well">Confidence limits</h3>
+<ul>
+<li>Confidence limits (or confidence interval) provide a range of possible values existing within our 95% confidence level.</li>
+<li>Becoming more and more important in psychological research as it gives researchers an idea of how meaningful the difference is.</li>
+<li><strong>If the interval does not include zero our rejection of the null hypothesis is correct.</strong></li>
+<li>Confidence limits are calculated very simply as:
+<ul>
+<li>The <span class="math inline">\(\bar{D} \pm t_{crit}\)</span> (standard error of the mean difference)</li>
+</ul></li>
+</ul>
+<p>As in the above example:</p>
+<p><span class="math display">\[\begin{align}
+  CI &amp;= \bar{D} \pm z\frac{s}{\sqrt{n}} \\
+  &amp;= 3.12 \pm z\frac{s}{\sqrt{n}} \\
+  &amp;= 3.12 ± 2.026(1.27) \\
+  &amp;= 3.12 ± 2.573 \\
+  &amp;= 0.547\ to\ 5.693
+\end{align}\]</span></p>
+<p><em>As mentioned above, this interval does not contain zero, so we can be reassured that our rejection of the null hypothesis is correct.</em></p>
 </div>
 
 
