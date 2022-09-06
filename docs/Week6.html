@@ -319,11 +319,22 @@ $(document).ready(function () {
 </div>
 
 
-<blockquote>
-<p>The purpose of correlation and regression is to describe the relationship between two variables: - Correlation is the simple form of this where two variables are assessed for the degree and direction of their relationship. - Regression is an extension of correlation allowing for the prediction of one variable based on the scores from another. - A scatterplot of the <abbr title="observation">individual</abbr> scores for each person will - A scatterplot also highlights 3 characteristics: - Type (linear, non-linear) - Strength (strong, weak) - Direction (positive, negative)</p>
-</blockquote>
-<div id="example-1" class="section level3 well">
-<h3 class="well">Example 1</h3>
+<div id="introduction" class="section level3 well">
+<h3 class="well">Introduction</h3>
+<p>The purpose of correlation and regression is to describe the relationship between two variables:</p>
+<ul>
+<li>Correlation is the simple form of this where two variables are assessed for the degree and direction of their relationship.</li>
+<li>Regression is an extension of correlation allowing for the prediction of one variable based on the scores from another.</li>
+<li>The variable on the X and Y dimensions are also referred to as the predictor and the criterion variable respectively.</li>
+<li>A scatterplot also highlights 3 dimensions:
+<ul>
+<li>Type (linear, non-linear)</li>
+<li>Strength (strong, weak) is conveyed as a measure between -1 and 1</li>
+<li>Direction (positive, negative)</li>
+</ul></li>
+</ul>
+<div id="scatterplots" class="section level4">
+<h4>Scatterplots</h4>
 <table class="table table-hover">
 <thead>
 <tr scope="row">
@@ -451,10 +462,37 @@ J
 </tr>
 </tbody>
 </table>
-<p><img src="Images/Wk6Ex1.png" style="width:50.0%" /></p>
+<p><img src="Images/Wk6Ex1.png" style="width:35.0%" alt="Positive Correlation" /> <img src="Images/Wk6Ex2.png" style="width:35.0%" alt="Negative Correlation" /></p>
 </div>
-<div id="example-2" class="section level3 well">
-<h3 class="well">Example 2</h3>
+<div id="regression-lines" class="section level4">
+<h4>Regression Lines</h4>
+<ul>
+<li><abbr title="Lines of best fit">Regression lines</abbr> are used in prediction to obtain an estimate of either the corresponding X or Y value.</li>
+<li>A specific formula is used to calculate the exact values.</li>
+<li>This illustration of regression highlights the difference between the predictor variable and the criterion variable. When we conduct a regression analysis we would normally have a research question which asks the extent to which one variable (the predictor, X) is able to predict scores on another (the criterion, Y). To reflect this, the predictor variable is usually placed on the X axis, and the criterion is placed on the Y axis.</li>
+</ul>
+</div>
+<div id="pearsons-correlation-coefficient-r" class="section level4">
+<h4>Pearson’s Correlation Coefficient (r)</h4>
+<p><span class="math display">\[\begin{align}
+  r = \frac{cov_{xy}}{s_xs_y} = \frac{covariance}{sd\ x\ and\ y} \\
+\end{align}\]</span></p>
+</div>
+<div id="covariance" class="section level4">
+<h4>Covariance</h4>
+<p><span class="math display">\[\begin{align}
+  cov_{xy} = \frac{\Sigma(X-\bar{X})(Y-\bar{Y})}{N-1} \\
+\end{align}\]</span></p>
+<p>This formula is essentially the sum of the deviation products divided by N – 1.</p>
+</div>
+</div>
+<div id="example" class="section level3 well">
+<h3 class="well">Example</h3>
+<ul>
+<li>Ten participants completed questionnaires which measured trait anxiety and negative mood.</li>
+<li>The researcher was interested in examining whether a highly trait-anxious person is more likely to report more negative mood throughout the course of a day.</li>
+<li>Higher scores on both measures indicate higher trait anxiety and more negative mood.</li>
+</ul>
 <table class="table table-hover">
 <thead>
 <tr scope="row">
@@ -671,11 +709,78 @@ Value
 </tr>
 </tbody>
 </table>
-<p><img src="Images/Wk6Ex1.png" style="width:50.0%" /></p>
+<p><span class="math display">\[\begin{align}
+  cov_{xy} &amp;= \frac{\Sigma(X-\bar{X})(Y-\bar{Y})}{N-1} \\
+  &amp;= \frac{37.9}{9} = 4.21
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
+  r &amp;= \frac{cov_{xy}}{s_xs_y} \\
+  &amp;= \frac{4.21}{2.85 \times 1.97} = 0.75
+\end{align}\]</span></p>
+<p><strong>Pearson’s correlation analysis reveals a strong positive relationship between anxiety and negative mood.</strong></p>
 <blockquote>
-<h3 id="reporting">Reporting</h3>
-<p>‘A Pearson’s correlation analysis was conducted to examine the relationship between X and Y. The analysis revealed a significant association between the variables, <em>r</em> = .59, <em>N</em> = 10’</p>
+<h4 id="reporting">Reporting</h4>
+<p>‘A Pearson’s correlation analysis was conducted to examine the relationship between anxiety and negative mood. The analysis revealed a significant association between the variables, <em>r</em> = .75, <em>N</em> = 10’</p>
 </blockquote>
+<div id="hypothesis-testing-and-pearsons-r" class="section level4">
+<h4>Hypothesis testing and Pearson’s r</h4>
+<p><span class="math display">\[\begin{align}
+H_0&amp;: \rho = 0\ (null) \\
+H_a&amp;: \rho \ne 0\ (two-tailed) \\
+H_a&amp;: \rho &lt; 0\ or\ \\
+H_a&amp;: \rho &lt; 0\ (one-tailed) \\
+\end{align}\]</span></p>
+</div>
+<div id="significance-testing-of-r" class="section level4">
+<h4>Significance testing of <span class="math inline">\(r\)</span></h4>
+<p>Is our obtained correlation coefficient (<span class="math inline">\(r\)</span>) significantly different from zero to indicate that the two variables are not independent?</p>
+<p><span class="math display">\[\begin{align}
+  t &amp;= \frac{r\sqrt{N-2}}{{\sqrt{1-r^2}}} \\
+  &amp;= \frac{0.75\sqrt{10-2}}{{\sqrt{1-0.75^2}}} \\
+  &amp;= \frac{2.12}{0.66} = 3.21
+\end{align}\]</span></p>
+<blockquote>
+<p><span class="math inline">\(t = 3.21(8), \alpha = 0.05\)</span></p>
+</blockquote>
+</div>
+<div id="decision-making" class="section level4">
+<h4>Decision Making</h4>
+<p><span class="math display">\[\begin{align}
+  t_{crit} &amp;= 2.306 \\
+  t_{calc} &amp;= 3.21
+\end{align}\]</span></p>
+<blockquote>
+<h3 id="reporting-1">Reporting</h3>
+<p>‘As our calculated <em>t</em>-value is greater than the critical <em>t</em>-value, we can reject the null hypothesis. The critical value of <em>t</em> indicates that there is a significant positive relationship between anxiety and negative mood (<em>r</em> = +0.75, <em>n</em> = 10, <em>p</em> &lt; 0.05)’</p>
+</blockquote>
+</div>
+</div>
+<div id="predictedexplained-variance-r2" class="section level3 well">
+<h3 class="well">Predicted/explained variance (<span class="math inline">\(r^2\)</span>)</h3>
+<div id="range-restriction" class="section level4">
+<h4>Range restriction</h4>
+<ul>
+<li>Range restriction can be detected by examining the standard deviations of variables.</li>
+<li>Overly small standard deviations indicate that the variable is restricted in range (i.e. people are all scoring at a similar point on the scale).</li>
+<li>Range restriction can cause an artificial change to the real correlation (either reduced or inflated).</li>
+<li>For example:
+<ul>
+<li>Overall there is a correlation between achievement test score and college GPA scores of 0.65.</li>
+<li>If we only examine the correlation between test scores and GPA for those students who score 400 or more on the test, the association reduces to 0.43.</li>
+</ul></li>
+</ul>
+</div>
+<div id="outliers" class="section level4">
+<h4>Outliers</h4>
+<p>An extreme score can have a dramatic influence on the correlation coefficient.</p>
+</div>
+<div id="heterogeneous-subsamples" class="section level4">
+<h4>Heterogeneous subsamples</h4>
+<ul>
+<li>Occurs when the data from two subgroups are mixed together. (i.e. collapsed across gender)</li>
+<li>Different groups could be characterised by different correlations between the variables of interest. (agreeableness between men and women)</li>
+</ul>
+</div>
 </div>
 
 

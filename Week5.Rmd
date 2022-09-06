@@ -292,6 +292,8 @@ Our t-statistic formula then becomes:
 -   <abbr title="from a table">Critical</abbr> = 2.026 (two-sided)
 -   The calculated $t$-value of 2.45 is greater than our <abbr title="from a table">critical</abbr> t-value of 2.026, meaning that the result is statistically significant enough for us to reject the null hypothesis.
 
+>#### Reporting
+>
 >'Overall there is a significant difference in anxiety levels between smokers (*M* = 15.31, *SD* = 4.42) and non-smokers (*M* = 12.19, *SD* = 3.28), *t*(37) = 2.45, *p* < .05.'
 
 ### Confidence limits {.well}

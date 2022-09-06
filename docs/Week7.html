@@ -319,7 +319,277 @@ $(document).ready(function () {
 </div>
 
 
-
+<div id="introduction" class="section level3 well">
+<h3 class="well">Introduction</h3>
+<ul>
+<li>Using the regression line (line of best fit), we can predict negative mood scores (Y / DV / criterion) based on anxiety (X / IV / predictor).</li>
+<li>In a bivariate analysis we can predict Y for any given value of X statistically, via the use of the intercept (a) and slope (b).</li>
+<li>A multiple analysis looks at the impact of the IV on several DVs</li>
+<li>We can estimate the value of Y from X via the scatterplot as below:</li>
+</ul>
+<div class="figure">
+<img src="Images/RegEst.png" style="width:50.0%" alt="" />
+<p class="caption">Regression Estimate</p>
+</div>
+</div>
+<div id="components" class="section level3 well">
+<h3 class="well">Components</h3>
+<div id="slope" class="section level4">
+<h4>Slope</h4>
+<p>The slope describes the degree of difference (rise) in our Y prediction where the value of X increases by 1.</p>
+<p><span class="math display">\[\begin{align}
+  b &amp;= \frac{cov_{XY}}{s_X^2}
+\end{align}\]</span></p>
+</div>
+<div id="intercept" class="section level4">
+<h4>Intercept</h4>
+<p>The intercept predicts the point at which our line of regression crosses the Y axis.</p>
+<p><span class="math display">\[\begin{align}
+  a &amp;= \bar{Y} - b\bar{X}
+\end{align}\]</span></p>
+</div>
+<div id="equation" class="section level4">
+<h4>Equation</h4>
+<p><span class="math display">\[\begin{align}
+  \hat{Y} = bX + a
+\end{align}\]</span></p>
+</div>
+<div id="standard-error-of-estimate" class="section level4">
+<h4>Standard Error of estimate</h4>
+<p>This value gives us the mean (?) distance between our plotted values and the regression line.</p>
+<p><span class="math display">\[\begin{align}
+  S_{Y.X} = S_Y\sqrt{(1-r^2)}
+\end{align}\]</span></p>
+</div>
+<div id="confidence-limits-95" class="section level4">
+<h4>Confidence Limits (95%)</h4>
+<p><span class="math display">\[\begin{align}
+  CI_Y = \hat{Y} \pm (t_{a/2})(S_{Y.X})
+\end{align}\]</span></p>
+</div>
+</div>
+<div id="example" class="section level3 well">
+<h3 class="well">Example</h3>
+<div id="data" class="section level4">
+<h4>Data</h4>
+<table class="table table-hover">
+<thead>
+<tr scope="row">
+<th scope="col" colspan="2">
+Scores
+</th>
+<th scope="col" colspan="2">
+Deviations<BR>from mean
+</th>
+<th scope="col">
+Products
+</th>
+</tr>
+<tr scope="row">
+<th scope="col">
+Anxiety (<em>X</em>)
+</th>
+<th scope="col">
+Negative<BR>mood (<em>Y</em>)
+</th>
+<th scope="col">
+<span class="math inline">\(X - \bar{X}\)</span>
+</th>
+<th scope="col">
+<span class="math inline">\(Y - \bar{Y}\)</span>
+</th>
+<th scope="col">
+<span class="math inline">\((X-\bar{X})(Y-\bar{Y})\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr scope="row">
+<td>
+5
+</td>
+<td>
+4
+</td>
+<td>
+–0.9
+</td>
+<td>
+–0.9
+</td>
+<td>
+0.81
+</td>
+</tr>
+<tr scope="row">
+<td>
+8
+</td>
+<td>
+6
+</td>
+<td>
+2.1
+</td>
+<td>
+1.1
+</td>
+<td>
+2.31
+</td>
+</tr>
+<tr scope="row">
+<td>
+9
+</td>
+<td>
+5
+</td>
+<td>
+3.1
+</td>
+<td>
+0.1
+</td>
+<td>
+0.31
+</td>
+</tr>
+<tr scope="row">
+<td>
+2
+</td>
+<td>
+1
+</td>
+<td>
+–3.9
+</td>
+<td>
+–3.9
+</td>
+<td>
+15.21
+</td>
+</tr>
+<tr scope="row">
+<td>
+7
+</td>
+<td>
+5
+</td>
+<td>
+1.1
+</td>
+<td>
+0.1
+</td>
+<td>
+0.11
+</td>
+</tr>
+<tr scope="row">
+<td>
+4
+</td>
+<td>
+3
+</td>
+<td>
+–1.9
+</td>
+<td>
+–1.9
+</td>
+<td>
+3.61
+</td>
+</tr>
+<tr scope="row">
+<td>
+9
+</td>
+<td>
+7
+</td>
+<td>
+3.1
+</td>
+<td>
+2.1
+</td>
+<td>
+6.51
+</td>
+</tr>
+<tr scope="row">
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+0.1
+</td>
+<td>
+2.1
+</td>
+<td>
+0.21
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-hover">
+<thead>
+<tr scope="row">
+<th scope="col">
+Measure
+</th>
+<th scope="col">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr scope="row">
+<td>
+<span class="math inline">\(\bar{X}\)</span>
+</td>
+<td>
+5.9
+</td>
+</tr>
+<tr scope="row">
+<td>
+<span class="math inline">\(\bar{Y}\)</span>
+</td>
+<td>
+4.9
+</td>
+</tr>
+<tr scope="row">
+<td>
+<span class="math inline">\(\Sigma(X-\bar{X})(Y-\bar{Y})\)</span>
+</td>
+<td>
+37.9
+</td>
+</tr>
+<tr scope="row">
+<td>
+<span class="math inline">\(cov_{xy}\)</span>
+</td>
+<td>
+4.21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 
 
 
