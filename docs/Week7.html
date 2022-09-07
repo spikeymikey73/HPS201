@@ -368,8 +368,8 @@ $(document).ready(function () {
 \end{align}\]</span></p>
 </div>
 </div>
-<div id="example" class="section level3 well">
-<h3 class="well">Example</h3>
+<div id="anxiety-vs-negative-mood-example" class="section level3 well">
+<h3 class="well">Anxiety vs Negative Mood Example</h3>
 <div id="data" class="section level4">
 <h4>Data</h4>
 <table class="table table-hover">
@@ -564,10 +564,27 @@ Value
 </tr>
 <tr scope="row">
 <td>
+<span class="math inline">\(SD_X\)</span>
+</td>
+<td>
+2.85
+</td>
+</tr>
+<tr scope="row">
+<td>
 <span class="math inline">\(\bar{Y}\)</span>
 </td>
 <td>
 4.9
+</td>
+</tr>
+</tr>
+<tr scope="row">
+<td>
+<span class="math inline">\(SD_Y\)</span>
+</td>
+<td>
+1.97
 </td>
 </tr>
 <tr scope="row">
@@ -588,6 +605,71 @@ Value
 </tr>
 </tbody>
 </table>
+</div>
+<div id="steps" class="section level4 tabset">
+<h4 class="tabset">Steps:</h4>
+<div id="calculate-slope" class="section level5">
+<h5>Calculate Slope</h5>
+<p><span class="math display">\[\begin{align}
+  b &amp;= \frac{cov_{XY}}{s_X^2} \\
+  &amp;= \frac{4.21}{2.85^2} \\
+  &amp;= 0.52
+\end{align}\]</span></p>
+</div>
+<div id="calculate-intercept" class="section level5">
+<h5>Calculate Intercept</h5>
+<p><span class="math display">\[\begin{align}
+  a &amp;= \bar{Y} - b\bar{X} \\
+  &amp;= 4.9 - (0.52 \times 5.9) \\
+  &amp;= 1.83
+\end{align}\]</span></p>
+</div>
+<div id="calculateplot-regression-line" class="section level5">
+<h5>Calculate/Plot Regression Line</h5>
+<p>Where <span class="math inline">\(X = 0\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+  \hat{Y} &amp;= bX + a \\
+  &amp;= (0.52 \times 0) + 1.83 \\
+  &amp;= 1.83
+\end{align}\]</span></p>
+<p>Where <span class="math inline">\(X = 9\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+  \hat{Y} &amp;= bX + a \\
+  &amp;= (0.52 \times 9) + 1.83 \\
+  &amp;= 6.51
+\end{align}\]</span></p>
+<p>We now simply plot this line on the graph so that it passes through the points (X = 0, Y = 1.832) and (X = 9, Y = 6.512).</p>
+<div class="figure">
+<img src="Images/Regression.png" style="width:50.0%" alt="" />
+<p class="caption">Regression Line</p>
+</div>
+</div>
+<div id="calculate-seoe" class="section level5">
+<h5>Calculate SEOE</h5>
+<p><span class="math display">\[\begin{align}
+  S_{Y.X} &amp;= S_Y\sqrt{(1-r^2)} \\
+  &amp;= 1.97\sqrt{(1-0.56)} \\
+  &amp;= 1.97\sqrt{0.44} \\
+  &amp;= 1.97 \times 0.66 \\
+  &amp;= 1.31
+\end{align}\]</span></p>
+</div>
+<div id="confidence-limits" class="section level5 unnumbered">
+<h5 class="unnumbered">Confidence Limits</h5>
+<p>The critical value of <em>t</em>(<span class="math inline">\(\alpha\)</span> = 0.05, df = 8) is 2.306.</p>
+<p>Where <span class="math inline">\(X = 6\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+  \hat{Y} &amp;= bX + a \\
+  &amp;= (0.52 \times 6) + 1.83 \\
+  &amp;= 3.18 + 1.83 \\
+  &amp;= 5.01 \\
+  \\
+  CI_Y &amp;= \hat{Y} \pm (t_{a/2})(S_{Y.X}) \\
+  &amp;= 5.01 \pm (2.306 \times 1.31) \\
+  &amp;= 5.01 \pm 3.021 \\
+  &amp;= 1.989\ to\ 8.031
+\end{align}\]</span></p>
+</div>
 </div>
 </div>
 

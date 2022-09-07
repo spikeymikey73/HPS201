@@ -36,6 +36,8 @@ The intercept predicts the point at which our line of regression crosses the Y a
 
 #### Equation
 
+We use the below formula with a low and high point for X to statistically estimate the respective values of Y.
+
 \begin{align}
   \hat{Y} = bX + a
 \end{align}
@@ -54,7 +56,7 @@ This value gives us the mean (?) distance between our plotted values and the reg
   CI_Y = \hat{Y} \pm (t_{a/2})(S_{Y.X})
 \end{align}
 
-### Example {.well}
+### Anxiety vs Negative Mood Example {.well}
 
 #### Data
 
@@ -146,8 +148,17 @@ This value gives us the mean (?) distance between our plotted values and the reg
             <td>5.9</td>
         </tr>
         <tr scope="row">
+            <td>$SD_X$</td>
+            <td>2.85</td>
+        </tr>
+        <tr scope="row">
             <td>$\bar{Y}$</td>
             <td>4.9</td>
+        </tr>
+        </tr>
+        <tr scope="row">
+            <td>$SD_Y$</td>
+            <td>1.97</td>
         </tr>
         <tr scope="row">
             <td>$\Sigma(X-\bar{X})(Y-\bar{Y})$</td>
@@ -160,4 +171,70 @@ This value gives us the mean (?) distance between our plotted values and the reg
     </tbody>
 </table>
 
+#### Steps: {.tabset}
 
+##### Calculate Slope
+
+\begin{align}
+  b &= \frac{cov_{XY}}{s_X^2} \\
+  &= \frac{4.21}{2.85^2} \\
+  &= 0.52
+\end{align}
+
+##### Calculate Intercept
+
+\begin{align}
+  a &= \bar{Y} - b\bar{X} \\
+  &= 4.9 - (0.52 \times 5.9) \\
+  &= 1.83
+\end{align}
+
+##### Calculate/Plot Regression Line
+
+Where $X = 0$:
+
+\begin{align}
+  \hat{Y} &= bX + a \\
+  &= (0.52 \times 0) + 1.83 \\
+  &= 1.83
+\end{align}
+
+Where $X = 9$:
+
+\begin{align}
+  \hat{Y} &= bX + a \\
+  &= (0.52 \times 9) + 1.83 \\
+  &= 6.51
+\end{align}
+
+We now simply plot this line on the graph so that it passes through the points (X = 0, Y = 1.832) and (X = 9, Y = 6.512).
+
+![Regression Line](Images/Regression.png){width=50%}
+
+##### Calculate SEOE
+
+\begin{align}
+  S_{Y.X} &= S_Y\sqrt{(1-r^2)} \\
+  &= 1.97\sqrt{(1-0.56)} \\
+  &= 1.97\sqrt{0.44} \\
+  &= 1.97 \times 0.66 \\
+  &= 1.31
+\end{align}
+
+##### Confidence Limits {-}
+
+The critical value of *t*($\alpha$ = 0.05, df = 8) is 2.306.
+
+Where $X = 6$:
+
+\begin{align}
+  \hat{Y} &= bX + a \\
+  &= (0.52 \times 6) + 1.83 \\
+  &= 3.18 + 1.83 \\
+  &= 5.01 \\
+  \\
+  CI_Y &= \hat{Y} \pm (t_{a/2})(S_{Y.X}) \\
+  &= 5.01 \pm (2.306 \times 1.31) \\
+  &= 5.01 \pm 3.021 \\
+  &= 1.989\ to\ 8.031
+\end{align}
