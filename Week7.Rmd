@@ -165,7 +165,7 @@ This value gives us the mean (?) distance between our plotted values and the reg
             <td>37.9</td>
         </tr>
         <tr scope="row">
-            <td>$cov_{xy}$</td>
+            <td><abbr title="$\frac{\Sigma(X-\bar{X})(Y-\bar{Y})}{N-1}$">$cov_{xy}$<\abbr></td>
             <td>4.21</td>
         </tr>
     </tbody>
