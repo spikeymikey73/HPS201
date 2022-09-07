@@ -5,8 +5,8 @@ title: "Unit Schedule"
 | Week | Commencing | Topic                                     | Assessment Due Date                 |
 |:----:|:----------:|-------------------------------------------|-------------------------------------|
 | 1    | 11 JUL 22  | Introduction                              | -                                   |
-| 2    | 18 JUL 22  | Central Tendency Variance z-scores        | -                                   |
-| 3    | 25 JUL 22  | Sampling Distributions Hypothesis Testing | -                                   |
+| 2    | 18 JUL 22  | Central Tendency<br>Variance<br>z-scores  | <br>-                                   |
+| 3    | 25 JUL 22  | Sampling Distributions<br>Hypothesis Testing | -                                   |
 | 4    | 01 AUG 22  | Chi-Square                                | Assessment 2 (Quiz 1) Due 4 AUG 22  |
 | 5    | 08 AUG 22  | t-tests                                   | -                                   |
 | 6    | 22 AUG 22  | Correlation                               | -                                   |
