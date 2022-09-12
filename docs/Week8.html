@@ -383,7 +383,7 @@ $(document).ready(function () {
 <p><span class="math display">\[\begin{align}
   F &amp;= \frac{variance\ between\ groups}{variance\ within\ groups} \\
   OR \\
-  F &amp;= \frac{treatment\ effect\ + difference\ due\ to\ chance}{difference\ due\ to\ chance} \\
+  F &amp;= \frac{treatment\ effect\ + difference\ due\ to\ chance}{difference\ due\ to\ chance}
 \end{align}\]</span></p>
 </div>
 <div id="logic-of-anova" class="section level3 well">
@@ -398,6 +398,7 @@ $(document).ready(function () {
 </div>
 <div id="calculation-of-anova" class="section level3 well">
 <h3 class="well">Calculation of ANOVA</h3>
+<p><strong>Age vs. Happiness notes study from notes</strong></p>
 <p>Steps:</p>
 <ol style="list-style-type: decimal">
 <li>Sums of Squares (distance of each score from the mean squared)</li>
@@ -420,16 +421,39 @@ $(document).ready(function () {
  SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2
 \end{align}\]</span></p>
 </blockquote>
+</div>
+<div id="b.-calculate-ss_error" class="section level5">
+<h5>b. Calculate <span class="math inline">\(SS_{error}\)</span></h5>
 <blockquote>
-<h5 id="b.-calculate-ss_error">b. Calculate <span class="math inline">\(SS_{error}\)</span></h5>
+<p><em>Difference of each score from the mean of its group:</em></p>
+<p>Where:</p>
+<p><span class="math inline">\(X_{ij} =\)</span> score of each person in group <span class="math inline">\(j\)</span>, and</p>
+<p><span class="math inline">\(\bar{X}_j=\)</span> treatment group mean</p>
+<p><span class="math display">\[\begin{align}
+ SS_{error} = \Sigma(X_{ij}-\bar{X}_j)^2
+\end{align}\]</span></p>
 </blockquote>
+</div>
+<div id="c.-calculate-ss_total" class="section level5">
+<h5>c. Calculate <span class="math inline">\(SS_{total}\)</span></h5>
 <blockquote>
-<h5 id="c.-calculate-ss_total">c. Calculate <span class="math inline">\(SS_{total}\)</span></h5>
+<p><span class="math display">\[\begin{align}
+ SS_{total} = SS_{treatment} + SS_{error}
+\end{align}\]</span></p>
 </blockquote>
 </div>
 </div>
 <div id="degrees-of-freedom" class="section level4">
 <h4>2. Degrees of Freedom</h4>
+<p>Where:</p>
+<p><span class="math inline">\(k =\)</span> number of groups / levels in IV</p>
+<p><span class="math inline">\(n =\)</span> number of people in each group / level</p>
+<p><span class="math inline">\(N=\)</span> total number of participants in study across all groups</p>
+<p><span class="math display">\[\begin{align}
+  df_{treatment} &amp;= k-1 \\
+  df_{error} &amp;= k(n-1) \\
+  df_{total} &amp;= N-1 \\
+\end{align}\]</span></p>
 </div>
 <div id="mean-squares" class="section level4">
 <h4>3. Mean Squares</h4>

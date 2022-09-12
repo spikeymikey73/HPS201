@@ -38,7 +38,7 @@ Reflects the proportion of variance between groups with the variance within grou
 \begin{align}
   F &= \frac{variance\ between\ groups}{variance\ within\ groups} \\
   OR \\
-  F &= \frac{treatment\ effect\ + difference\ due\ to\ chance}{difference\ due\ to\ chance} \\
+  F &= \frac{treatment\ effect\ + difference\ due\ to\ chance}{difference\ due\ to\ chance}
 \end{align}
 
 ### Logic of ANOVA {.well}
@@ -48,53 +48,6 @@ Reflects the proportion of variance between groups with the variance within grou
 -   Numerator difference between mean (can also be due to chance or uncontrollable factors),
 -   Numerator also contains differences due to treatment,
 -   If numerator treatment effect + error is larger than the denominator, there is evidence that treatment is affecting between group (mean) differences.
-
-### Calculation of ANOVA {.well}
-
-Steps:
-
-1.    Sums of Squares (distance of each score from the mean squared)
-2.    Degrees of Freedom
-3.    Mean Squares
-4.    F-value
-
-#### 1. Sums of Squares (distance of each score from the mean squared)
-
-\begin{align}
-  SS_{total} = SS_{treatment} + SS_{error}
-\end{align}
-
-##### a. Calculate $SS_{treatment}$
->
->Where:
->
->$\bar{X}_j =$ treatment group mean,
->
->$\bar{X}.. =$ grand mean
->
->\begin{align}
->  SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2
->\end{align}
-
->##### b. Calculate $SS_{error}$
->
->
-
->##### c. Calculate $SS_{total}$
->
->
-
-#### 2. Degrees of Freedom
-
-
-
-#### 3. Mean Squares
-
-
-
-#### 4. F-value
-
-
 
 ### The F statistic {.well}
 
@@ -107,6 +60,77 @@ table from slides
 -   Tells us how much the total variability is caused by the difference between treatments
 -   Range from 0 to 1
 -   Represented by eta squared ($\eta^2$)
+
 \begin{align}
   \eta^2 = \frac{SS_{treat}}{SS{total}}
 \end{align}
+
+### Calculation of ANOVA {.well}
+
+**Age vs. Happiness notes study from notes**
+
+Steps:
+
+1.    Sums of Squares (distance of each score from the mean squared)
+2.    Degrees of Freedom
+3.    Mean Squares
+4.    F-value
+
+#### 1. Sums of Squares (distance of each score from the mean squared)
+
+##### a. Calculate $SS_{treatment}$
+
+>Where:
+>
+>$\bar{X}_j =$ treatment group mean,
+>
+>$\bar{X}.. =$ grand mean
+>
+>\begin{align}
+>  SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2
+>\end{align}
+
+##### b. Calculate $SS_{error}$
+
+>*Difference of each score from the mean of its group:*
+>
+>Where:
+>
+>$X_{ij} =$ score of each person in group $j$, and
+>
+>$\bar{X}_j=$ treatment group mean
+>
+>\begin{align}
+>  SS_{error} = \Sigma(X_{ij}-\bar{X}_j)^2
+>\end{align}
+
+
+##### c. Calculate $SS_{total}$
+
+>\begin{align}
+>  SS_{total} = SS_{treatment} + SS_{error}
+>\end{align}
+
+#### 2. Degrees of Freedom
+
+Where:
+
+$k =$ number of groups / levels in IV
+
+$n =$ number of people in each group / level
+
+$N=$ total number of participants in study across all groups
+
+\begin{align}
+  df_{treatment} &= k-1 \\
+  df_{error} &= k(n-1) \\
+  df_{total} &= N-1 \\
+\end{align}
+
+#### 3. Mean Squares
+
+
+
+#### 4. F-value
+
+
