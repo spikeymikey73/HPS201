@@ -7,3 +7,106 @@ knitr::opts_chunk$set(echo = TRUE)
 library(jmv)
 ```
 
+### Introduction {.well}
+
+The differences between the t-test and ANOVA:
+
+| t-test                                                       | Example                              | ANOVA                                            | Example                              |
+|--------------------------------------------------------------|--------------------------------------|--------------------------------------------------|--------------------------------------|
+| One IV: two categorical levels | campus vs. cloud student             | One IV: three or more categorical levels                     | Young vs. Middle Aged vs. Old        |
+| One DV: continuous values                                    | IQ score, exam results, unit results | One DV: Continuous values                        | IQ score, exam results, unit results |
+| Examines:<br>&nbsp;- between group variance                              | -                                    | Examines:<br>&nbsp;- between group, and<br>&nbsp;-    within group variance | -                                    |
+
+### Assumptions {.well}
+
+-   Homogeneity of Variance: equal spread of each group around the mean
+-   Normality: data is characterised by a normal distribution around the mean
+-   Independence of Observations: each score is not related to others. If there is a relationship, scores are not random.
+-   If these assumptions are violated, caution is required in interpretation of the results.
+-   A larger sample size overcomes the violation of assumptions.
+
+### Sources of error {.well}
+
+-   Individual Differences such as sex, gender, personality, measurement error,
+-   Variability within group is called error variance,
+-   Differences between groups due to chance or effect of treatment
+
+### F-statistic {.well}
+
+Reflects the proportion of variance between groups with the variance within groups.
+
+\begin{align}
+  F &= \frac{variance\ between\ groups}{variance\ within\ groups} \\
+  OR \\
+  F &= \frac{treatment\ effect\ + difference\ due\ to\ chance}{difference\ due\ to\ chance} \\
+\end{align}
+
+### Logic of ANOVA {.well}
+
+-   Compares whether the difference between means is greater than the difference expected by chance,
+-   Denominator referred to as error variance as it represents uncontrollable/random factors,
+-   Numerator difference between mean (can also be due to chance or uncontrollable factors),
+-   Numerator also contains differences due to treatment,
+-   If numerator treatment effect + error is larger than the denominator, there is evidence that treatment is affecting between group (mean) differences.
+
+### Calculation of ANOVA {.well}
+
+Steps:
+
+1.    Sums of Squares (distance of each score from the mean squared)
+2.    Degrees of Freedom
+3.    Mean Squares
+4.    F-value
+
+#### 1. Sums of Squares (distance of each score from the mean squared)
+
+\begin{align}
+  SS_{total} = SS_{treatment} + SS_{error}
+\end{align}
+
+##### a. Calculate $SS_{treatment}$
+>
+>Where:
+>
+>$\bar{X}_j =$ treatment group mean,
+>
+>$\bar{X}.. =$ grand mean
+>
+>\begin{align}
+>  SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2
+>\end{align}
+
+>##### b. Calculate $SS_{error}$
+>
+>
+
+>##### c. Calculate $SS_{total}$
+>
+>
+
+#### 2. Degrees of Freedom
+
+
+
+#### 3. Mean Squares
+
+
+
+#### 4. F-value
+
+
+
+### The F statistic {.well}
+
+### ANOVA Summary {.well}
+
+table from slides
+
+### Effect Size {.well}
+
+-   Tells us how much the total variability is caused by the difference between treatments
+-   Range from 0 to 1
+-   Represented by eta squared ($\eta^2$)
+\begin{align}
+  \eta^2 = \frac{SS_{treat}}{SS{total}}
+\end{align}
