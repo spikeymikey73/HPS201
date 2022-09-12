@@ -55,26 +55,16 @@ Reflects the proportion of variance between groups with the variance within grou
 
 table from slides
 
-### Effect Size {.well}
-
--   Tells us how much the total variability is caused by the difference between treatments
--   Range from 0 to 1
--   Represented by eta squared ($\eta^2$)
-
-\begin{align}
-  \eta^2 = \frac{SS_{treat}}{SS{total}}
-\end{align}
-
 ### Calculation of ANOVA {.well}
 
-**Age vs. Happiness notes study from notes**
+>Steps:
+>
+>1.    Sums of Squares (distance of each score from the mean squared)
+>2.    Degrees of Freedom
+>3.    Mean Squares
+>4.    F-value
 
-Steps:
-
-1.    Sums of Squares (distance of each score from the mean squared)
-2.    Degrees of Freedom
-3.    Mean Squares
-4.    F-value
+### Age vs. Happiness notes study from notes {.well}
 
 #### 1. Sums of Squares (distance of each score from the mean squared)
 
@@ -113,24 +103,44 @@ Steps:
 
 #### 2. Degrees of Freedom
 
-Where:
+>Where:
+>
+>$k =$ number of groups / levels in IV
+>
+>$n =$ number of people in each group / level
+>
+>$N=$ total number of participants in study across all groups
+>
+>\begin{align}
+>  df_{treatment} &= k-1 \\
+>  df_{error} &= k(n-1) \\
+>  df_{total} &= N-1
+>\end{align}
 
-$k =$ number of groups / levels in IV
+#### 3. $MS_{treatment}$ and $MS_{error}$
 
-$n =$ number of people in each group / level
+>Dividing the $SS_{treatment}$ and $SS_{error}$ by their respective $df$ values:
+>
+>\begin{align}
+>  MS_{treatment} &= \frac{SS_{treatment}}{df_{treatment}} \\
+>  MS_{error} &= \frac{SS_{error}}{df_{error}}
+>\end{align}
 
-$N=$ total number of participants in study across all groups
+#### 4. Calculate F-value
 
-\begin{align}
-  df_{treatment} &= k-1 \\
-  df_{error} &= k(n-1) \\
-  df_{total} &= N-1 \\
-\end{align}
+>\begin{align}
+>  F &= \frac{MS_{treatment}}{MS_{error}}
+>\end{align}
+>
+>-   What does F mean?
+>-   Is it significant?
 
-#### 3. Mean Squares
+#### 5. Effect Size
 
-
-
-#### 4. F-value
-
-
+>-   Tells us how much the total variability is caused by the difference between treatments
+>-   Range from 0 to 1
+>-   Represented by eta squared ($\eta^2$)
+>
+>\begin{align}
+>  \eta^2 = \frac{SS_{treat}}{SS{total}}
+>\end{align}

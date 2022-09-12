@@ -396,9 +396,16 @@ $(document).ready(function () {
 <li>If numerator treatment effect + error is larger than the denominator, there is evidence that treatment is affecting between group (mean) differences.</li>
 </ul>
 </div>
+<div id="the-f-statistic" class="section level3 well">
+<h3 class="well">The F statistic</h3>
+</div>
+<div id="anova-summary" class="section level3 well">
+<h3 class="well">ANOVA Summary</h3>
+<p>table from slides</p>
+</div>
 <div id="calculation-of-anova" class="section level3 well">
 <h3 class="well">Calculation of ANOVA</h3>
-<p><strong>Age vs. Happiness notes study from notes</strong></p>
+<blockquote>
 <p>Steps:</p>
 <ol style="list-style-type: decimal">
 <li>Sums of Squares (distance of each score from the mean squared)</li>
@@ -406,11 +413,12 @@ $(document).ready(function () {
 <li>Mean Squares</li>
 <li>F-value</li>
 </ol>
+</blockquote>
+</div>
+<div id="age-vs.-happiness-notes-study-from-notes" class="section level3 well">
+<h3 class="well">Age vs. Happiness notes study from notes</h3>
 <div id="sums-of-squares-distance-of-each-score-from-the-mean-squared" class="section level4">
 <h4>1. Sums of Squares (distance of each score from the mean squared)</h4>
-<p><span class="math display">\[\begin{align}
-  SS_{total} = SS_{treatment} + SS_{error}
-\end{align}\]</span></p>
 <div id="a.-calculate-ss_treatment" class="section level5">
 <h5>a. Calculate <span class="math inline">\(SS_{treatment}\)</span></h5>
 <blockquote>
@@ -445,39 +453,53 @@ $(document).ready(function () {
 </div>
 <div id="degrees-of-freedom" class="section level4">
 <h4>2. Degrees of Freedom</h4>
+<blockquote>
 <p>Where:</p>
 <p><span class="math inline">\(k =\)</span> number of groups / levels in IV</p>
 <p><span class="math inline">\(n =\)</span> number of people in each group / level</p>
 <p><span class="math inline">\(N=\)</span> total number of participants in study across all groups</p>
 <p><span class="math display">\[\begin{align}
-  df_{treatment} &amp;= k-1 \\
-  df_{error} &amp;= k(n-1) \\
-  df_{total} &amp;= N-1 \\
+ df_{treatment} &amp;= k-1 \\
+ df_{error} &amp;= k(n-1) \\
+ df_{total} &amp;= N-1
 \end{align}\]</span></p>
+</blockquote>
 </div>
-<div id="mean-squares" class="section level4">
-<h4>3. Mean Squares</h4>
+<div id="ms_treatment-and-ms_error" class="section level4">
+<h4>3. <span class="math inline">\(MS_{treatment}\)</span> and <span class="math inline">\(MS_{error}\)</span></h4>
+<blockquote>
+<p>Dividing the <span class="math inline">\(SS_{treatment}\)</span> and <span class="math inline">\(SS_{error}\)</span> by their respective <span class="math inline">\(df\)</span> values:</p>
+<p><span class="math display">\[\begin{align}
+ MS_{treatment} &amp;= \frac{SS_{treatment}}{df_{treatment}} \\
+ MS_{error} &amp;= \frac{SS_{error}}{df_{error}}
+\end{align}\]</span></p>
+</blockquote>
 </div>
-<div id="f-value" class="section level4">
-<h4>4. F-value</h4>
+<div id="calculate-f-value" class="section level4">
+<h4>4. Calculate F-value</h4>
+<blockquote>
+<p><span class="math display">\[\begin{align}
+ F &amp;= \frac{MS_{treatment}}{MS_{error}}
+\end{align}\]</span></p>
+<ul>
+<li>What does F mean?</li>
+<li>Is it significant?</li>
+</ul>
+</blockquote>
 </div>
-</div>
-<div id="the-f-statistic" class="section level3 well">
-<h3 class="well">The F statistic</h3>
-</div>
-<div id="anova-summary" class="section level3 well">
-<h3 class="well">ANOVA Summary</h3>
-<p>table from slides</p>
-</div>
-<div id="effect-size" class="section level3 well">
-<h3 class="well">Effect Size</h3>
+<div id="effect-size" class="section level4">
+<h4>5. Effect Size</h4>
+<blockquote>
 <ul>
 <li>Tells us how much the total variability is caused by the difference between treatments</li>
 <li>Range from 0 to 1</li>
-<li>Represented by eta squared (<span class="math inline">\(\eta^2\)</span>) <span class="math display">\[\begin{align}
-  \eta^2 = \frac{SS_{treat}}{SS{total}}
-\end{align}\]</span></li>
+<li>Represented by eta squared (<span class="math inline">\(\eta^2\)</span>)</li>
 </ul>
+<p><span class="math display">\[\begin{align}
+ \eta^2 = \frac{SS_{treat}}{SS{total}}
+\end{align}\]</span></p>
+</blockquote>
+</div>
 </div>
 
 
