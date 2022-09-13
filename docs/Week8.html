@@ -379,7 +379,13 @@ $(document).ready(function () {
 </div>
 <div id="f-statistic" class="section level3 well">
 <h3 class="well">F-statistic</h3>
-<p>Reflects the proportion of variance between groups with the variance within groups.</p>
+<ul>
+<li>Reflects the proportion of variance between groups with the variance within groups.</li>
+<li>Tells us how many times larger the treatment effect is than the error.</li>
+<li>Is the difference between groups larger than the error between groups</li>
+<li>Compare <span class="math inline">\(F_{calc}\)</span> to <span class="math inline">\(F_{crit}\)</span> to determine significance where <span class="math inline">\(\alpha = 0.05\)</span>.</li>
+</ul>
+<p>If <span class="math inline">\(F_{calc} &gt; F_{crit}\)</span> we can reject <span class="math inline">\(H_0\)</span></p>
 <p><span class="math display">\[\begin{align}
   F &amp;= \frac{variance\ between\ groups}{variance\ within\ groups} \\
   OR \\
@@ -396,12 +402,49 @@ $(document).ready(function () {
 <li>If numerator treatment effect + error is larger than the denominator, there is evidence that treatment is affecting between group (mean) differences.</li>
 </ul>
 </div>
-<div id="the-f-statistic" class="section level3 well">
-<h3 class="well">The F statistic</h3>
-</div>
 <div id="anova-summary" class="section level3 well">
 <h3 class="well">ANOVA Summary</h3>
-<p>table from slides</p>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="5%" />
+<col width="30%" />
+<col width="34%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>df</th>
+<th>SS</th>
+<th>MS</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Treatment</td>
+<td><span class="math inline">\(k-1\)</span></td>
+<td><span class="math inline">\(SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2\)</span></td>
+<td><span class="math inline">\(MS_{treatment} = \frac{SS_{treatment}}{df_{treatment}}\)</span></td>
+<td><span class="math inline">\(F = \frac{MS_{treatment}}{MS_{error}}\)</span></td>
+</tr>
+<tr class="even">
+<td>Error</td>
+<td><span class="math inline">\(k(n-1)\)</span></td>
+<td><span class="math inline">\(SS_{error} = \Sigma(X_{ij}-\bar{X}_j)^2\)</span></td>
+<td><span class="math inline">\(MS_{error} = \frac{SS_{error}}{df_{error}}\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td><span class="math inline">\(N-1\)</span></td>
+<td><span class="math inline">\(SS_{total} = SS_{treatment} + SS_{error}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="calculation-of-anova" class="section level3 well">
 <h3 class="well">Calculation of ANOVA</h3>

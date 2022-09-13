@@ -33,7 +33,12 @@ The differences between the t-test and ANOVA:
 
 ### F-statistic {.well}
 
-Reflects the proportion of variance between groups with the variance within groups.
+-   Reflects the proportion of variance between groups with the variance within groups.
+-   Tells us how many times larger the treatment effect is than the error.
+-   Is the difference between groups larger than the error between groups
+-   Compare $F_{calc}$ to $F_{crit}$ to determine significance where $\alpha = 0.05$.
+
+If $F_{calc} > F_{crit}$ we can reject $H_0$
 
 \begin{align}
   F &= \frac{variance\ between\ groups}{variance\ within\ groups} \\
@@ -49,11 +54,13 @@ Reflects the proportion of variance between groups with the variance within grou
 -   Numerator also contains differences due to treatment,
 -   If numerator treatment effect + error is larger than the denominator, there is evidence that treatment is affecting between group (mean) differences.
 
-### The F statistic {.well}
-
 ### ANOVA Summary {.well}
 
-table from slides
+| Source    | df       | SS                                                  | MS                                                        | F                                     |
+|-----------|----------|-----------------------------------------------------|-----------------------------------------------------------|---------------------------------------|
+| Treatment | $k-1$    | $SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2$ | $MS_{treatment} = \frac{SS_{treatment}}{df_{treatment}}$ | $F = \frac{MS_{treatment}}{MS_{error}}$ |
+| Error     | $k(n-1)$ | $SS_{error} = \Sigma(X_{ij}-\bar{X}_j)^2$           | $MS_{error} = \frac{SS_{error}}{df_{error}}$             |                                       |
+| Total     | $N-1$    | $SS_{total} = SS_{treatment} + SS_{error}$          |                                                           |                                       |
 
 ### Calculation of ANOVA {.well}
 
