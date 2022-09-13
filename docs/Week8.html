@@ -460,6 +460,112 @@ $(document).ready(function () {
 </div>
 <div id="age-vs.-happiness-notes-study-from-notes" class="section level3 well">
 <h3 class="well">Age vs. Happiness notes study from notes</h3>
+<table class="table table-hover">
+<tr scope="row">
+<th scope="col">
+</th>
+<th scope="col">
+Young People
+</th>
+<th scope="col">
+Middle Aged People
+</th>
+<th scope="col">
+Old People
+</th>
+</tr>
+<tr scope="row">
+<td>
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+</tr>
+<tr scope="row">
+<td>
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+</tr>
+<tr scope="row">
+<td>
+</td>
+<td>
+7
+</td>
+<td>
+5
+</td>
+<td>
+8
+</td>
+</tr>
+<tr scope="row">
+<td>
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+</tr>
+<tr scope="row">
+<td>
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+9
+</td>
+</tr>
+<tr scope="row">
+<td>
+Mean
+</td>
+<td>
+6.2
+</td>
+<td>
+6.6
+</td>
+<td>
+8.4
+</td>
+</tr>
+<tr scope="row">
+<td>
+Grand Mean
+</td>
+<td>
+</td>
+<td>
+7.07
+</td>
+<td>
+</td>
+</tr>
+</table>
 <div id="sums-of-squares-distance-of-each-score-from-the-mean-squared" class="section level4">
 <h4>1. Sums of Squares (distance of each score from the mean squared)</h4>
 <div id="a.-calculate-ss_treatment" class="section level5">
@@ -469,7 +575,11 @@ $(document).ready(function () {
 <p><span class="math inline">\(\bar{X}_j =\)</span> treatment group mean,</p>
 <p><span class="math inline">\(\bar{X}.. =\)</span> grand mean</p>
 <p><span class="math display">\[\begin{align}
- SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2
+SS_{treatment} &amp;= n\Sigma(\bar{X}_{j}-\bar{X}..)^2 \\
+&amp;= 5([6.2-7.07]+[6.6-7.07]+[8.4-7.07]) \\
+&amp;= 5(0.76 + 0.22 + 1.77) \\
+&amp;= 5 \times 2.75 \\
+&amp;= 13.75
 \end{align}\]</span></p>
 </blockquote>
 </div>
@@ -481,7 +591,14 @@ $(document).ready(function () {
 <p><span class="math inline">\(X_{ij} =\)</span> score of each person in group <span class="math inline">\(j\)</span>, and</p>
 <p><span class="math inline">\(\bar{X}_j=\)</span> treatment group mean</p>
 <p><span class="math display">\[\begin{align}
- SS_{error} = \Sigma(X_{ij}-\bar{X}_j)^2
+ SS_{error} &amp;= \Sigma(X_{ij}-\bar{X}_j)^2 \\
+&amp;=[(6-6.2)^2+(7–6.2)^2+(7–6.2)^2+(6–6.2)^2+ \\
+  &amp;(5–6.2)^2+(7–6.6)^2+(8–6.6)^2+(5–6.6)^2+ \\
+  &amp;(7–6.6)^2+(6–6.6)^2+(8–8.4)^2+(9-8.4)^2+ \\
+  &amp;(8–8.4)^2+(8–8.4)^2+(9–8.4)^2] \\
+&amp;=0.04+0.64+0.64+0.04+1.44+0.16+1.96+ \\
+  &amp;2.56+0.16+0.36+0.16+0.36+0.16+0.16+0.36 \\
+&amp;=9.2
 \end{align}\]</span></p>
 </blockquote>
 </div>
@@ -489,7 +606,9 @@ $(document).ready(function () {
 <h5>c. Calculate <span class="math inline">\(SS_{total}\)</span></h5>
 <blockquote>
 <p><span class="math display">\[\begin{align}
- SS_{total} = SS_{treatment} + SS_{error}
+SS_{total} &amp;= SS_{treatment} + SS_{error} \\
+&amp;= 13.75+9.2 \\
+&amp;= 22.95
 \end{align}\]</span></p>
 </blockquote>
 </div>
@@ -502,9 +621,9 @@ $(document).ready(function () {
 <p><span class="math inline">\(n =\)</span> number of people in each group / level</p>
 <p><span class="math inline">\(N=\)</span> total number of participants in study across all groups</p>
 <p><span class="math display">\[\begin{align}
- df_{treatment} &amp;= k-1 \\
- df_{error} &amp;= k(n-1) \\
- df_{total} &amp;= N-1
+ df_{treatment} &amp;= k-1 = 3-1 = 2 \\
+ df_{error} &amp;= k(n-1) = 3(5-1) = 12 \\
+ df_{total} &amp;= N-1 = 15-1 = 14 \\
 \end{align}\]</span></p>
 </blockquote>
 </div>
@@ -513,8 +632,8 @@ $(document).ready(function () {
 <blockquote>
 <p>Dividing the <span class="math inline">\(SS_{treatment}\)</span> and <span class="math inline">\(SS_{error}\)</span> by their respective <span class="math inline">\(df\)</span> values:</p>
 <p><span class="math display">\[\begin{align}
- MS_{treatment} &amp;= \frac{SS_{treatment}}{df_{treatment}} \\
- MS_{error} &amp;= \frac{SS_{error}}{df_{error}}
+ MS_{treatment} &amp;= \frac{SS_{treatment}}{df_{treatment}} = \frac{13.75}{2} = 6.875 \\
+ MS_{error} &amp;= \frac{SS_{error}}{df_{error}} = \frac{9.2}{12} = 0.77 \\
 \end{align}\]</span></p>
 </blockquote>
 </div>
@@ -522,7 +641,7 @@ $(document).ready(function () {
 <h4>4. Calculate F-value</h4>
 <blockquote>
 <p><span class="math display">\[\begin{align}
- F &amp;= \frac{MS_{treatment}}{MS_{error}}
+ F &amp;= \frac{MS_{treatment}}{MS_{error}} = \frac{6.875}{0.77} = 8.93 \\
 \end{align}\]</span></p>
 <ul>
 <li>What does F mean?</li>
@@ -539,8 +658,19 @@ $(document).ready(function () {
 <li>Represented by eta squared (<span class="math inline">\(\eta^2\)</span>)</li>
 </ul>
 <p><span class="math display">\[\begin{align}
- \eta^2 = \frac{SS_{treat}}{SS{total}}
+ \eta^2 &amp;= \frac{SS_{treat}}{SS{total}} = \frac{13.75}{22.95} = .60 \\
 \end{align}\]</span></p>
+</blockquote>
+</div>
+<div id="f-statistic-1" class="section level4">
+<h4>F-statistic</h4>
+<blockquote>
+<ul>
+<li>The F statistic tells us that the effect of the treatment (or the difference between groups) is 8.93 times greater than the error within groups.</li>
+<li>You check to see if this is a significant difference using the table at the back of your textbook.</li>
+<li>Critical value for F (2, 12) at <span class="math inline">\(\alpha\)</span> = .05 is 3.89.</li>
+<li>Since our obtained F &gt; critical F we can reject the null hypothesis.</li>
+</ul>
 </blockquote>
 </div>
 </div>

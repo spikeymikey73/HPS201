@@ -4,7 +4,7 @@ title: 'Week 8: Analysis of Variance (ANOVA)'
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(jmv)
+library(kableExtra)
 ```
 
 ### Introduction {.well}
@@ -73,6 +73,57 @@ If $F_{calc} > F_{crit}$ we can reject $H_0$
 
 ### Age vs. Happiness notes study from notes {.well}
 
+<table class="table table-hover">
+    <tr scope="row">
+        <th scope="col"></th>
+        <th scope="col">Young People</th>
+        <th scope="col">Middle Aged People</th>
+        <th scope="col">Old People</th>
+    </tr>
+    <tr scope="row">
+        <td></td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+    <tr scope="row">
+        <td></td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+    <tr scope="row">
+        <td></td>
+        <td>7</td>
+        <td>5</td>
+        <td>8</td>
+    </tr>
+    <tr scope="row">
+        <td></td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+    <tr scope="row">
+        <td></td>
+        <td>5</td>
+        <td>6</td>
+        <td>9</td>
+    </tr>
+    <tr scope="row">
+        <td>Mean</td>
+        <td>6.2</td>
+        <td>6.6</td>
+        <td>8.4</td>
+    </tr>
+    <tr scope="row">
+        <td>Grand Mean</td>
+        <td></td>
+        <td>7.07</td>
+        <td></td>
+    </tr>
+</table>
+
 #### 1. Sums of Squares (distance of each score from the mean squared)
 
 ##### a. Calculate $SS_{treatment}$
@@ -83,8 +134,14 @@ If $F_{calc} > F_{crit}$ we can reject $H_0$
 >
 >$\bar{X}.. =$ grand mean
 >
+>$n =$ group sample size
+>
 >\begin{align}
->  SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2
+> SS_{treatment} &= n\Sigma(\bar{X}_{j}-\bar{X}..)^2 \\
+> &= 5([6.2-7.07]+[6.6-7.07]+[8.4-7.07]) \\
+> &= 5(0.76 + 0.22 + 1.77) \\
+> &= 5 \times 2.75 \\
+> &= 13.75
 >\end{align}
 
 ##### b. Calculate $SS_{error}$
@@ -98,14 +155,23 @@ If $F_{calc} > F_{crit}$ we can reject $H_0$
 >$\bar{X}_j=$ treatment group mean
 >
 >\begin{align}
->  SS_{error} = \Sigma(X_{ij}-\bar{X}_j)^2
+>  SS_{error} &= \Sigma(X_{ij}-\bar{X}_j)^2 \\
+> &=[(6-6.2)^2+(7–6.2)^2+(7–6.2)^2+(6–6.2)^2+ \\
+>   &(5–6.2)^2+(7–6.6)^2+(8–6.6)^2+(5–6.6)^2+ \\
+>   &(7–6.6)^2+(6–6.6)^2+(8–8.4)^2+(9-8.4)^2+ \\
+>   &(8–8.4)^2+(8–8.4)^2+(9–8.4)^2] \\
+> &=0.04+0.64+0.64+0.04+1.44+0.16+1.96+ \\
+>   &2.56+0.16+0.36+0.16+0.36+0.16+0.16+0.36 \\
+> &=9.2
 >\end{align}
 
 
 ##### c. Calculate $SS_{total}$
 
 >\begin{align}
->  SS_{total} = SS_{treatment} + SS_{error}
+> SS_{total} &= SS_{treatment} + SS_{error} \\
+> &= 13.75+9.2 \\
+> &= 22.95
 >\end{align}
 
 #### 2. Degrees of Freedom
@@ -119,9 +185,9 @@ If $F_{calc} > F_{crit}$ we can reject $H_0$
 >$N=$ total number of participants in study across all groups
 >
 >\begin{align}
->  df_{treatment} &= k-1 \\
->  df_{error} &= k(n-1) \\
->  df_{total} &= N-1
+>  df_{treatment} &= k-1 = 3-1 = 2 \\
+>  df_{error} &= k(n-1) = 3(5-1) = 12 \\
+>  df_{total} &= N-1 = 15-1 = 14 \\
 >\end{align}
 
 #### 3. $MS_{treatment}$ and $MS_{error}$
@@ -129,14 +195,14 @@ If $F_{calc} > F_{crit}$ we can reject $H_0$
 >Dividing the $SS_{treatment}$ and $SS_{error}$ by their respective $df$ values:
 >
 >\begin{align}
->  MS_{treatment} &= \frac{SS_{treatment}}{df_{treatment}} \\
->  MS_{error} &= \frac{SS_{error}}{df_{error}}
+>  MS_{treatment} &= \frac{SS_{treatment}}{df_{treatment}} = \frac{13.75}{2} = 6.875 \\
+>  MS_{error} &= \frac{SS_{error}}{df_{error}} = \frac{9.2}{12} = 0.77 \\
 >\end{align}
 
 #### 4. Calculate F-value
 
 >\begin{align}
->  F &= \frac{MS_{treatment}}{MS_{error}}
+>  F &= \frac{MS_{treatment}}{MS_{error}} = \frac{6.875}{0.77} = 8.93 \\
 >\end{align}
 >
 >-   What does F mean?
@@ -149,5 +215,66 @@ If $F_{calc} > F_{crit}$ we can reject $H_0$
 >-   Represented by eta squared ($\eta^2$)
 >
 >\begin{align}
->  \eta^2 = \frac{SS_{treat}}{SS{total}}
+>  \eta^2 &= \frac{SS_{treat}}{SS{total}} = \frac{13.75}{22.95} = .60 \\
 >\end{align}
+
+#### F-statistic
+
+>-   The F statistic tells us that the effect of the treatment (or the difference between groups) is 8.93 times greater than the error within groups.
+>-   You check to see if this is a significant difference using the table at the back of your textbook.
+>-   Critical value for F (2, 12) at $\alpha$ = .05 is 3.89.
+>-   Since our obtained F > critical F we can reject the null hypothesis.
+
+### Worked Example (from study guide) {.well}
+
+#### Data
+
+The effects of temperature on cognitive processes
+
+```{r echo=TRUE}
+tempData <- read.csv("data/tempData.csv")
+colnames(tempData) <- c("10 degrees", "20 degrees", "30 degrees")
+
+treatMean10 <- round(mean(tempData$`10 degrees`), 2)
+treatMean20 <- round(mean(tempData$`20 degrees`), 2)
+treatMean30 <- round(mean(tempData$`30 degrees`), 2)
+grandMean <- round((treatMean10 + treatMean20 + treatMean30)/ncol(tempData), 2)
+
+SStreat <- round(nrow(tempData) * (((treatMean10 - grandMean)^2) + ((treatMean20 - grandMean)^2) + ((treatMean30 - grandMean)^2)),1)
+
+
+
+for(i in 1:ncol(tempData)) {
+  SSerror <- sum((tempData[ , i] - mean(tempData$'10 degrees'))^2)
+}
+
+kbl(tempData) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
+```
+#### 1. Sums of Squares (distance of each score from the mean squared)
+
+##### a. Calculate $SS_{treatment}$
+
+>Where:
+>
+>$\bar{X}_j =$ treatment group mean,
+>
+>$\bar{X}.. =$ grand mean
+>
+> $SS_{treatment} &= n\Sigma(\bar{X}_{j}-\bar{X}..)^2 =$ `{r} SStreat`
+
+
+
+##### b. Calculate $SS_{error}$
+
+##### c. Calculate $SS_{total}$
+
+#### 2. Degrees of Freedom
+
+#### 3. $MS_{treatment}$ and $MS_{error}$
+
+#### 4. Calculate F-value
+
+#### 5. Effect Size
+
+#### F-statistic
