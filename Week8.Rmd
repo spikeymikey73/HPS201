@@ -223,58 +223,8 @@ If $F_{calc} > F_{crit}$ we can reject $H_0$
 >-   The F statistic tells us that the effect of the treatment (or the difference between groups) is 8.93 times greater than the error within groups.
 >-   You check to see if this is a significant difference using the table at the back of your textbook.
 >-   Critical value for F (2, 12) at $\alpha$ = .05 is 3.89.
->-   Since our obtained F > critical F we can reject the null hypothesis.
+>-   Since our $F_{calc} > F_{crit}$ we can reject the null hypothesis.
 
-### Worked Example (from study guide) {.well}
+### Reporting {.well}
 
-#### Data
-
-The effects of temperature on cognitive processes
-
-```{r echo=TRUE}
-tempData <- read.csv("data/tempData.csv")
-colnames(tempData) <- c("10 degrees", "20 degrees", "30 degrees")
-
-treatMean10 <- round(mean(tempData$`10 degrees`), 2)
-treatMean20 <- round(mean(tempData$`20 degrees`), 2)
-treatMean30 <- round(mean(tempData$`30 degrees`), 2)
-grandMean <- round((treatMean10 + treatMean20 + treatMean30)/ncol(tempData), 2)
-
-SStreat <- round(nrow(tempData) * (((treatMean10 - grandMean)^2) + ((treatMean20 - grandMean)^2) + ((treatMean30 - grandMean)^2)),1)
-
-
-
-for(i in 1:ncol(tempData)) {
-  SSerror <- sum((tempData[ , i] - mean(tempData$'10 degrees'))^2)
-}
-
-kbl(tempData) %>%
-  kable_styling(bootstrap_options = "striped", full_width = F)
-```
-#### 1. Sums of Squares (distance of each score from the mean squared)
-
-##### a. Calculate $SS_{treatment}$
-
->Where:
->
->$\bar{X}_j =$ treatment group mean,
->
->$\bar{X}.. =$ grand mean
->
-> $SS_{treatment} &= n\Sigma(\bar{X}_{j}-\bar{X}..)^2 =$ `{r} SStreat`
-
-
-
-##### b. Calculate $SS_{error}$
-
-##### c. Calculate $SS_{total}$
-
-#### 2. Degrees of Freedom
-
-#### 3. $MS_{treatment}$ and $MS_{error}$
-
-#### 4. Calculate F-value
-
-#### 5. Effect Size
-
-#### F-statistic
+A one-way ANOVA was conducted to examine whether there was a significant difference in happiness between the young people, middle aged people and old people groups. The analysis found a significant difference between these groups, *F*(2, 12) = 6.875, *p* > .05, $\eta^2_p = .60$.

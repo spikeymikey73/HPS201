@@ -173,7 +173,7 @@ This value gives us the mean (?) distance between our plotted values and the reg
 
 #### Steps: {.tabset}
 
-##### Calculate Slope
+##### Calculate Slope ($b$)
 
 \begin{align}
   b &= \frac{cov_{XY}}{s_X^2} \\
@@ -181,7 +181,7 @@ This value gives us the mean (?) distance between our plotted values and the reg
   &= 0.52
 \end{align}
 
-##### Calculate Intercept
+##### Calculate Intercept ($a$)
 
 \begin{align}
   a &= \bar{Y} - b\bar{X} \\
@@ -189,7 +189,7 @@ This value gives us the mean (?) distance between our plotted values and the reg
   &= 1.83
 \end{align}
 
-##### Calculate/Plot Regression Line
+##### Calculate/Plot Regression Line ($\hat{Y}$)
 
 Where $X = 0$:
 
