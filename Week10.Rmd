@@ -7,3 +7,60 @@ knitr::opts_chunk$set(echo = TRUE)
 library(jmv)
 ```
 
+### Introduction {.well}
+
+-   Used to compare means across multiple groups when there is more than one IV (factor) in the analysis:
+    -   IV (categorical)
+    -   DV (Continuous)
+    
+#### One-Way ANOVA (review)
+
+- Determining how 'happiness' scores (1 - 10) differ based on age (A one-way comparison as there is only one IV)
+    -   One IV: Age (3 levels - young, middle, old)
+    -   One DV: Happiness
+    
+#### Factorial ANOVA
+
+-   Determine differences in 'happiness' based on age AND gender (a two-way comparison as there are two IVs)
+    -   Two IVs:
+        -   Age: 3 levels (young, middle, old)
+        -   Gender: 2 levels (male, female)
+
+A factorial ANOVA could be used to determine if the effects of age on happiness are the same for males and females.
+
+#### Main & Interaction Effects
+
+With a two-way ANOVA there are three possible effects:
+
+-   Main Effect 1: Overall effect of factor A (ignoring effects of factor B)
+-   Main Effect 2: Overall effect of factor B (ignoring effects of factor A)
+-   Interaction Effect: where the effect of one factor on the DV is not the same at all levels of the other factor:
+    -   Provides information about the relationship between the IVs and DV
+    -   Are interpreted best with plots
+    
+#### Interaction Example
+
+Two-way ANOVA exploring the effect of temperature on cognitive performance (recall) to determine if the effect is the same for males and females.
+
+-   IV1: Temperature (3 levels: 10$\degrees$, 20$\degrees$, 30$\degrees$)
+-   IV2: Gender (2 levels: male and female)
+-   DV: Performance (recall)
+
+!Insert graph from handout!
+
+#### Interactions
+
+-   For females, performance improves with temperature
+-   For males, temperature has no effect
+-   The effect of IV1 (temperature) is not the same at all levels of IV2 (gender)
+-   If the plot lines are parallel (do not cross over), there is no interaction
+
+#### Main Effects
+
+!Insert graph 2 from notes
+
+-   A main effect is the effect of IV1 on the DV (overall effect of temperature on cognitive performance), while ignoring the effects of IV2.
+-   A main effect is the effect of IV2 on the DV (overall effect of gender on cognitive performance), while ignoring the effects of IV1.
+-   Each IV can have a main effect of DV and an individual effect on DV.
+
+### Calculation {.well}
