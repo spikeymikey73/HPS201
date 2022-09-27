@@ -260,4 +260,9 @@ Two-way ANOVA exploring the effect of temperature on cognitive performance (reca
 
 ### Reporting {.well}
 
+A two-way ANOVA was conducted to examine the effect of instruction (self-paced or structured) and personality (internal or external) on exam performance. The analysis showed a significant interaction effect, *F*(1, 16) = 5.57, *p* =
+.031, $\eta^2_p$ = .26. Internally driven individuals scored higher on the exam when they were provided with a self-paced
+learning program (*M* = 82.80, *SD* = 11.30) as opposed to a structured learning program (*M* = 75.20, *SD* = 5.93).
+Externally driven individuals scored higher on the exam when they were provided with a structured learning program (*M* = 82.20, *SD* = 6.61) as opposed to a self-paced learning program (*M* = 72.40, *SD* = 8.08).
+
 A two-way ANOVA was conducted to examine the effect of maths anxiety (low or high) and counselling (yes or no) on exam performance. The analysis showed a significant main effect for maths anxiety, *F*(1, 28) = 5.78, *p* = .023, $\eta^2_p$ = .17. On average, students in the low anxiety group (*M* = 81.00, *SD* = 10.30) performed better on the exam than students in the high anxiety group (*M* = 72.50, *SD* = 10.24).
