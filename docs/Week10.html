@@ -582,24 +582,148 @@ Females
   &amp;= 0.34 \\
 \end{align}\]</span></p>
 </div>
-<div id="calculate-ss_a-1" class="section level5">
-<h5>Calculate <span class="math inline">\(SS_A\)</span></h5>
+<div id="calculate-ss_b" class="section level5">
+<h5>Calculate <span class="math inline">\(SS_B\)</span></h5>
 <p><span class="math display">\[\begin{align}
-  SS_{A} &amp;= na\Sigma(\bar{X}_A - \bar{X}..)^2 \\
-  &amp;= 3 \times 2[(7.5 - 7.33)^2 + (7.16 - 7.33)^2] \\
-  &amp;= 6 \times 0.0578 \\
-  &amp;= 0.34 \\
+  SS_{B} &amp;= na\Sigma(\bar{X}_A - \bar{X}..)^2 \\
+  &amp;= 3 \times 2[(6.33 - 7.33)^2 + (8.33 - 7.33)^2] \\
+  &amp;= 6 \times 2 \\
+  &amp;= 12 \\
 \end{align}\]</span></p>
 </div>
 <div id="calculate-ss_cells" class="section level5">
 <h5>Calculate <span class="math inline">\(SS_{cells}\)</span></h5>
+<p><span class="math display">\[\begin{align}
+  SS_{cells} &amp;= n\Sigma(\bar{X}_A - \bar{X}..)^2 \\
+  &amp;= 3 \times [(7.67 - 7.33)^2 + (7.33 - 7.33)^2 + (5 - 7.33)^2 + (9.33 - 7.33)^2] \\
+  &amp;= 3 \times 9.5445 \\
+  &amp;= 28.6335
+\end{align}\]</span></p>
 </div>
 <div id="calculate-ss_ab" class="section level5">
 <h5>Calculate <span class="math inline">\(SS_{A*B}\)</span></h5>
+<p><span class="math display">\[\begin{align}
+  SS_{AB} &amp;= SS_{cells} – SS_A – SS_B \\
+  &amp;= 28.6335 – 0.34 – 12 \\
+  &amp;= 16.3
+\end{align}\]</span></p>
 </div>
 <div id="calculate-ss_error" class="section level5">
 <h5>Calculate <span class="math inline">\(SS_{error}\)</span></h5>
+<p><span class="math display">\[\begin{align}
+  SS_{error} &amp;= SS_{total} – SS_{cells} \\
+  &amp;= 36.667 – 28.6335 \\
+  &amp;= 8
+\end{align}\]</span></p>
 </div>
+</div>
+<div id="anova-summary-table" class="section level4 well">
+<h4 class="well">ANOVA Summary Table</h4>
+<table class="table table-hover">
+<tr scope="row">
+<th scope="col">
+df
+</th>
+<th scope="col">
+<abbr title="Sum of Squares">SS</abbr>
+</th>
+<th scope="col">
+<abbr title="Mean of Squares">MS</abbr>
+</th>
+<th scope="col">
+F
+</th>
+<th scope="col">
+p
+</th>
+</tr>
+<tr scope="row">
+<td>
+A (gender)
+</td>
+<td>
+1
+</td>
+<td>
+0.34
+</td>
+<td>
+0.34
+</td>
+<td>
+0.34
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+B (anxiety)
+</td>
+<td>
+1
+</td>
+<td>
+12
+</td>
+<td>
+12
+</td>
+<td>
+12
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+AB (interaction)
+</td>
+<td>
+1
+</td>
+<td>
+16.3
+</td>
+<td>
+16.3
+</td>
+<td>
+16.3
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+Error
+</td>
+<td>
+8
+</td>
+<td>
+8
+</td>
+<td>
+1
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+Total
+</td>
+<td>
+11
+</td>
+<td>
+36.6
+</td>
+</tr>
+</table>
 </div>
 </div>
 

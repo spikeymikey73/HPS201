@@ -175,23 +175,85 @@ Two-way ANOVA exploring the effect of temperature on cognitive performance (reca
   &= 0.34 \\
 \end{align}
 
-##### Calculate $SS_A$
+##### Calculate $SS_B$
 
 \begin{align}
-  SS_{A} &= na\Sigma(\bar{X}_A - \bar{X}..)^2 \\
-  &= 3 \times 2[(7.5 - 7.33)^2 + (7.16 - 7.33)^2] \\
-  &= 6 \times 0.0578 \\
-  &= 0.34 \\
+  SS_{B} &= na\Sigma(\bar{X}_A - \bar{X}..)^2 \\
+  &= 3 \times 2[(6.33 - 7.33)^2 + (8.33 - 7.33)^2] \\
+  &= 6 \times 2 \\
+  &= 12 \\
 \end{align}
 
 ##### Calculate $SS_{cells}$
 
 \begin{align}
-
-
-
+  SS_{cells} &= n\Sigma(\bar{X}_A - \bar{X}..)^2 \\
+  &= 3 \times [(7.67 - 7.33)^2 + (7.33 - 7.33)^2 + (5 - 7.33)^2 + (9.33 - 7.33)^2] \\
+  &= 3 \times 9.5445 \\
+  &= 28.6335
 \end{align}
 
 ##### Calculate $SS_{A*B}$
 
+\begin{align}
+  SS_{AB} &= SS_{cells} – SS_A – SS_B \\
+  &= 28.6335 – 0.34 – 12 \\
+  &= 16.3
+\end{align}
+
 ##### Calculate $SS_{error}$
+
+\begin{align}
+  SS_{error} &= SS_{total} – SS_{cells} \\
+  &= 36.667 – 28.6335 \\
+  &= 8
+\end{align}
+
+#### ANOVA Summary Table {.well}
+
+<table class="table table-hover">
+  <tr scope="row">
+      <th scope="col">df</th>
+      <th scope="col"><abbr title="Sum of Squares">SS</abbr></th>
+      <th scope="col"><abbr title="Mean of Squares">MS</abbr></th>
+      <th scope="col">F</th>
+      <th scope="col">p</th>
+  </tr>
+  <tr scope="row">
+    <td>A (gender)</td>
+    <td>1</td>
+    <td>0.34</td>
+    <td>0.34</td>
+    <td>0.34</td>
+    <td></td>
+  </tr>
+  <tr scope="row">
+    <td>B (anxiety)</td>
+    <td>1</td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>
+    <td></td>
+  </tr>
+  <tr scope="row">
+    <td>AB (interaction)</td>
+    <td>1</td>
+    <td>16.3</td>
+    <td>16.3</td>
+    <td>16.3</td>
+    <td></td>
+  </tr>
+  <tr scope="row">
+    <td>Error</td>
+    <td>8</td>
+    <td>8</td>
+    <td>1</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr scope="row">
+    <td>Total</td>
+    <td>11</td>
+    <td>36.6</td>
+  </tr>
+</table>
