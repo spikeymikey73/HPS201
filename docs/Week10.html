@@ -319,7 +319,289 @@ $(document).ready(function () {
 </div>
 
 
-
+<div id="introduction" class="section level3 well">
+<h3 class="well">Introduction</h3>
+<ul>
+<li><p>Used to compare means across multiple groups when there is more than one IV (factor) in the analysis:</p>
+<ul>
+<li>IV (categorical)</li>
+<li>DV (Continuous)</li>
+</ul></li>
+</ul>
+<div id="one-way-anova-review" class="section level4">
+<h4>One-Way ANOVA (review)</h4>
+<ul>
+<li><p>Determining how ‘happiness’ scores (1 - 10) differ based on age (A one-way comparison as there is only one IV)</p>
+<ul>
+<li>One IV: Age (3 levels - young, middle, old)</li>
+<li>One DV: Happiness</li>
+</ul></li>
+</ul>
+</div>
+<div id="factorial-anova" class="section level4">
+<h4>Factorial ANOVA</h4>
+<ul>
+<li><p>Determine differences in ‘happiness’ based on age AND gender (a two-way comparison as there are two IVs)</p>
+<ul>
+<li><p>Two IVs:</p>
+<ul>
+<li>Age: 3 levels (young, middle, old)</li>
+<li>Gender:^2 levels (male, female)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>A factorial ANOVA could be used to determine if the effects of age on happiness are the same for males and females.</p>
+</div>
+<div id="main-interaction-effects" class="section level4">
+<h4>Main &amp; Interaction Effects</h4>
+<p>With a two-way ANOVA there are three possible effects:</p>
+<ul>
+<li><p>Main Effect 1: Overall effect of factor A (ignoring effects of factor B)</p></li>
+<li><p>Main Effect 2: Overall effect of factor B (ignoring effects of factor A)</p></li>
+<li><p>Interaction Effect: where the effect of one factor on the DV is not the same at all levels of the other factor:</p>
+<ul>
+<li>Provides information about the relationship between the IVs and DV</li>
+<li>Are interpreted best with plots</li>
+</ul></li>
+</ul>
+</div>
+<div id="interaction-example" class="section level4">
+<h4>Interaction Example</h4>
+<p>Two-way ANOVA exploring the effect of temperature on cognitive performance (recall) to determine if the effect is the same for males and females.</p>
+<ul>
+<li>IV1: Temperature (3 levels: 10<span class="math inline">\(^\circ\)</span>, 20<span class="math inline">\(^\circ\)</span>, 30<span class="math inline">\(^\circ\)</span>)</li>
+<li>IV2: Gender (2 levels: male and female)</li>
+<li>DV: Performance (recall)</li>
+</ul>
+<p>!Insert graph from handout!</p>
+</div>
+<div id="interactions" class="section level4">
+<h4>Interactions</h4>
+<ul>
+<li>For females, performance improves with temperature</li>
+<li>For males, temperature has no effect</li>
+<li>The effect of IV1 (temperature) is not the same at all levels of IV2 (gender)</li>
+<li>If the plot lines are parallel (do not cross over), there is no interaction</li>
+</ul>
+</div>
+<div id="main-effects" class="section level4">
+<h4>Main Effects</h4>
+<p>!Insert graph 2 from notes</p>
+<ul>
+<li>A main effect is the effect of IV1 on the DV (overall effect of temperature on cognitive performance), while ignoring the effects of IV2.</li>
+<li>A main effect is the effect of IV2 on the DV (overall effect of gender on cognitive performance), while ignoring the effects of IV1.</li>
+<li>Each IV can have a main effect of DV and an individual effect on DV.</li>
+</ul>
+</div>
+</div>
+<div id="calculations" class="section level3 well">
+<h3 class="well">Calculations</h3>
+<table class="table table-hover">
+<tr scope="row">
+<th>
+</th>
+<th>
+</th>
+<th scope="col" colspan="2">
+Stress
+</th>
+</tr>
+<tr scope="row">
+<td>
+</td>
+<td>
+</td>
+<td>
+Low
+</td>
+<td>
+High
+</td>
+<td>
+<span class="math inline">\(Mean_A\)</span>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td rowspan="9">
+Gender (B)
+</td>
+<td rowspan="3">
+Males
+</td>
+<td>
+74
+</td>
+<td>
+72
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+78
+</td>
+<td>
+70
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+71
+</td>
+<td>
+74
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+<span class="math inline">\(Mean_{1B}\)</span>
+</td>
+<td>
+74.33
+</td>
+<td>
+72.00
+</td>
+<td>
+73.17
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td rowspan="3">
+Females
+</td>
+<td>
+77
+</td>
+<td>
+68
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+84
+</td>
+<td>
+71
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+82
+</td>
+<td>
+64
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+<span class="math inline">\(Mean_{2B}\)</span>
+</td>
+<td>
+81.00
+</td>
+<td>
+67.67
+</td>
+<td>
+74.33
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+<span class="math inline">\(Mean_B\)</span>
+</td>
+<td>
+77.67
+</td>
+<td>
+69.83
+</td>
+<td>
+73.75
+</td>
+<td>
+&lt;- <span class="math inline">\(\bar{X}..\)</span>
+</td>
+</tr>
+</table>
+<div id="steps" class="section level4">
+<h4>Steps</h4>
+<ul>
+<li><span class="math inline">\(n =\)</span> number of participants in each cell (e.g. males with low anxiety = 3, there are 3 participants in every cell),</li>
+<li><span class="math inline">\(a =\)</span> levels of factor A</li>
+<li><span class="math inline">\(b =\)</span> levels of factor B</li>
+</ul>
+<div id="calculate-ss_total" class="section level5">
+<h5>Calculate <span class="math inline">\(SS_{total}\)</span></h5>
+<p><span class="math display">\[\begin{align}
+  SS_{total} &amp;= \Sigma(X-\bar{X}..)^2 \\
+  &amp;= (6 – 7.33)^2 + (7 – 7.33)^2 + (9 –7.33)^2 + (8 – 7.33)^2 + (8 – 7.33)^2 + \\
+    &amp;   (7 – 7.33)^2 + (4 – 7.33)^2 + (10 – 7.33)^2 + (5 – 7.33)^2 + (9 – 7.33)^2 + \\
+    &amp;   (6 – 7.33)^2 + (9 – 7.33)^2 \\
+  &amp;=  1.7689 + 0.1089 + 2.7889 + 0.4489 + 0.4489 + 0.1089 + 11.0889 \\
+    &amp;   + 7.1289 + 5.4289 + 2.7889 + 1.7689 + 2.7889 \\
+  &amp;=  36.667
+\end{align}\]</span></p>
+</div>
+<div id="calculate-ss_a" class="section level5">
+<h5>Calculate <span class="math inline">\(SS_A\)</span></h5>
+<p><span class="math display">\[\begin{align}
+  SS_{A} &amp;= nb\Sigma(\bar{X}_A - \bar{X}..)^2 \\
+  &amp;= 3 \times 2[(7.5 - 7.33)^2 + (7.16 - 7.33)^2] \\
+  &amp;= 6 \times 0.0578 \\
+  &amp;= 0.34 \\
+\end{align}\]</span></p>
+</div>
+<div id="calculate-ss_a-1" class="section level5">
+<h5>Calculate <span class="math inline">\(SS_A\)</span></h5>
+<p><span class="math display">\[\begin{align}
+  SS_{A} &amp;= na\Sigma(\bar{X}_A - \bar{X}..)^2 \\
+  &amp;= 3 \times 2[(7.5 - 7.33)^2 + (7.16 - 7.33)^2] \\
+  &amp;= 6 \times 0.0578 \\
+  &amp;= 0.34 \\
+\end{align}\]</span></p>
+</div>
+<div id="calculate-ss_cells" class="section level5">
+<h5>Calculate <span class="math inline">\(SS_{cells}\)</span></h5>
+</div>
+<div id="calculate-ss_ab" class="section level5">
+<h5>Calculate <span class="math inline">\(SS_{A*B}\)</span></h5>
+</div>
+<div id="calculate-ss_error" class="section level5">
+<h5>Calculate <span class="math inline">\(SS_{error}\)</span></h5>
+</div>
+</div>
+</div>
 
 
 

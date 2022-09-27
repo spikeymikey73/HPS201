@@ -10,21 +10,25 @@ library(jmv)
 ### Introduction {.well}
 
 -   Used to compare means across multiple groups when there is more than one IV (factor) in the analysis:
+
     -   IV (categorical)
     -   DV (Continuous)
-    
+
 #### One-Way ANOVA (review)
 
-- Determining how 'happiness' scores (1 - 10) differ based on age (A one-way comparison as there is only one IV)
+-   Determining how 'happiness' scores (1 - 10) differ based on age (A one-way comparison as there is only one IV)
+
     -   One IV: Age (3 levels - young, middle, old)
     -   One DV: Happiness
-    
+
 #### Factorial ANOVA
 
 -   Determine differences in 'happiness' based on age AND gender (a two-way comparison as there are two IVs)
+
     -   Two IVs:
+
         -   Age: 3 levels (young, middle, old)
-        -   Gender: 2 levels (male, female)
+        -   Gender:\^2 levels (male, female)
 
 A factorial ANOVA could be used to determine if the effects of age on happiness are the same for males and females.
 
@@ -33,16 +37,19 @@ A factorial ANOVA could be used to determine if the effects of age on happiness 
 With a two-way ANOVA there are three possible effects:
 
 -   Main Effect 1: Overall effect of factor A (ignoring effects of factor B)
+
 -   Main Effect 2: Overall effect of factor B (ignoring effects of factor A)
+
 -   Interaction Effect: where the effect of one factor on the DV is not the same at all levels of the other factor:
+
     -   Provides information about the relationship between the IVs and DV
     -   Are interpreted best with plots
-    
+
 #### Interaction Example
 
 Two-way ANOVA exploring the effect of temperature on cognitive performance (recall) to determine if the effect is the same for males and females.
 
--   IV1: Temperature (3 levels: 10$\degrees$, 20$\degrees$, 30$\degrees$)
+-   IV1: Temperature (3 levels: 10$^\circ$, 20$^\circ$, 30$^\circ$)
 -   IV2: Gender (2 levels: male and female)
 -   DV: Performance (recall)
 
@@ -63,4 +70,128 @@ Two-way ANOVA exploring the effect of temperature on cognitive performance (reca
 -   A main effect is the effect of IV2 on the DV (overall effect of gender on cognitive performance), while ignoring the effects of IV1.
 -   Each IV can have a main effect of DV and an individual effect on DV.
 
-### Calculation {.well}
+### Calculations {.well}
+
+<table class="table table-hover">
+    <tr scope="row">
+        <th></th>
+        <th></th>
+        <th scope="col" colspan="2">Stress</th>
+    </tr>
+    <tr scope="row">
+        <td></td>
+        <td></td>
+        <td>Low</td>
+        <td>High</td>
+        <td>$Mean_A$</td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td rowspan="9">Gender (B)</td>
+        <td rowspan="3">Males</td>
+        <td>74</td>
+        <td>72</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td>78</td>
+        <td>70</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td>71</td>
+        <td>74</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td>$Mean_{1B}$ </td>
+        <td>74.33</td>
+        <td>72.00</td>
+        <td>73.17</td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td rowspan="3">Females</td>
+        <td>77</td>
+        <td>68</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td>84</td>
+        <td>71</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td>82</td>
+        <td>64</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td>$Mean_{2B}$</td>
+        <td>81.00</td>
+        <td>67.67</td>
+        <td>74.33</td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td>$Mean_B$</td>
+        <td>77.67</td>
+        <td>69.83</td>
+        <td>73.75</td>
+        <td><- $\bar{X}..$</td>
+    </tr>
+</table>
+
+#### Steps
+
+-   $n =$ number of participants in each cell (e.g. males with low anxiety = 3, there are 3 participants in every cell),
+-   $a =$ levels of factor A
+-   $b =$ levels of factor B
+
+##### Calculate $SS_{total}$
+
+\begin{align}
+  SS_{total} &= \Sigma(X-\bar{X}..)^2 \\
+  &= (6 – 7.33)^2 + (7 – 7.33)^2 + (9 –7.33)^2 + (8 – 7.33)^2 + (8 – 7.33)^2 + \\
+    &   (7 – 7.33)^2 + (4 – 7.33)^2 + (10 – 7.33)^2 + (5 – 7.33)^2 + (9 – 7.33)^2 + \\
+    &   (6 – 7.33)^2 + (9 – 7.33)^2 \\
+  &=  1.7689 + 0.1089 + 2.7889 + 0.4489 + 0.4489 + 0.1089 + 11.0889 \\
+    &   + 7.1289 + 5.4289 + 2.7889 + 1.7689 + 2.7889 \\
+  &=  36.667
+\end{align}
+
+##### Calculate $SS_A$
+
+\begin{align}
+  SS_{A} &= nb\Sigma(\bar{X}_A - \bar{X}..)^2 \\
+  &= 3 \times 2[(7.5 - 7.33)^2 + (7.16 - 7.33)^2] \\
+  &= 6 \times 0.0578 \\
+  &= 0.34 \\
+\end{align}
+
+##### Calculate $SS_A$
+
+\begin{align}
+  SS_{A} &= na\Sigma(\bar{X}_A - \bar{X}..)^2 \\
+  &= 3 \times 2[(7.5 - 7.33)^2 + (7.16 - 7.33)^2] \\
+  &= 6 \times 0.0578 \\
+  &= 0.34 \\
+\end{align}
+
+##### Calculate $SS_{cells}$
+
+\begin{align}
+
+
+
+\end{align}
+
+##### Calculate $SS_{A*B}$
+
+##### Calculate $SS_{error}$
