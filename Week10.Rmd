@@ -28,7 +28,7 @@ library(jmv)
     -   Two IVs:
 
         -   Age: 3 levels (young, middle, old)
-        -   Gender:\^2 levels (male, female)
+        -   Gender: 2 levels (male, female)
 
 A factorial ANOVA could be used to determine if the effects of age on happiness are the same for males and females.
 
@@ -257,3 +257,7 @@ Two-way ANOVA exploring the effect of temperature on cognitive performance (reca
     <td>36.6</td>
   </tr>
 </table>
+
+### Reporting {.well}
+
+A two-way ANOVA was conducted to examine the effect of maths anxiety (low or high) and counselling (yes or no) on exam performance. The analysis showed a significant main effect for maths anxiety, *F*(1, 28) = 5.78, *p* = .023, $\eta^2_p$ = .17. On average, students in the low anxiety group (*M* = 81.00, *SD* = 10.30) performed better on the exam than students in the high anxiety group (*M* = 72.50, *SD* = 10.24).
