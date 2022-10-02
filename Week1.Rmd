@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(jmv)
 ```
 
-### LO1: Understand the difference between population and sample
+### LO1: Understand the difference between population and sample {.well}
 
 #### Population vs. Sample
 
@@ -22,7 +22,7 @@ A psychologist wants to determine whether a motivational program is effective in
 -   Solution: Select a sample from the population Sample (e.g., 100 workers from each state)
 -   Generalise: Results from the sample (100 workers from each state) back to the population of interest (Every Australian Office Worker)
 
-### LO2: Distinguish between parameters and statistics
+### LO2: Distinguish between parameters and statistics {.well}
 
 **Parameter:** a value that describes a key characteristic of the population, such as:
 
@@ -36,21 +36,16 @@ A psychologist wants to determine whether a motivational program is effective in
 
 $\bigstar$ Statistics are used to estimate values that exist in the population.
 
-### LO3: Distinguish between descriptive and inferential statistics
+### LO3: Distinguish between descriptive and inferential statistics {.well}
 
 As a researcher, you have:
 
 -   Decided on a research question: Is a new anti-depressant effective at reducing depressive symptoms?
-
 -   You've taken a sample of individuals to answer your research question: 100 individuals with depression
-
 -   Conduct your experiment
-
     -   50 given the new anti-depressant
     -   50 given the pre-existing best seller
-
 -   Measure depression levels after (0-100)
-
 -   You've collected your data. Now what??
 
 Statistics is the method of using mathematics to organize, summarise, and interpret numerical data
@@ -67,9 +62,9 @@ Two main types:
 #### Inferential statistics:
 
 -   Used when we want to answer research questions (Week 3 onwards)
--   Allows us to make generalizations from our sample to our population of interest
+-   Allows us to make generalisations from our sample to our population of interest
 
-### LO4: Distinguish between discrete and continuous variables
+### LO4: Distinguish between discrete and continuous variables {.well}
 
 -   Before we can answer our research questions we need data
 -   Data is obtained by measuring specific variables of interest to your research question
@@ -78,36 +73,35 @@ Two main types:
 #### Discrete data
 
 -   Contain only a small number of values, such as:
-
     -   handedness (right/left/ambidextrous)
     -   favourite season (summer/autumn/ winter/ spring)
-
 -   Often referred to as Categorical data
 
 #### Continuous:
 
-Contain many different values - Weight (40kg- 140kg), age (0-100 years) - Often referred to as Measurement data - Often depends on the way you set up the measurement - Anxiety levels of HPS201/771 students
+Continuous variables contain many different values - Weight (40kg- 140kg), age (0-100 years)
+
+-   Are often referred to as Measurement data
+-   Often depends on the way you set up the measurement.
+-   e.g. Anxiety levels of HPS201/771 students
 
 #### Discrete or continuous?
 
--   Generally continuous -- score on an anxiety questionnaire
+-   Continuous variables can represent a score on a scale (e.g. an anxiety questionnaire)
 -   Questionnaire scores range from 0-60
--   But, often people will be categorised into groups:
--   High anxiety (41-60), Average anxiety (21-40), Low anxiety (0-20)
--   This is a discrete variable
+-   Discrete variables allow for people to be organised into groups:
+      -   High anxiety (41-60)
+      -   Average anxiety (21-40)
+      -   Low anxiety (0-20)
 
 #### Why does it matter?
 
-The type of data that you use will impact the types of statistical approach that we use to analyse data
+**The type of data that you use will impact the types of statistical approach that we use to analyse data**
 
--   Continuous/Measurement data are usually summarised using means (averages)
--   Mean age of HPS201 students is 19.8 (made up)
--   Mean height of AFL footballers is 188cm
--   Discrete/Categorical data are usually summarized using percentage
--   15% of participants were left-handed, 75% right-handed, 10% ambidextrous
--   32% of students have black hair, 8% have red hair, 50% have brown hair, 5 % have blonde hair, 5% other
+-   Continuous/Measurement data are usually summarised using means (e.g. Mean age of HPS201 students is 19.8, Mean height of AFL footballers is 188cm)
+-   Discrete/Categorical data are usually summarized using percentage (e.g. 15% of participants were left-handed, 75% right-handed, 10% ambidextrous. 32% of students have black hair, 8% have red hair, 50% have brown hair, 5 % have blonde hair, 5% other)
 
-### LO5: Explain the difference between categorical data and measurement data
+### LO5: Explain the difference between categorical data and measurement data {.well}
 
 The type of data that you use will impact the types of statistical approach that we use to analyse data.
 
@@ -121,19 +115,19 @@ Discrete/Categorical data are usually summarized using percentage
 -   15% of participants were left-handed, 75% right-handed, 10% ambidextrous
 -   32% if students have black hair, 8% have red hair , 50% have brown hair, 5 % have blonde hair, 5% other
 
-### LO6: Distinguish between independent and dependent variables
+### LO6: Distinguish between independent and dependent variables {.well}
 
-#### Independent variable (IV):
+#### Independent variable (IV / X-axis):
 
 -   The variable that we manipulate
 -   As a researcher, we believe that the IV will effect our dependent variable
 
-#### Dependent variable (DV):
+#### Dependent variable (DV / Y-axis):
 
 -   The variable that we measure
 -   The variable that is observed for differences/changes
 
-------------------------------------------------------------------------
+---
 
 #### Quiz time!
 
@@ -143,7 +137,7 @@ A researcher wanted to test her theory that people tend to walk faster on cold d
 
 <abbr title="Walking speed">Dependant variable?</abbr>
 
-------------------------------------------------------------------------
+---
 
 #### Quiz time!
 
@@ -155,21 +149,19 @@ A psychologist wants to investigate whether caffeine improves attention. She giv
 
 ------------------------------------------------------------------------
 
-### LO7: Understand the different types of measurement scales (nominal, ordinal, interval and ratio)
+### LO7: Understand the different types of measurement scales (nominal, ordinal, interval and ratio) {.well}
 
 We measure our IV and DV's using a variety of measurement scales:
 
 -   **Nominal:** consist of a set of categories with different names in no ordered sequence
 
     -   Handedness:
-
         -   Right, Left, Ambidextrous
         -   No category is higher/lower, better/worse than any other as they are just labels for different categories
 
 -   **Ordinal:** Ordinal scales consist of a set of categories with different names AND are organized into an ordered sequence
 
     -   Highest level of academic qualification:
-
         -   High School Incomplete
         -   High School Complete
         -   Diploma
@@ -180,11 +172,8 @@ We measure our IV and DV's using a variety of measurement scales:
 -   **Interval:** Consist of ordered categories where the intervals are exactly the same size
 
     -   The distance between each value is the same along the scale
-
     -   Usually have a more data points than ordinal scales (continuous data)
-
     -   **No absolute zero point**
-
         -   Degrees Celsius
         -   Distance between 10-15 degrees is the same as the distance between 30-35 degrees
         -   Zero degrees does not represent the absence of temperature. It is just a point on the temperature scale
@@ -192,15 +181,12 @@ We measure our IV and DV's using a variety of measurement scales:
 -   **Ratio:** Consist of ordered categories where the intervals are exactly the same size
 
     -   The distance between each value is the same along the scale
-
     -   Usually have a more data points than ordinal scales (continuous data)
-
     -   **With a true zero point**
-
         -   Time (minutes)
         -   length (cm)
 
-### L08: Understand how to construct frequency distributions and histograms
+### L08: Understand how to construct frequency distributions and histograms {.well}
 
 **Frequency distributions** report how often each score was recorded in a given data set. When presented in table form, a frequency distribution lists all values for a variable along with the frequency of each.
 
@@ -228,7 +214,7 @@ The frequency table above helps to summarise the collected data, allowing us to 
 
 The **histogram** is a graphical representation of the data in the frequency table. A larger data set may be most relevant when the results are grouped together (known as a **bin**), while smaller data sets can simply be plotted as collected. Grouping data in bins assists in reducing the number of 'random' results and to assist in identifying trends.
 
-### LO9: Understand positive skew, negative skew and kurtosis
+### LO9: Understand positive skew, negative skew and kurtosis {.well}
 
 **Bimodal:** A frequency distribution is said to be bimodal when the majority of results are visible at 2 clear peaks in the data being presented.
 
