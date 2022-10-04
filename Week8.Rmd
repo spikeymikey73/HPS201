@@ -56,20 +56,49 @@ If $F_{calc} > F_{crit}$ we can reject $H_0$
 
 ### ANOVA Summary {.well}
 
-| Source    | df       | SS                                                  | MS                                                        | F                                     |
-|-----------|----------|-----------------------------------------------------|-----------------------------------------------------------|---------------------------------------|
-| Treatment | $k-1$    | $SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2$ | $MS_{treatment} = \frac{SS_{treatment}}{df_{treatment}}$ | $F = \frac{MS_{treatment}}{MS_{error}}$ |
-| Error     | $k(n-1)$ | $SS_{error} = \Sigma(X_{ij}-\bar{X}_j)^2$           | $MS_{error} = \frac{SS_{error}}{df_{error}}$             |                                       |
-| Total     | $N-1$    | $SS_{total} = SS_{treatment} + SS_{error}$          |                                                           |                                       |
+<table class="table table-hover">
+    <tr scope="row">
+        <th scope="col">Source</th>
+        <th scope="col">df</th>
+        <th scope="col">SS</th>
+        <th scope="col">MS</th>
+        <th scope="col">F</th>
+        <th scope="col">p</th>
+    </tr>
+    <tr scope="row">
+        <td>Treatment</td>
+        <td><abbr title="k = no. of participants per group">$k-1$</abbr></td>
+        <td><abbr title="n = no. of groups">$n\Sigma(\bar{X}_{j}-\bar{X}..)^2$</abbr></td>
+        <td>$\frac{SS_{treatment}}{df_{treatment}}$</td>
+        <td>$\frac{MS_{treatment}}{MS_{error}}$</td>
+        <td><abbr title="Significance level determined prior to test">.05</abbr></td>
+    </tr>
+    <tr scope="row">
+        <td>Error</td>
+        <td><abbr title="k = no. of participants per group, n = no. of groups">$k(n-1)$</abbr></td>
+        <td>$\Sigma(X_{ij}-\bar{X}_j)^2$</td>
+        <td>$\frac{SS_{error}}{df_{error}}$</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr scope="row">
+        <td>Total</td>
+        <td><abbr title="N = Total participants across all groups">$N-1$</abbr></td>
+        <td>$SS_{treatment} + SS_{error}$</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 
 ### Calculation of ANOVA {.well}
 
->Steps:
->
->1.    Sums of Squares (distance of each score from the mean squared)
->2.    Degrees of Freedom
->3.    Mean Squares
->4.    F-value
+Steps:
+
+1.    Sums of Squares (distance of each score from the mean squared)
+2.    Degrees of Freedom
+3.    Mean Squares
+4.    F-value
 
 ### Age vs. Happiness notes study from notes {.well}
 

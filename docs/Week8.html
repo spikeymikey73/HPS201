@@ -404,51 +404,86 @@ $(document).ready(function () {
 </div>
 <div id="anova-summary" class="section level3 well">
 <h3 class="well">ANOVA Summary</h3>
-<table>
-<colgroup>
-<col width="6%" />
-<col width="5%" />
-<col width="30%" />
-<col width="34%" />
-<col width="22%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Source</th>
-<th>df</th>
-<th>SS</th>
-<th>MS</th>
-<th>F</th>
+<table class="table table-hover">
+<tr scope="row">
+<th scope="col">
+Source
+</th>
+<th scope="col">
+df
+</th>
+<th scope="col">
+SS
+</th>
+<th scope="col">
+MS
+</th>
+<th scope="col">
+F
+</th>
+<th scope="col">
+p
+</th>
 </tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Treatment</td>
-<td><span class="math inline">\(k-1\)</span></td>
-<td><span class="math inline">\(SS_{treatment} = n\Sigma(\bar{X}_{j}-\bar{X}..)^2\)</span></td>
-<td><span class="math inline">\(MS_{treatment} = \frac{SS_{treatment}}{df_{treatment}}\)</span></td>
-<td><span class="math inline">\(F = \frac{MS_{treatment}}{MS_{error}}\)</span></td>
+<tr scope="row">
+<td>
+Treatment
+</td>
+<td>
+<abbr title="k = no. of participants per group"><span class="math inline">\(k-1\)</span></abbr>
+</td>
+<td>
+<abbr title="n = no. of groups"><span class="math inline">\(n\Sigma(\bar{X}_{j}-\bar{X}..)^2\)</span></abbr>
+</td>
+<td>
+<span class="math inline">\(\frac{SS_{treatment}}{df_{treatment}}\)</span>
+</td>
+<td>
+<span class="math inline">\(\frac{MS_{treatment}}{MS_{error}}\)</span>
+</td>
+<td>
+<abbr title="Significance level determined prior to test">.05</abbr>
+</td>
 </tr>
-<tr class="even">
-<td>Error</td>
-<td><span class="math inline">\(k(n-1)\)</span></td>
-<td><span class="math inline">\(SS_{error} = \Sigma(X_{ij}-\bar{X}_j)^2\)</span></td>
-<td><span class="math inline">\(MS_{error} = \frac{SS_{error}}{df_{error}}\)</span></td>
-<td></td>
+<tr scope="row">
+<td>
+Error
+</td>
+<td>
+<abbr title="k = no. of participants per group, n = no. of groups"><span class="math inline">\(k(n-1)\)</span></abbr>
+</td>
+<td>
+<span class="math inline">\(\Sigma(X_{ij}-\bar{X}_j)^2\)</span>
+</td>
+<td>
+<span class="math inline">\(\frac{SS_{error}}{df_{error}}\)</span>
+</td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr class="odd">
-<td>Total</td>
-<td><span class="math inline">\(N-1\)</span></td>
-<td><span class="math inline">\(SS_{total} = SS_{treatment} + SS_{error}\)</span></td>
-<td></td>
-<td></td>
+<tr scope="row">
+<td>
+Total
+</td>
+<td>
+<abbr title="N = Total participants across all groups"><span class="math inline">\(N-1\)</span></abbr>
+</td>
+<td>
+<span class="math inline">\(SS_{treatment} + SS_{error}\)</span>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-</tbody>
 </table>
 </div>
 <div id="calculation-of-anova" class="section level3 well">
 <h3 class="well">Calculation of ANOVA</h3>
-<blockquote>
 <p>Steps:</p>
 <ol style="list-style-type: decimal">
 <li>Sums of Squares (distance of each score from the mean squared)</li>
@@ -456,7 +491,6 @@ $(document).ready(function () {
 <li>Mean Squares</li>
 <li>F-value</li>
 </ol>
-</blockquote>
 </div>
 <div id="age-vs.-happiness-notes-study-from-notes" class="section level3 well">
 <h3 class="well">Age vs. Happiness notes study from notes</h3>
@@ -670,7 +704,7 @@ SS_{total} &amp;= SS_{treatment} + SS_{error} \\
 <li>The F statistic tells us that the effect of the treatment (or the difference between groups) is 8.93 times greater than the error within groups.</li>
 <li>You check to see if this is a significant difference using the table at the back of your textbook.</li>
 <li>Critical value for F (2, 12) at <span class="math inline">\(\alpha\)</span> = .05 is 3.89.</li>
-<li>Since our <span class="math inline">\(F_{calc} &gt; F{crit}\)</span> we can reject the null hypothesis.</li>
+<li>Since our <span class="math inline">\(F_{calc} &gt; F_{crit}\)</span> we can reject the null hypothesis.</li>
 </ul>
 </blockquote>
 </div>
