@@ -402,86 +402,6 @@ $(document).ready(function () {
 <li>If numerator treatment effect + error is larger than the denominator, there is evidence that treatment is affecting between group (mean) differences.</li>
 </ul>
 </div>
-<div id="anova-summary" class="section level3 well">
-<h3 class="well">ANOVA Summary</h3>
-<table class="table table-hover">
-<tr scope="row">
-<th scope="col">
-Source
-</th>
-<th scope="col">
-df
-</th>
-<th scope="col">
-SS
-</th>
-<th scope="col">
-MS
-</th>
-<th scope="col">
-F
-</th>
-<th scope="col">
-p
-</th>
-</tr>
-<tr scope="row">
-<td>
-<abbr title="Between">Treatment</abbr>
-</td>
-<td>
-<abbr title="k = no. of participants per group"><span class="math inline">\(k-1\)</span></abbr>
-</td>
-<td>
-<abbr title="n = no. of groups"><span class="math inline">\(n\Sigma(\bar{X}_{j}-\bar{X}..)^2\)</span></abbr>
-</td>
-<td>
-<span class="math inline">\(\frac{SS_{treatment}}{df_{treatment}}\)</span>
-</td>
-<td>
-<span class="math inline">\(\frac{MS_{treatment}}{MS_{error}}\)</span>
-</td>
-<td>
-<abbr title="Significance level determined prior to test">.05</abbr>
-</td>
-</tr>
-<tr scope="row">
-<td>
-Error
-</td>
-<td>
-<abbr title="k = no. of participants per group, n = no. of groups"><span class="math inline">\(k(n-1)\)</span></abbr>
-</td>
-<td>
-<span class="math inline">\(\Sigma(X_{ij}-\bar{X}_j)^2\)</span>
-</td>
-<td>
-<span class="math inline">\(\frac{SS_{error}}{df_{error}}\)</span>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr scope="row">
-<td>
-Total
-</td>
-<td>
-<abbr title="N = Total participants across all groups"><span class="math inline">\(N-1\)</span></abbr>
-</td>
-<td>
-<span class="math inline">\(SS_{treatment} + SS_{error}\)</span>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-</table>
-</div>
 <div id="calculation-of-anova" class="section level3 well">
 <h3 class="well">Calculation of ANOVA</h3>
 <p>Steps:</p>
@@ -712,6 +632,86 @@ SS_{total} &amp;= SS_{treatment} + SS_{error} \\
 <div id="reporting" class="section level3 well">
 <h3 class="well">Reporting</h3>
 <p>A one-way ANOVA was conducted to examine whether there was a significant difference in happiness between the young people, middle aged people and old people groups. The analysis found a significant difference between these groups, <em>F</em>(2, 12) = 6.875, <em>p</em> &gt; .05, <span class="math inline">\(\eta^2_p = .60\)</span>.</p>
+</div>
+<div id="one-way-anova-summary-formulae" class="section level3 well">
+<h3 class="well">One-way ANOVA Summary Formulae</h3>
+<table class="table table-hover">
+<tr scope="row">
+<th scope="col">
+Source
+</th>
+<th scope="col">
+df
+</th>
+<th scope="col">
+SS
+</th>
+<th scope="col">
+MS
+</th>
+<th scope="col">
+F
+</th>
+<th scope="col">
+p
+</th>
+</tr>
+<tr scope="row">
+<td>
+<abbr title="Between">Treatment</abbr>
+</td>
+<td>
+<abbr title="k = no. of participants per group"><span class="math inline">\(k-1\)</span></abbr>
+</td>
+<td>
+<abbr title="n = Group sample size"><span class="math inline">\(n\Sigma(\bar{X}_{j}-\bar{X}..)^2\)</span></abbr>
+</td>
+<td>
+<span class="math inline">\(\frac{SS_{treatment}}{df_{treatment}}\)</span>
+</td>
+<td>
+<span class="math inline">\(\frac{MS_{treatment}}{MS_{error}}\)</span>
+</td>
+<td>
+<abbr title="Significance level determined prior to test">.05</abbr>
+</td>
+</tr>
+<tr scope="row">
+<td>
+Error
+</td>
+<td>
+<abbr title="k = no. of participants per group, n = no. of groups"><span class="math inline">\(k(n-1)\)</span></abbr>
+</td>
+<td>
+<span class="math inline">\(\Sigma(X_{ij}-\bar{X}_j)^2\)</span>
+</td>
+<td>
+<span class="math inline">\(\frac{SS_{error}}{df_{error}}\)</span>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+Total
+</td>
+<td>
+<abbr title="N = Total participants across all groups"><span class="math inline">\(N-1\)</span></abbr>
+</td>
+<td>
+<span class="math inline">\(SS_{treatment} + SS_{error}\)</span>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</table>
 </div>
 
 
