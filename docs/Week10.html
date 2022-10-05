@@ -731,11 +731,12 @@ Total
 <p>A two-way ANOVA was conducted to examine the effect of instruction (self-paced or structured) and personality (internal or external) on exam performance. The analysis showed a significant interaction effect, <em>F</em>(1, 16) = 5.57, <em>p</em> = .031, <span class="math inline">\(\eta^2_p\)</span> = .26. Internally driven individuals scored higher on the exam when they were provided with a self-paced learning program (<em>M</em> = 82.80, <em>SD</em> = 11.30) as opposed to a structured learning program (<em>M</em> = 75.20, <em>SD</em> = 5.93). Externally driven individuals scored higher on the exam when they were provided with a structured learning program (<em>M</em> = 82.20, <em>SD</em> = 6.61) as opposed to a self-paced learning program (<em>M</em> = 72.40, <em>SD</em> = 8.08).</p>
 <p>A two-way ANOVA was conducted to examine the effect of maths anxiety (low or high) and counselling (yes or no) on exam performance. The analysis showed a significant main effect for maths anxiety, <em>F</em>(1, 28) = 5.78, <em>p</em> = .023, <span class="math inline">\(\eta^2_p\)</span> = .17. On average, students in the low anxiety group (<em>M</em> = 81.00, <em>SD</em> = 10.30) performed better on the exam than students in the high anxiety group (<em>M</em> = 72.50, <em>SD</em> = 10.24).</p>
 </div>
-<div id="anova-summary-table-formulae" class="section level3 well">
-<h3 class="well">ANOVA Summary Table (Formulae)</h3>
+<div id="two-way-anova-summary-table-formulae" class="section level3 well">
+<h3 class="well">Two-way ANOVA Summary Table (Formulae)</h3>
 <table class="table table-hover">
 <tr scope="row">
 <th scope="col">
+Source
 </th>
 <th scope="col">
 df
@@ -758,10 +759,10 @@ p
 Factor A
 </td>
 <td>
-1
+<span class="math inline">\(k-1\)</span>
 </td>
 <td>
-<span class="math inline">\(nb\Sigma(\bar{X}_A - \bar{X}..)^2\)</span>
+<abbr title="n = No. of participants per grp, b = No. of levels in B"><span class="math inline">\(nb\Sigma(\bar{X}_A - \bar{X}..)^2\)</span><abbr></abbr>
 </td>
 <td>
 0.34
@@ -777,10 +778,10 @@ Factor A
 Factor B
 </td>
 <td>
-1
+<span class="math inline">\(k-1\)</span>
 </td>
 <td>
-<span class="math inline">\(na\Sigma(\bar{X}_A - \bar{X}..)^2\)</span>
+<abbr title="n = No. of participants per grp, a = No. of levels in A"><span class="math inline">\(na\Sigma(\bar{X}_A - \bar{X}..)^2\)</span></abbr>
 </td>
 <td>
 12
@@ -796,7 +797,7 @@ Factor B
 A*B (interaction)
 </td>
 <td>
-1
+<span class="math inline">\(df_A \times df_B\)</span>
 </td>
 <td>
 <span class="math inline">\(SS_{cells} – SS_A – SS_B\)</span>
@@ -815,7 +816,7 @@ A*B (interaction)
 Error
 </td>
 <td>
-8
+<span class="math inline">\(df_{total} - df_A - df_B - df_{AB}\)</span>
 </td>
 <td>
 <span class="math inline">\(SS_{total} – SS_{cells}\)</span>
@@ -830,10 +831,10 @@ Error
 </tr>
 <tr scope="row">
 <td>
-<abbr title="$N-1$">Total
+Total
 </td>
 <td>
-<span class="math inline">\(df_a + df_b + df_{ab} + df_{error}\)</span>
+<span class="math inline">\(N-1\)</span>
 </td>
 <td>
 <span class="math inline">\(\Sigma(X-\bar{X}..)^2\)</span>

@@ -267,11 +267,11 @@ Externally driven individuals scored higher on the exam when they were provided 
 
 A two-way ANOVA was conducted to examine the effect of maths anxiety (low or high) and counselling (yes or no) on exam performance. The analysis showed a significant main effect for maths anxiety, *F*(1, 28) = 5.78, *p* = .023, $\eta^2_p$ = .17. On average, students in the low anxiety group (*M* = 81.00, *SD* = 10.30) performed better on the exam than students in the high anxiety group (*M* = 72.50, *SD* = 10.24).
 
-### ANOVA Summary Table (Formulae) {.well}
+### Two-way ANOVA Summary Table (Formulae) {.well}
 
 <table class="table table-hover">
   <tr scope="row">
-      <th scope="col"></th>
+      <th scope="col">Source</th>
       <th scope="col">df</th>
       <th scope="col"><abbr title="Sum of Squares">SS</abbr></th>
       <th scope="col"><abbr title="Mean of Squares">MS</abbr></th>
@@ -280,23 +280,23 @@ A two-way ANOVA was conducted to examine the effect of maths anxiety (low or hig
   </tr>
   <tr scope="row">
     <td>Factor A</td>
-    <td>1</td>
-    <td>$nb\Sigma(\bar{X}_A - \bar{X}..)^2$</td>
+    <td>$k-1$</td>
+    <td><abbr title="n = No. of participants per grp, b = No. of levels in B">$nb\Sigma(\bar{X}_A - \bar{X}..)^2$<abbr></abbr></td>
     <td>0.34</td>
     <td>0.34</td>
     <td></td>
   </tr>
   <tr scope="row">
     <td>Factor B</td>
-    <td>1</td>
-    <td>$na\Sigma(\bar{X}_A - \bar{X}..)^2$</td>
+    <td>$k-1$</td>
+    <td><abbr title="n = No. of participants per grp, a = No. of levels in A">$na\Sigma(\bar{X}_A - \bar{X}..)^2$</abbr></td>
     <td>12</td>
     <td>12</td>
     <td></td>
   </tr>
   <tr scope="row">
     <td>A*B (interaction)</td>
-    <td>1</td>
+    <td>$df_A \times df_B$</td>
     <td>$SS_{cells} – SS_A – SS_B$</td>
     <td>16.3</td>
     <td>16.3</td>
@@ -304,15 +304,15 @@ A two-way ANOVA was conducted to examine the effect of maths anxiety (low or hig
   </tr>
   <tr scope="row">
     <td>Error</td>
-    <td>8</td>
+    <td>$df_{total} - df_A - df_B - df_{AB}$</td>
     <td>$SS_{total} – SS_{cells}$</td>
     <td>1</td>
     <td></td>
     <td></td>
   </tr>
   <tr scope="row">
-    <td><abbr title="$N-1$">Total</td>
-    <td>$df_a + df_b + df_{ab} + df_{error}$</td>
+    <td>Total</td>
+    <td>$N-1$</td>
     <td>$\Sigma(X-\bar{X}..)^2$</td>
   </tr>
     <td colspan="6">$SS_{cells} = n\Sigma(\bar{X}_A - \bar{X}..)^2$</td>

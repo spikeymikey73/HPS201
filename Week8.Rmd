@@ -234,7 +234,7 @@ A one-way ANOVA was conducted to examine whether there was a significant differe
     </tr>
     <tr scope="row">
         <td><abbr title="Between">Treatment</abbr></td>
-        <td><abbr title="k = no. of participants per group">$k-1$</abbr></td>
+        <td><abbr title="k = no. of groups">$k-1$</abbr></td>
         <td><abbr title="n = Group sample size">$n\Sigma(\bar{X}_{j}-\bar{X}..)^2$</abbr></td>
         <td>$\frac{SS_{treatment}}{df_{treatment}}$</td>
         <td>$\frac{MS_{treatment}}{MS_{error}}$</td>
@@ -242,7 +242,7 @@ A one-way ANOVA was conducted to examine whether there was a significant differe
     </tr>
     <tr scope="row">
         <td><abbr title="Within">Error</abbr></td>
-        <td><abbr title="k = no. of participants per group, n = no. of groups">$k(n-1)$</abbr></td>
+        <td><abbr title="k = no. groups, n = Group sample size">$k(n-1)$</abbr></td>
         <td>$\Sigma(X_{ij}-\bar{X}_j)^2$</td>
         <td>$\frac{SS_{error}}{df_{error}}$</td>
         <td></td>
@@ -255,5 +255,10 @@ A one-way ANOVA was conducted to examine whether there was a significant differe
         <td></td>
         <td></td>
         <td></td>
+    </tr>
+    <tr scope="row">
+      <td>Effect Size</td>
+      <td>$\eta^2$</td>
+      <td>$\frac{SS_{treat}}{SS_{total}}$</td>
     </tr>
 </table>
