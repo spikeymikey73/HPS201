@@ -346,7 +346,7 @@ $(document).ready(function () {
 <li><p>Two IVs:</p>
 <ul>
 <li>Age: 3 levels (young, middle, old)</li>
-<li>Gender:^2 levels (male, female)</li>
+<li>Gender: 2 levels (male, female)</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -728,7 +728,123 @@ Total
 </div>
 <div id="reporting" class="section level3 well">
 <h3 class="well">Reporting</h3>
+<p>A two-way ANOVA was conducted to examine the effect of instruction (self-paced or structured) and personality (internal or external) on exam performance. The analysis showed a significant interaction effect, <em>F</em>(1, 16) = 5.57, <em>p</em> = .031, <span class="math inline">\(\eta^2_p\)</span> = .26. Internally driven individuals scored higher on the exam when they were provided with a self-paced learning program (<em>M</em> = 82.80, <em>SD</em> = 11.30) as opposed to a structured learning program (<em>M</em> = 75.20, <em>SD</em> = 5.93). Externally driven individuals scored higher on the exam when they were provided with a structured learning program (<em>M</em> = 82.20, <em>SD</em> = 6.61) as opposed to a self-paced learning program (<em>M</em> = 72.40, <em>SD</em> = 8.08).</p>
 <p>A two-way ANOVA was conducted to examine the effect of maths anxiety (low or high) and counselling (yes or no) on exam performance. The analysis showed a significant main effect for maths anxiety, <em>F</em>(1, 28) = 5.78, <em>p</em> = .023, <span class="math inline">\(\eta^2_p\)</span> = .17. On average, students in the low anxiety group (<em>M</em> = 81.00, <em>SD</em> = 10.30) performed better on the exam than students in the high anxiety group (<em>M</em> = 72.50, <em>SD</em> = 10.24).</p>
+</div>
+<div id="anova-summary-table-formulae" class="section level3 well">
+<h3 class="well">ANOVA Summary Table (Formulae)</h3>
+<table class="table table-hover">
+<tr scope="row">
+<th scope="col">
+</th>
+<th scope="col">
+df
+</th>
+<th scope="col">
+<abbr title="Sum of Squares">SS</abbr>
+</th>
+<th scope="col">
+<abbr title="Mean of Squares">MS</abbr>
+</th>
+<th scope="col">
+F
+</th>
+<th scope="col">
+p
+</th>
+</tr>
+<tr scope="row">
+<td>
+Factor A
+</td>
+<td>
+1
+</td>
+<td>
+<span class="math inline">\(nb\Sigma(\bar{X}_A - \bar{X}..)^2\)</span>
+</td>
+<td>
+0.34
+</td>
+<td>
+0.34
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+Factor B
+</td>
+<td>
+1
+</td>
+<td>
+<span class="math inline">\(na\Sigma(\bar{X}_A - \bar{X}..)^2\)</span>
+</td>
+<td>
+12
+</td>
+<td>
+12
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+A*B (interaction)
+</td>
+<td>
+1
+</td>
+<td>
+<span class="math inline">\(SS_{cells} – SS_A – SS_B\)</span>
+</td>
+<td>
+16.3
+</td>
+<td>
+16.3
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+Error
+</td>
+<td>
+8
+</td>
+<td>
+<span class="math inline">\(SS_{total} – SS_{cells}\)</span>
+</td>
+<td>
+1
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr scope="row">
+<td>
+<abbr title="$N-1$">Total
+</td>
+<td>
+<span class="math inline">\(df_a + df_b + df_{ab} + df_{error}\)</span>
+</td>
+<td>
+<span class="math inline">\(\Sigma(X-\bar{X}..)^2\)</span>
+</td>
+</tr>
+<td colspan="6">
+<span class="math inline">\(SS_{cells} = n\Sigma(\bar{X}_A - \bar{X}..)^2\)</span>
+</td>
+<tr>
+</tr>
+</table>
 </div>
 
 

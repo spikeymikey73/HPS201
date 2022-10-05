@@ -66,7 +66,7 @@ If $F_{calc} > F_{crit}$ we can reject $H_0$
         <th scope="col">p</th>
     </tr>
     <tr scope="row">
-        <td>Treatment</td>
+        <td><abbr title="Between">Treatment</abbr></td>
         <td><abbr title="k = no. of participants per group">$k-1$</abbr></td>
         <td><abbr title="n = no. of groups">$n\Sigma(\bar{X}_{j}-\bar{X}..)^2$</abbr></td>
         <td>$\frac{SS_{treatment}}{df_{treatment}}$</td>
