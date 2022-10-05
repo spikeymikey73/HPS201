@@ -241,7 +241,7 @@ A one-way ANOVA was conducted to examine whether there was a significant differe
         <td><abbr title="Significance level determined prior to test">.05</abbr></td>
     </tr>
     <tr scope="row">
-        <td>Error</td>
+        <td><abbr title="Within">Error</abbr></td>
         <td><abbr title="k = no. of participants per group, n = no. of groups">$k(n-1)$</abbr></td>
         <td>$\Sigma(X_{ij}-\bar{X}_j)^2$</td>
         <td>$\frac{SS_{error}}{df_{error}}$</td>
