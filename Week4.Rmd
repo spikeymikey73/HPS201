@@ -36,7 +36,7 @@ $\chi^2 = \Sigma{\frac{(O-E)^2}{E}}$
 
 ```{r echo=FALSE}
 exp_lemonade <- c(10,10,10)
-obs_lemonade <- c(5,8,7)
+obs_lemonade <- c(5,18,7)
 table_lemonade <- rbind(exp_lemonade, obs_lemonade)
 rnames <- c("Expected","Observed")
 cnames <- c("A", "B", "C")
