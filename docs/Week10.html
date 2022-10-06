@@ -654,6 +654,7 @@ A (gender)
 0.34
 </td>
 <td>
+0.05
 </td>
 </tr>
 <tr scope="row">
@@ -759,18 +760,19 @@ p
 Factor A
 </td>
 <td>
-<span class="math inline">\(k-1\)</span>
+<abbr title="a = # of levels in factor A"><span class="math inline">\(a-1\)</span></abbr>
 </td>
 <td>
-<abbr title="n = No. of participants per grp, b = No. of levels in B"><span class="math inline">\(nb\Sigma(\bar{X}_A - \bar{X}..)^2\)</span><abbr></abbr>
+<abbr title="n = # of participants per cell, b = # of levels in B"><span class="math inline">\(nb\Sigma(\bar{X}_A - \bar{X}..)^2\)</span><abbr></abbr>
 </td>
 <td>
-0.34
+<span class="math inline">\(\frac{SS_A}{df_A}\)</span>
 </td>
 <td>
-0.34
+<span class="math inline">\(\frac{MS_A}{MS_{error}}\)</span>
 </td>
 <td>
+0.05
 </td>
 </tr>
 <tr scope="row">
@@ -778,18 +780,19 @@ Factor A
 Factor B
 </td>
 <td>
-<span class="math inline">\(k-1\)</span>
+<abbr title="b = # of levels in factor B"><span class="math inline">\(b-1\)</span></abbr>
 </td>
 <td>
-<abbr title="n = No. of participants per grp, a = No. of levels in A"><span class="math inline">\(na\Sigma(\bar{X}_A - \bar{X}..)^2\)</span></abbr>
+<abbr title="n = # of participants per cell, a = # of levels in A"><span class="math inline">\(na\Sigma(\bar{X}_A - \bar{X}..)^2\)</span></abbr>
 </td>
 <td>
-12
+<span class="math inline">\(\frac{SS_B}{df_B}\)</span>
 </td>
 <td>
-12
+<span class="math inline">\(\frac{MS_B}{MS_{error}}\)</span>
 </td>
 <td>
+ 
 </td>
 </tr>
 <tr scope="row">
@@ -797,18 +800,19 @@ Factor B
 A*B (interaction)
 </td>
 <td>
-<span class="math inline">\(df_A \times df_B\)</span>
+<abbr title="-OR- (a-1)(b-1)"><span class="math inline">\(df_A \times df_B\)</span></abbr>
 </td>
 <td>
 <span class="math inline">\(SS_{cells} – SS_A – SS_B\)</span>
 </td>
 <td>
-16.3
+<span class="math inline">\(\frac{SS_{AB}}{df_{AB}}\)</span>
 </td>
 <td>
-16.3
+<span class="math inline">\(\frac{MS_AB}{MS_{error}}\)</span>
 </td>
 <td>
+ 
 </td>
 </tr>
 <tr scope="row">
@@ -822,11 +826,13 @@ Error
 <span class="math inline">\(SS_{total} – SS_{cells}\)</span>
 </td>
 <td>
-1
+<span class="math inline">\(\frac{SS_{error}}{df_{error}}\)</span>
 </td>
 <td>
+ 
 </td>
 <td>
+ 
 </td>
 </tr>
 <tr scope="row">
@@ -834,16 +840,37 @@ Error
 Total
 </td>
 <td>
-<span class="math inline">\(N-1\)</span>
+<abbr title="N = total # of participants"><span class="math inline">\(N-1\)</span></abbr>
 </td>
 <td>
-<span class="math inline">\(\Sigma(X-\bar{X}..)^2\)</span>
+<abbr title="Sum of squares for each value in the study"><span class="math inline">\(\Sigma(X-\bar{X}..)^2\)</span></abbr>
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
 </td>
 </tr>
-<td colspan="6">
-<span class="math inline">\(SS_{cells} = n\Sigma(\bar{X}_A - \bar{X}..)^2\)</span>
+<tr scope="row">
+<td colspan="5">
+<abbr title="omitted from summary like any Sum of Squares value"><span class="math inline">\(SS_{cells} = n\Sigma(\bar{X}_A - \bar{X}..)^2\)</span></abbr>
 </td>
-<tr>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
 </tr>
 </table>
 </div>

@@ -225,7 +225,7 @@ Two-way ANOVA exploring the effect of temperature on cognitive performance (reca
     <td>0.34</td>
     <td>0.34</td>
     <td>0.34</td>
-    <td></td>
+    <td>0.05</td>
   </tr>
   <tr scope="row">
     <td>B (anxiety)</td>
@@ -280,42 +280,49 @@ A two-way ANOVA was conducted to examine the effect of maths anxiety (low or hig
   </tr>
   <tr scope="row">
     <td>Factor A</td>
-    <td>$k-1$</td>
-    <td><abbr title="n = No. of participants per grp, b = No. of levels in B">$nb\Sigma(\bar{X}_A - \bar{X}..)^2$<abbr></abbr></td>
-    <td>0.34</td>
-    <td>0.34</td>
-    <td></td>
+    <td><abbr title="a = # of levels in factor A">$a-1$</abbr></td>
+    <td><abbr title="n = # of participants per cell, b = # of levels in B">$nb\Sigma(\bar{X}_A - \bar{X}..)^2$<abbr></abbr></td>
+    <td>$\frac{SS_A}{df_A}$</td>
+    <td>$\frac{MS_A}{MS_{error}}$</td>
+    <td>0.05</td>
   </tr>
   <tr scope="row">
     <td>Factor B</td>
-    <td>$k-1$</td>
-    <td><abbr title="n = No. of participants per grp, a = No. of levels in A">$na\Sigma(\bar{X}_A - \bar{X}..)^2$</abbr></td>
-    <td>12</td>
-    <td>12</td>
-    <td></td>
+    <td><abbr title="b = # of levels in factor B">$b-1$</abbr></td>
+    <td><abbr title="n = # of participants per cell, a = # of levels in A">$na\Sigma(\bar{X}_A - \bar{X}..)^2$</abbr></td>
+    <td>$\frac{SS_B}{df_B}$</td>
+    <td>$\frac{MS_B}{MS_{error}}$</td>
+    <td>&nbsp;</td>
   </tr>
   <tr scope="row">
     <td>A*B (interaction)</td>
-    <td>$df_A \times df_B$</td>
+    <td><abbr title="-OR- (a-1)(b-1)">$df_A \times df_B$</abbr></td>
     <td>$SS_{cells} – SS_A – SS_B$</td>
-    <td>16.3</td>
-    <td>16.3</td>
-    <td></td>
+    <td>$\frac{SS_{AB}}{df_{AB}}$</td>
+    <td>$\frac{MS_AB}{MS_{error}}$</td>
+    <td>&nbsp;</td>
   </tr>
   <tr scope="row">
     <td>Error</td>
     <td>$df_{total} - df_A - df_B - df_{AB}$</td>
     <td>$SS_{total} – SS_{cells}$</td>
-    <td>1</td>
-    <td></td>
-    <td></td>
+    <td>$\frac{SS_{error}}{df_{error}}$</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
   </tr>
   <tr scope="row">
     <td>Total</td>
-    <td>$N-1$</td>
-    <td>$\Sigma(X-\bar{X}..)^2$</td>
+    <td><abbr title="N = total # of participants">$N-1$</abbr></td>
+    <td><abbr title="Sum of squares for each value in the study">$\Sigma(X-\bar{X}..)^2$</abbr></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
   </tr>
-    <td colspan="6">$SS_{cells} = n\Sigma(\bar{X}_A - \bar{X}..)^2$</td>
-  <tr>
+  <tr scope="row">
+    <td colspan="5"><abbr title="omitted from summary like any Sum of Squares value">$SS_{cells} = n\Sigma(\bar{X}_A - \bar{X}..)^2$</abbr></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
   </tr>
 </table>
