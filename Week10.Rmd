@@ -296,10 +296,10 @@ A two-way ANOVA was conducted to examine the effect of maths anxiety (low or hig
   </tr>
   <tr scope="row">
     <td>A*B (interaction)</td>
-    <td><abbr title="-OR- (a-1)(b-1)">$df_A \times df_B$</abbr></td>
+    <td><abbr title="(a-1) * (b-1)">$df_A \times df_B$</abbr></td>
     <td>$SS_{cells} – SS_A – SS_B$</td>
     <td>$\frac{SS_{AB}}{df_{AB}}$</td>
-    <td>$\frac{MS_AB}{MS_{error}}$</td>
+    <td>$\frac{MS_{AB}}{MS_{error}}$</td>
     <td>&nbsp;</td>
   </tr>
   <tr scope="row">
