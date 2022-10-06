@@ -34,20 +34,26 @@ $\chi^2 = \Sigma{\frac{(O-E)^2}{E}}$
 
 #### Lemonade Preferences between males and females
 
-```{r echo=FALSE}
-exp_lemonade <- c(10,10,10)
-obs_lemonade <- c(5,18,7)
-table_lemonade <- rbind(exp_lemonade, obs_lemonade)
-rnames <- c("Expected","Observed")
-cnames <- c("A", "B", "C")
-
-table_lemonade <- matrix(table_lemonade,nrow=2,byrow=TRUE,dimnames=list(rnames,cnames))
-
-table_lemonade %>%
-  kbl() %>%
-  kable_styling(bootstrap_options = "striped", full_width = F)
-
-```
+<table class="table table-hover">
+    <tr scope="row">
+      <th scope="col"></th>
+      <th scope="col">A</th>
+      <th scope="col">B</th>
+      <th scope="col">C</th>
+    </tr>
+    <tr scope="row">
+        <td>Observed</td>
+        <td>5</td>
+        <td>18</td>
+        <td>7</td>
+    </tr>
+    <tr scope="row">
+        <td>Expected</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+    </tr>
+</table>
 
 ##### Chi-square Value
 
